@@ -128,8 +128,8 @@
                                 <li><a href="./blog-details.html">Blog Details</a></li>
                             </ul>
                         </li> -->
-                        <li><a href="./blog.html">Tin tức</a></li>
-                        <li><a href="./contact.html">Liên hệ</a></li>
+                        <li><a href="blog.jsp">Tin tức</a></li>
+                        <li><a href="contact.jsp">Liên hệ</a></li>
                     </ul>
                 </nav>
             </div>
@@ -137,7 +137,7 @@
                 <div class="header__cart">
                     <ul>
                         <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                        <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                        <li><a href="cart.jsp"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
                     </ul>
                     <div class="header__cart__price">Tổng: <span>450.000<sup>đ</sup></span></div>
                 </div>

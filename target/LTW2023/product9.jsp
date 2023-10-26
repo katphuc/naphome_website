@@ -28,23 +28,6 @@
   <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
   <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
-
-  <style>
-    .hero__search__phone__icon {
-      padding-top: 15px;
-      font-size: 18px;
-      color: #ffacac;
-      height: 50px;
-      width: 50px;
-      background: #f5f5f5;
-      line-height: 50px;
-      text-align: center;
-      border-radius: 50%;
-      float: left;
-      margin-right: 20px;
-      /*padding-top: 14px;*/
-    }
-  </style>
 </head>
 
 <body>
@@ -66,11 +49,7 @@
   </div>
 </section>
 <!-- Hero Section End -->
-<ul class="breadcrumb">
-  <li><a href="">Trang chủ</a></li>
-  <%--    <li><a href="/dung-cu/">  Giỏ hàng</a></li>--%>
-  <li><span>  Cửa hàng</span></li>
-</ul>
+
 
 
 <!-- Product Section Begin -->
@@ -191,7 +170,7 @@
         <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/08/600x509-204-2021-03-50875-71245-large_mobile-bim-ta-dan-huggies-platinum-nature-made-size-newborn-60-mieng-duoi-5kg.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/11/59975-94803-large_mobile/tui-3-xe-tron-phuong-tien-giao-thong-ngo-nghinh-animo-js054502g.jpg">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -199,14 +178,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Combo 2 bỉm tã dán Huggies Platinum Nature Made size Newborn 60 miếng (dưới 5kg)" href="#">Combo 2 bỉm tã dán Huggies Platinum Nature Made size Newborn 60 miếng (dưới 5kg)</a></h6>
+                <h6><a title="Túi 3 xe trớn  phương tiện giao thông ngộ nghĩnh Animo JS054502G" href="#">Túi 3 xe trớn  phương tiện giao thông ngộ nghĩnh Animo JS054502G</a></h6>
                 <h5>110.000<sup>đ</sup><span class="discount">-10%</span></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/06/4696000000003.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/03/61941-trans.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -214,14 +193,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Combo 2 Bỉm tã quần Elprairie AW (XL, 10-17kg, 42 miếng)" href="#">Combo 2 Bỉm tã quần Elprairie AW (XL, 10-17kg, 42 miếng)</a></h6>
+                <h6><a title="Ngôi nhà két sắt kèm hình trang trí và chìa khóa JS057225" href="#">Ngôi nhà két sắt kèm hình trang trí và chìa khóa JS057225 </a></h6>
                 <h5>149.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/06/4694000000002.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/11/59956-94735-large_mobile/chu-sau-vui-nhon-an-truot-997.jpg">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -229,14 +208,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Combo 2 Bỉm tã dán Elprairie AW (S, dưới 6.5kg, 34 miếng)" href="#">Combo 2 Bỉm tã dán Elprairie AW (S, dưới 6.5kg, 34 miếng)</a></h6>
+                <h6><a title="Chú sâu vui nhộn ấn trượt 997" href="#">Chú sâu vui nhộn ấn trượt 997</a></h6>
                 <h5>149.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/10/42703-75454-large_mobile/mieng-lot-so-sinh-bobby-newborn-1-duoi-5-kg-64-mieng.jpg">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/08/58547-91636-large_mobile/bo-nhap-vai-may-nuong-banh-mi-cy294239.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -244,14 +223,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Miếng lót Bobby size Newborn 1 64 miếng (dưới 5kg)" href="#">Miếng lót Bobby size Newborn 1 64 miếng (dưới 5kg)</a></h6>
+                <h6><a title="Bộ nhập vai máy nướng bánh mì CY294239" href="#">Bộ nhập vai máy nướng bánh mì CY294239</a></h6>
                 <h5>149.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/12/60450-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/09/57635-92737-large_mobile/tui-xach-tai-tho-trang-diem-cy265271.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -259,14 +238,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Miếng lót Huggies (Newborn 1, dưới 5kg, 108 miếng)" href="#">Miếng lót Huggies (Newborn 1, dưới 5kg, 108 miếng)</a></h6>
+                <h6><a title="Túi xách tai thỏ trang điểm CY265271" href="#">Túi xách tai thỏ trang điểm CY265271</a></h6>
                 <h5>149.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/54917-1696411000-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/01/54627-79314-large_mobile/lat-dat-hinh-con-nhim-animo-co-nhac-chuong-cy306279-xanh.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -274,14 +253,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Tã quần Molfix (L, 9 - 13kg, 68 miếng) (giao bao bì ngẫu nhiên)" href="#">Tã quần Molfix (L, 9 - 13kg, 68 miếng) (giao bao bì ngẫu nhiên)</a></h6>
+                <h6><a title="Lật đật hình con nhím Animo có nhạc chuông CY306279 (Xanh)" href="#">Lật đật hình con nhím Animo có nhạc chuông CY306279 (Xanh)</a></h6>
                 <h5>278.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/01/54921-79372-large_mobile/bim-ta-dan-molfix-thien-nhien-xs-5kg-72-mieng.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/11/60272-95457-large_mobile/robot-biet-nhay-co-nhac-den-yn374470.jpg">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -289,14 +268,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã dán Molfix thiên nhiên (XS, < 5kg, 72 miếng + 8 miếng)" href="#">Bỉm tã dán Molfix thiên nhiên (XS, < 5kg, 72 miếng + 8 miếng)</a></h6>
+                <h6><a title="Robot biết nhảy có nhạc đèn YN374470" href="#">Robot biết nhảy có nhạc đèn YN374470</a></h6>
                 <h5>438.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/10/42704-75451-large_mobile/mieng-lot-so-sinh-bobby-fresh-newborn-1-duoi-5-kg-108-mieng.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/11/60358-trans.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -304,14 +283,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Miếng lót Bobby size Newborn 1 108 miếng (dưới 5kg)" href="#">Miếng lót Bobby size Newborn 1 108 miếng (dưới 5kg)</a></h6>
+                <h6><a title="Đồ chơi chú gà vẫy cánh phát nhạc JS049270 (2 màu)" href="#">Đồ chơi chú gà vẫy cánh phát nhạc JS049270 (2 màu)</a></h6>
                 <h5>238.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/03/27666-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/10/59657-94343-large_mobile/bo-2-xe-chay-tron-nho-vai-mem-cho-be-ept717251.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -319,14 +298,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã dán Bobby siêu thấm size M 76 miếng (6-10kg) (giao bao bì ngẫu nhiên)" href="#">Bỉm tã dán Bobby siêu thấm size M 76 miếng (6-10kg) (giao bao bì ngẫu nhiên)</a></h6>
+                <h6><a title="Bộ 2 xe chạy trớn nhỏ vải mềm cho bé EPT717251" href="#">Bộ 2 xe chạy trớn nhỏ vải mềm cho bé EPT717251</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/10/48752-75515-large_mobile/bim-ta-quan-moony-be-trai-size-xxl-26-mieng-13-28kg.jpg">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/11/60394-95681-large_mobile/dan-piano-mini-da-nang-kem-micro-cy143065.jpg">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -334,14 +313,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã quần Moony bé trai size XXL 26 miếng (13-28kg)" href="#">Bỉm tã quần Moony bé trai size XXL 26 miếng (13-28kg)</a></h6>
+                <h6><a title="Đàn piano mini đa năng kèm micro CY143065" href="#">Đàn piano mini đa năng kèm micro CY143065</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/04/48750-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/11/60387-95709-large_mobile/bo-hop-dung-va-ban-lego-lap-rap-4-in-1-kem-bang-ve-50pcs-cy370782.jpg">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -349,14 +328,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã quần Moony bé trai size XL 38 miếng (12-22kg) (giao bao bì ngẫu nhiên)" href="#">Bỉm tã quần Moony bé trai size XL 38 miếng (12-22kg) (giao bao bì ngẫu nhiên)</a></h6>
+                <h6><a title="Bộ hộp đựng và bàn lego lắp ráp 4 in 1 kèm bảng vẽ, 50pcs CY370782 (giao ngẫu nhiên)" href="#">Bộ hộp đựng và bàn lego lắp ráp 4 in 1 kèm bảng vẽ, 50pcs CY370782 (giao ngẫu nhiên)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/04/50926-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-8-2023-08-63621-1691383234-trans.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -364,14 +343,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã dán Moony size S, 84 miếng (4-8kg) (giao bao bì ngẫu nhiên)" href="#">Bỉm tã dán Moony size S, 84 miếng (4-8kg) (giao bao bì ngẫu nhiên)</a></h6>
+                <h6><a title="Đồ chơi robot biết nhảy có nhạc đèn ngộ nghĩnh YN509147 (Xanh)" href="#">Đồ chơi robot biết nhảy có nhạc đèn ngộ nghĩnh YN509147 (Xanh)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-221-2023-07-42698-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-13-2023-08-63614-1691393255-trans.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -379,14 +358,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã quần Bobby size XL 62 miếng (12-17kg) (giao bao bì ngẫu nhiên)" href="#">Bỉm tã quần Bobby size XL 62 miếng (12-17kg) (giao bao bì ngẫu nhiên)</a></h6>
+                <h6><a title="Đồ chơi siêu xe biến hình robot có nhạc đèn YN382675 (Vàng)" href="#">Đồ chơi siêu xe biến hình robot có nhạc đèn YN382675 (Vàng)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-222-2023-07-42697-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-2-2023-08-63628-1691400721-trans.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -394,14 +373,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã quần Bobby size XXL 56 miếng (trên 16kg) (sản phẩm được giao với bao bì ngẫu nhiên)" href="#">Bỉm tã quần Bobby size XXL 56 miếng (trên 16kg) (sản phẩm được giao với bao bì ngẫu nhiên)</a></h6>
+                <h6><a title="Thú bông bé hươu 3 màu ngộ nghĩnh Animo C62023" href="#">Thú bông bé hươu 3 màu ngộ nghĩnh Animo C62023</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/08/380x560-710-2021-10-19187-75493-large_mobile-bim-ta-quan-merries-m-6-11kg-58-mieng.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-676-2023-03-61874-trans.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -409,14 +388,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã quần Merries size M 58 miếng (6-11kg)" href="#">Bỉm tã quần Merries size M 58 miếng (6-11kg)</a></h6>
+                <h6><a title="Xe vệ sinh đường phố cao cấp có âm thanh và đèn RFD341536 (Cam)" href="#">Xe vệ sinh đường phố cao cấp có âm thanh và đèn RFD341536 (Cam)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/03/62031-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/03/61870-trans.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -424,14 +403,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Tã dán sơ sinh Huggies Dry (S, 4-8kg, 80 miếng) + 2 miếng" href="#">Tã dán sơ sinh Huggies Dry (S, 4-8kg, 80 miếng) + 2 miếng</a></h6>
+                <h6><a title="Xe cứu hộ chở con thuyền có âm thanh và đèn RFD425848 (Xanh)" href="#">Xe cứu hộ chở con thuyền có âm thanh và đèn RFD425848 (Xanh)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-257-2023-06-62987-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/12/60481-96017-large_mobile/goi-om-ban-bo-de-thuong-animo-td.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -439,14 +418,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Tã dán Huggies Skincare cực đại (M, 6-11kg, 76 miếng)" href="#">Tã dán Huggies Skincare cực đại (M, 6-11kg, 76 miếng)</a></h6>
+                <h6><a title="Gối ôm bạn bò dễ thương Animo" href="#">Gối ôm bạn bò dễ thương Animo</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/57126-87376-large_mobile/ta-quan-huggies-thin-soft-xl-12-17kg-62-mieng.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-9-2023-08-63619-1691390343-trans.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -454,14 +433,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Tã quần Huggies Thin & Soft  (XL, 12-17kg, 62 miếng)" href="#">Tã quần Huggies Thin & Soft  (XL, 12-17kg, 62 miếng)</a></h6>
+                <h6><a title="Đồ chơi robot biết nhảy có nhạc đèn YN509265 (Vàng)" href="#">Đồ chơi robot biết nhảy có nhạc đèn YN509265 (Vàng)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/57131-87386-large_mobile/ta-dan-huggies-thin-soft-l-9-14kg-46-mieng.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-402-2023-05-62619-trans.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -469,14 +448,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Tã dán Huggies Thin & Soft  (L, 9-14kg, 46 miếng)" href="#">Tã dán Huggies Thin & Soft  (L, 9-14kg, 46 miếng)</a></h6>
+                <h6><a title="Gối ôm bác gấu nâu chăm chỉ Animo" href="#">Gối ôm bác gấu nâu chăm chỉ Animo</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/10/51849-75494-large_mobile/ta-quan-merries-ultra-jumbo-l-9-14kg-56-mieng.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-12-2023-08-63615-1691392395-trans.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -484,7 +463,7 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Tã quần Merries Ultra Jumbo (L, 9-14kg, 56 miếng)" href="#">Tã quần Merries Ultra Jumbo (L, 9-14kg, 56 miếng)</a></h6>
+                <h6><a title="Đồ chơi siêu xe biến hình robot có nhạc đèn YN382690 (Cam)" href="#">Đồ chơi siêu xe biến hình robot có nhạc đèn YN382690 (Cam)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>

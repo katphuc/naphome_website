@@ -28,6 +28,22 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        .hero__search__phone__icon {
+            padding-top: 15px;
+            font-size: 18px;
+            color: #ffacac;
+            height: 50px;
+            width: 50px;
+            background: #f5f5f5;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            float: left;
+            margin-right: 20px;
+            /*padding-top: 14px;*/
+        }
+    </style>
 </head>
 
 <body>
@@ -49,7 +65,11 @@
     </div>
 </section>
 <!-- Hero Section End -->
-
+<ul class="breadcrumb">
+    <li><a href="">Trang chủ</a></li>
+    <%--    <li><a href="/dung-cu/">  Giỏ hàng</a></li>--%>
+    <li><span>  Cửa hàng</span></li>
+</ul>
 
 
 <!-- Product Section Begin -->

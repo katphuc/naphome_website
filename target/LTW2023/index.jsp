@@ -66,6 +66,21 @@
         .next-arrow {
             right: 10px;
         }
+
+        .hero__search__phone__icon {
+             padding-top: 15px;
+             font-size: 18px;
+             color: #ffacac;
+             height: 50px;
+             width: 50px;
+             background: #f5f5f5;
+             line-height: 50px;
+             text-align: center;
+             border-radius: 50%;
+             float: left;
+             margin-right: 20px;
+             /*padding-top: 14px;*/
+         }
     </style>
 </head>
 
@@ -82,8 +97,8 @@
                         <span>Danh mục</span>
                     </div>
                     <ul>
-                        <li><a href="#">Sữa bột cao cấp</a></li>
-                        <li><a href="#">Bỉm tã khuyến mãi</a></li>
+                        <li><a href="product_type1.jsp">Sữa bột cao cấp</a></li>
+                        <li><a href="product_type2.jsp">Bỉm tã khuyến mãi</a></li>
                         <li><a href="#">Sữa tươi các loại</a></li>
                         <li><a href="#">Ăn dặm, dinh dưỡng</a></li>
                         <li><a href="#">Vitamin & sức khỏe</a></li>

@@ -190,7 +190,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-416-2023-05-62581-trans.png">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/06/57874-89656-large_mobile/men-vi-sinh-synteract-baby-drops-oil-10ml.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -198,14 +198,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bộ tính năng ngắn vải modal Animo VĐ522022 (12-24M,Kem)" href="#">Bộ tính năng ngắn vải modal Animo VĐ522022 (12-24M,Kem)</a></h6>
+                                <h6><a title="Men vi sinh Synteract Baby Drops Oil 10mL" href="#">Men vi sinh Synteract Baby Drops Oil 10mL</a></h6>
                                 <h5>110.000<sup>đ</sup><span class="discount">-10%</span></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/53691-88670-large_mobile/bodysuit-ss-dai-vai-cellulose-animo-i1221011-0-12m-trang.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/11/58158-trans.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -213,14 +213,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bodysuit SS dài vải Cellulose, Animo I1221011 (0-12M,Hồng)" href="#">Bodysuit SS dài vải Cellulose, Animo I1221011 (0-12M,Hồng)</a></h6>
+                                <h6><a title="Life Space Probiotic Powder for Baby (0 tháng - 3 tuổi) 60g" href="#">Life Space Probiotic Powder for Baby (0 tháng - 3 tuổi) 60g</a></h6>
                                 <h5>149.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/500x500-822-2023-02-61549-trans.png">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/10/59630-94234-large_mobile/tinh-dau-toi-diep-chi-gold.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -228,14 +228,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bộ tính năng ngắn vải modal Animo VĐ522023 (0-24M,Xám)" href="#">Bộ tính năng ngắn vải modal Animo VĐ522023 (0-24M,Xám)</a></h6>
+                                <h6><a title="Tinh dầu tỏi Diệp Chi Gold + (30ml)" href="#">Tinh dầu tỏi Diệp Chi Gold + (30ml)</a></h6>
                                 <h5>149.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/64179-1696844910-trans.png">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/08/62961-1692775053-trans.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -243,14 +243,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bodysuit tính năng tam giác, vải lưới Animo I0322028 (0-12M,Beige)" href="#">Bodysuit tính năng tam giác, vải lưới Animo I0322028 (0-12M,Beige)</a></h6>
+                                <h6><a title="Gummies CHEWY VITES bổ sung Vitamin D3" href="#">Gummies CHEWY VITES bổ sung Vitamin D3</a></h6>
                                 <h5>149.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-644-2023-03-61951-trans.png">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/04/57083-87299-large_mobile/vien-uong-bo-sung-vitamin-me-bau-cho-con-bu-elevit-30-vien.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -258,14 +258,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bodysuit tính năng tam giác, vải lưới Animo I0322029 (0-12M,Xanh)" href="#">Bodysuit tính năng tam giác, vải lưới Animo I0322029 (0-12M,Xanh)</a></h6>
+                                <h6><a title="Viên uống bổ sung Vitamin mẹ bầu, cho con bú Elevit 30 viên" href="#">Viên uống bổ sung Vitamin mẹ bầu, cho con bú Elevit 30 viên</a></h6>
                                 <h5>149.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/53392-88713-large_mobile/bodysuit-tam-giac-det-jacquard-animo-i1121050-0-12m-hong.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/06/62841-trans.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -273,14 +273,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bodysuit tam giác dệt jacquard Animo I1121050 (0-12M,Hồng)" href="#">Bodysuit tam giác dệt jacquard Animo I1121050 (0-12M,Hồng)</a></h6>
+                                <h6><a title="Viên canxi cho bà bầu, sau sinh Chela calcium D3" href="#">Viên canxi cho bà bầu, sau sinh Chela calcium D3</a></h6>
                                 <h5>278.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/10/59188-93386-large_mobile/giay-tap-di-cao-cap-animo-a2204-mn015-16-17-18-19-kem.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-292-2023-06-62843-trans.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -288,14 +288,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Giày tập đi cao cấp Animo A2204_MN015 (16 - 17 - 18 - 19, Kem)" href="#">Giày tập đi cao cấp Animo A2204_MN015 (16 - 17 - 18 - 19, Kem)</a></h6>
+                                <h6><a title="Viên sắt cho bà bầu Chela - Ferr Forte" href="#">Viên sắt cho bà bầu Chela - Ferr Forte</a></h6>
                                 <h5>438.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/10/59187-93381-large_mobile/giay-tap-di-cao-cap-animo-a2204-mn015-16-17-18-19-xanh.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/06/62842-101770-large_mobile/vien-uong-gold-dha-ho-tro-suc-khoe-me-bau-sau-sinh.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -303,14 +303,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Giày tập đi cao cấp Animo A2204_MN015 (16 - 17 - 18 - 19, Xanh)" href="#">Giày tập đi cao cấp Animo A2204_MN015 (16 - 17 - 18 - 19, Xanh)</a></h6>
+                                <h6><a title="Viên uống Gold DHA hỗ trợ sức khỏe mẹ bầu & sau sinh" href="#">Viên uống Gold DHA hỗ trợ sức khỏe mẹ bầu & sau sinh</a></h6>
                                 <h5>238.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/11/60024-94926-large_mobile/bo-be-trai-dai-bst-be-dan-animo-hn622035-6-9m-trang.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/08/504x600-300-2021-10-52603-76617-large_mobile-vitamin-k2-d3-lineabon.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -318,14 +318,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bộ bé trai dài, BST Bé dần Animo HN622035 (6M-3Y,Trắng)" href="#">Bộ bé trai dài, BST Bé dần Animo HN622035 (6M-3Y,Trắng)</a></h6>
+                                <h6><a title="Combo 2 Vitamin D3 giúp tăng chiều cao cho bé Lineabon K2+D3" href="#">Combo 2 Vitamin D3 giúp tăng chiều cao cho bé Lineabon K2+D3</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/11/60017-94945-large_mobile/bo-be-trai-dai-bst-su-tu-gam-gu-animo-hn722039-6-9m-soc-nhieu-mau.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/03/50942-71316-large_mobile/biogaia-protectis-baby-drops-5ml.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -333,14 +333,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bộ bé trai dài, BST Sư tử gầm gừ Animo HN722039 (6M-3Y,Sọc nhiều màu)" href="#">Bộ bé trai dài, BST Sư tử gầm gừ Animo HN722039 (6M-3Y,Sọc nhiều màu)</a></h6>
+                                <h6><a title="Men Vi Sinh BioGaia Protectis (Lọ 5ml)" href="#">Men Vi Sinh BioGaia Protectis (Lọ 5ml)</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/54751-88233-large_mobile/giay-tap-di-cao-cap-animo-a2109-mn014-16-17-18-19-vang.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/08/54912-1693365746-trans.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -348,14 +348,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Giày tập đi cao cấp Animo A2109_MN014 (16-17-18-19,Vàng)" href="#">Giày tập đi cao cấp Animo A2109_MN014 (16-17-18-19,Vàng)</a></h6>
+                                <h6><a title="Thực phẩm bảo vệ sức khỏe Nature's Way Kids Smart Drops DHA (20ml)" href="#">Thực phẩm bảo vệ sức khỏe Nature's Way Kids Smart Drops DHA (20ml)</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/12/54747-78895-large_mobile/giay-tap-di-cao-cap-animo-a2109-mn015-16-17-18-19-hong.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/08/600x600-938-2023-03-62049-trans.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -363,14 +363,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Giày tập đi cao cấp Animo A2109_MN015 (16-17-18-19,Hồng)" href="#">Giày tập đi cao cấp Animo A2109_MN015 (16-17-18-19,Hồng)</a></h6>
+                                <h6><a title="Combo 2 Sắt Hữu Cơ cho bé Ferrolip baby (30ml)" href="#">Combo 2 Sắt Hữu Cơ cho bé Ferrolip baby (30ml)</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/54731-88222-large_mobile/giay-tap-di-cao-cap-animo-a2107-mn016-16-xanh.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/06/57811-89510-large_mobile/combo-2-kem-huu-co-chuan-chau-au-biolizin.jpg">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -378,14 +378,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Tặng 1 Giỏ đựng đồ ConCung Good cho đơn hàng Thời trang và phụ kiện từ 500000 đồng" href="#">Tặng 1 Giỏ đựng đồ ConCung Good cho đơn hàng Thời trang và phụ kiện từ 500000 đồng</a></h6>
+                                <h6><a title="Combo 2 Kẽm hữu cơ chuẩn châu Âu Biolizin" href="#">Combo 2 Kẽm hữu cơ chuẩn châu Âu Biolizin</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/54727-88240-large_mobile/giay-tap-di-cao-cap-animo-a2109-mn016-16-17-18-19-vang-dam.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/64073-1696228377-trans.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -393,14 +393,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Giày tập đi cao cấp Animo A2109_MN016 (16-17-18-19,Vàng đậm)" href="#">Giày tập đi cao cấp Animo A2109_MN016 (16-17-18-19,Vàng đậm)</a></h6>
+                                <h6><a title="Combo 2 Thực phẩm bảo vệ sức khoẻ Bestical (120ml)" href="#">Combo 2 Thực phẩm bảo vệ sức khoẻ Bestical (120ml)</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/54723-88243-large_mobile/giay-tap-di-cao-cap-animo-a2109-mn017-16-17-18-19-hong.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/05/62644-trans.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -408,14 +408,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Giày tập đi cao cấp Animo A2109_MN017 (16-17-18-19,Hồng)" href="#">Giày tập đi cao cấp Animo A2109_MN017 (16-17-18-19,Hồng)</a></h6>
+                                <h6><a title="Siro ăn ngon Babyplus Hapi Gold X2 (hộp 30 gói)" href="#">Siro ăn ngon Babyplus Hapi Gold X2 (hộp 30 gói)</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/54718-88246-large_mobile/giay-tap-di-cao-cap-animo-a2109-mn017-16-17-18-19-xanh.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/11/52769-77332-large_mobile/vitamin-d3-k2-drops-m-smarty.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -423,14 +423,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Giày tập đi cao cấp Animo A2109_MN017 (16-17-18-19,Xanh)" href="#">Giày tập đi cao cấp Animo A2109_MN017 (16-17-18-19,Xanh)</a></h6>
+                                <h6><a title="Vitamin D3, K2 giúp tăng chiều cao cho bé M'Smarty Drops" href="#">Vitamin D3, K2 giúp tăng chiều cao cho bé M'Smarty Drops</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/08/53879-92059-large_mobile/bo-be-trai-dai-bst-thu-cung-animo-b1121029-6m-3y-trang.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/05/62646-trans.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -438,14 +438,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bộ bé trai dài BST thú cưng Animo B1121029 (6M-3Y,Trắng)" href="#">Bộ bé trai dài BST thú cưng Animo B1121029 (6M-3Y,Trắng)</a></h6>
+                                <h6><a title="Lợi sữa Hi Mom Hapi (hộp 30 gói)" href="#">Lợi sữa Hi Mom Hapi (hộp 30 gói)</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/08/53779-92143-large_mobile/bo-be-trai-dai-bst-be-dan-animo-b1221014-6-9m-vang.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/06/62840-101750-large_mobile/ferrolip.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -453,14 +453,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bộ bé trai dài, bst bé dần Animo B1221014 (6M-3Y,Vàng)" href="#">Bộ bé trai dài, bst bé dần Animo B1221014 (6M-3Y,Vàng)</a></h6>
+                                <h6><a title="Sắt sinh học Ferrolip Bầu" href="#">Sắt sinh học Ferrolip Bầu</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/53777-88363-large_mobile/bo-be-trai-dai-bst-be-dan-animo-b1221017-6m-3y-xanh.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/11/60402-trans.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -468,14 +468,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bộ bé trai dài, bst bé dần Animo B1221017 (6M-3Y, Xanh)" href="#">Bộ bé trai dài, bst bé dần Animo B1221017 (6M-3Y, Xanh)</a></h6>
+                                <h6><a title="Tinh chất Rau - Tảo lục (hộp 30 gói)" href="#">Tinh chất Rau - Tảo lục (hộp 30 gói)</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/12/53471-78431-large_mobile/bodysuit-be-trai-tam-giac-animo-b1121006-0-3m-trang.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/08/54910-1693365835-trans.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -483,7 +483,7 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bodysuit bé trai tam giác Animo B1121006 (0-12M,Trắng)" href="#">Bodysuit bé trai tam giác Animo B1121006 (0-12M,Trắng)</a></h6>
+                                <h6><a title="Nature's Way Kids Smart Vita Gummies Multi Vitamin for Fussy Eaters" href="#">Nature's Way Kids Smart Vita Gummies Multi Vitamin for Fussy Eaters</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>

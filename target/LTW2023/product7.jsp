@@ -28,7 +28,6 @@
   <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
   <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
-
   <style>
     .hero__search__phone__icon {
       padding-top: 15px;
@@ -191,7 +190,7 @@
         <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/08/600x509-204-2021-03-50875-71245-large_mobile-bim-ta-dan-huggies-platinum-nature-made-size-newborn-60-mieng-duoi-5kg.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/11/50805-77286-large_mobile/binh-sua-mam-easy-start-anticolic-260ml-xanh-duong.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -199,14 +198,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Combo 2 bỉm tã dán Huggies Platinum Nature Made size Newborn 60 miếng (dưới 5kg)" href="#">Combo 2 bỉm tã dán Huggies Platinum Nature Made size Newborn 60 miếng (dưới 5kg)</a></h6>
+                <h6><a title="Bình sữa Mam Easy Start Anticolic (chống đầy hơi, 260ml, Xanh dương)" href="#">Bình sữa Mam Easy Start Anticolic (chống đầy hơi, 260ml, Xanh dương)</a></h6>
                 <h5>110.000<sup>đ</sup><span class="discount">-10%</span></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/06/4696000000003.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2020/05/25373-60935-large_mobile/binh-sua-co-rong-nhua-ppsu-pigeon-160ml.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -214,14 +213,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Combo 2 Bỉm tã quần Elprairie AW (XL, 10-17kg, 42 miếng)" href="#">Combo 2 Bỉm tã quần Elprairie AW (XL, 10-17kg, 42 miếng)</a></h6>
+                <h6><a title="Bình sữa Pigeon nhựa PPSU cổ rộng 160ml" href="#">Bình sữa Pigeon nhựa PPSU cổ rộng 160ml </a></h6>
                 <h5>149.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/06/4694000000002.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/08/49429-75068-large_mobile/binh-sua-edison-ppsu-240ml-xanh.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -229,14 +228,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Combo 2 Bỉm tã dán Elprairie AW (S, dưới 6.5kg, 34 miếng)" href="#">Combo 2 Bỉm tã dán Elprairie AW (S, dưới 6.5kg, 34 miếng)</a></h6>
+                <h6><a title="Bình sữa Edison PPSU 240ml  (xanh)" href="#">Bình sữa Edison PPSU 240ml  (xanh)</a></h6>
                 <h5>149.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/10/42703-75454-large_mobile/mieng-lot-so-sinh-bobby-newborn-1-duoi-5-kg-64-mieng.jpg">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/10/58637-94294-large_mobile/binh-sua-edison-ppsu-160ml-hong.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -244,14 +243,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Miếng lót Bobby size Newborn 1 64 miếng (dưới 5kg)" href="#">Miếng lót Bobby size Newborn 1 64 miếng (dưới 5kg)</a></h6>
+                <h6><a title="Bình sữa Edison PPSU 160ml (Hồng)" href="#">Bình sữa Edison PPSU 160ml (Hồng)</a></h6>
                 <h5>149.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/12/60450-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/11/49430-77274-large_mobile/binh-sua-edison-ppsu-240ml-hong.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -259,14 +258,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Miếng lót Huggies (Newborn 1, dưới 5kg, 108 miếng)" href="#">Miếng lót Huggies (Newborn 1, dưới 5kg, 108 miếng)</a></h6>
+                <h6><a title="Bình sữa Edison PPSU 240ml (hồng)" href="#">Bình sữa Edison PPSU 240ml (hồng)</a></h6>
                 <h5>149.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/54917-1696411000-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2015/04/35995-39309-large_mobile/binh-sua-pigeon-nhua-ppsu-co-hep-240ml-vang.jpg">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -274,14 +273,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Tã quần Molfix (L, 9 - 13kg, 68 miếng) (giao bao bì ngẫu nhiên)" href="#">Tã quần Molfix (L, 9 - 13kg, 68 miếng) (giao bao bì ngẫu nhiên)</a></h6>
+                <h6><a title="Bình sữa Pigeon nhựa PPSU cổ hẹp 240ml" href="#">Bình sữa Pigeon nhựa PPSU cổ hẹp 240ml</a></h6>
                 <h5>278.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/01/54921-79372-large_mobile/bim-ta-dan-molfix-thien-nhien-xs-5kg-72-mieng.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2020/07/46082-63559-large_mobile/binh-sua-olababy-240ml-trang.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -289,14 +288,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã dán Molfix thiên nhiên (XS, < 5kg, 72 miếng + 8 miếng)" href="#">Bỉm tã dán Molfix thiên nhiên (XS, < 5kg, 72 miếng + 8 miếng)</a></h6>
+                <h6><a title="Bình sữa Olababy silicone cổ rộng 240ml (Trắng)" href="#">Bình sữa Olababy silicone cổ rộng 240ml (Trắng)</a></h6>
                 <h5>438.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/10/42704-75451-large_mobile/mieng-lot-so-sinh-bobby-fresh-newborn-1-duoi-5-kg-108-mieng.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2020/05/37730-61003-large_mobile/binh-sua-pigeon-nhua-pp-plus-co-rong-160ml.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -304,14 +303,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Miếng lót Bobby size Newborn 1 108 miếng (dưới 5kg)" href="#">Miếng lót Bobby size Newborn 1 108 miếng (dưới 5kg)</a></h6>
+                <h6><a title="Bình sữa Pigeon nhựa PP Plus BPA Free cổ rộng 160ml" href="#">Bình sữa Pigeon nhựa PP Plus BPA Free cổ rộng 160ml</a></h6>
                 <h5>238.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/03/27666-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/08/52306-74758-large_mobile/binh-sua-pigeon-nhua-ppsu-plus-ngoi-sao-160ml.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -319,14 +318,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã dán Bobby siêu thấm size M 76 miếng (6-10kg) (giao bao bì ngẫu nhiên)" href="#">Bỉm tã dán Bobby siêu thấm size M 76 miếng (6-10kg) (giao bao bì ngẫu nhiên)</a></h6>
+                <h6><a title="Bình sữa Pigeon nhựa PPSU Plus ngôi sao(160ml)" href="#">Bình sữa Pigeon nhựa PPSU Plus ngôi sao(160ml)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/10/48752-75515-large_mobile/bim-ta-quan-moony-be-trai-size-xxl-26-mieng-13-28kg.jpg">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2020/02/41873-56681-large_mobile/may-ham-va-tiet-trung-binh-sua-da-nang-concung-good.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -334,14 +333,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã quần Moony bé trai size XXL 26 miếng (13-28kg)" href="#">Bỉm tã quần Moony bé trai size XXL 26 miếng (13-28kg)</a></h6>
+                <h6><a title="Máy hâm và tiệt trùng bình sữa đa năng ConCung Good" href="#">Máy hâm và tiệt trùng bình sữa đa năng ConCung Good</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/04/48750-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/08/600x600-389-2022-02-55232-80475-large_mobile-tui-tru-sua-cam-ung-nhiet-concung-good-30-tui.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -349,14 +348,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã quần Moony bé trai size XL 38 miếng (12-22kg) (giao bao bì ngẫu nhiên)" href="#">Bỉm tã quần Moony bé trai size XL 38 miếng (12-22kg) (giao bao bì ngẫu nhiên)</a></h6>
+                <h6><a title="Combo 2 Túi trữ sữa ConCung Good 200ml (30 túi/hộp)" href="#">Combo 2 Túi trữ sữa ConCung Good 200ml (30 túi/hộp)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/04/50926-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2020/05/39339-60949-large_mobile/binh-sua-silicone-gluck-premium-150ml-xanh.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -364,14 +363,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã dán Moony size S, 84 miếng (4-8kg) (giao bao bì ngẫu nhiên)" href="#">Bỉm tã dán Moony size S, 84 miếng (4-8kg) (giao bao bì ngẫu nhiên)</a></h6>
+                <h6><a title="Bình sữa Gluck Baby Premium silicone có tay cầm cổ rộng 150ml (Xanh)" href="#">Bình sữa Gluck Baby Premium silicone có tay cầm cổ rộng 150ml (Xanh)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-221-2023-07-42698-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2015/04/35996-39318-large_mobile/may-ham-sua-da-nang-gluck-gn06.jpg">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -379,14 +378,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã quần Bobby size XL 62 miếng (12-17kg) (giao bao bì ngẫu nhiên)" href="#">Bỉm tã quần Bobby size XL 62 miếng (12-17kg) (giao bao bì ngẫu nhiên)</a></h6>
+                <h6><a title="Máy hâm sữa đa năng Gluck GN06" href="#">Máy hâm sữa đa năng Gluck GN06</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-222-2023-07-42697-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2020/05/39337-60938-large_mobile/binh-sua-silicone-gluck-premium-240ml-xanh.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -394,14 +393,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã quần Bobby size XXL 56 miếng (trên 16kg) (sản phẩm được giao với bao bì ngẫu nhiên)" href="#">Bỉm tã quần Bobby size XXL 56 miếng (trên 16kg) (sản phẩm được giao với bao bì ngẫu nhiên)</a></h6>
+                <h6><a title="Bình sữa Gluck Baby Premium silicone có tay cầm cổ rộng 240ml (Xanh)" href="#">Bình sữa Gluck Baby Premium silicone có tay cầm cổ rộng 240ml (Xanh)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/08/380x560-710-2021-10-19187-75493-large_mobile-bim-ta-quan-merries-m-6-11kg-58-mieng.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2019/10/43517-53478-large_mobile/may-ham-sua-2-binh-gluck-gn05-xanh-da-troi.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -409,14 +408,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã quần Merries size M 58 miếng (6-11kg)" href="#">Bỉm tã quần Merries size M 58 miếng (6-11kg)</a></h6>
+                <h6><a title="Máy hâm sữa 2 bình Gluck GN05 Xanh da trời" href="#">Máy hâm sữa 2 bình Gluck GN05 Xanh da trời</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/03/62031-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/11/39342-77171-large_mobile/binh-silicone-kim-cuong-mmd240-mau-xanh.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -424,14 +423,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Tã dán sơ sinh Huggies Dry (S, 4-8kg, 80 miếng) + 2 miếng" href="#">Tã dán sơ sinh Huggies Dry (S, 4-8kg, 80 miếng) + 2 miếng</a></h6>
+                <h6><a title="Bình sữa Gluck Baby Natural silicone cổ rộng 240ml (MMD240, Xanh)" href="#">Bình sữa Gluck Baby Natural silicone cổ rộng 240ml (MMD240, Xanh)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-257-2023-06-62987-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/08/35997-92321-large_mobile/may-tiet-trung-binh-sua-kenjo-kj06n.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -439,14 +438,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Tã dán Huggies Skincare cực đại (M, 6-11kg, 76 miếng)" href="#">Tã dán Huggies Skincare cực đại (M, 6-11kg, 76 miếng)</a></h6>
+                <h6><a title="Máy tiệt trùng bình sữa Kenjo KJ06N" href="#">Máy tiệt trùng bình sữa Kenjo KJ06N</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/57126-87376-large_mobile/ta-quan-huggies-thin-soft-xl-12-17kg-62-mieng.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2020/04/39343-59765-large_mobile/binh-silicone-kim-cuong-mmd240-mau-hong.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -454,14 +453,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Tã quần Huggies Thin & Soft  (XL, 12-17kg, 62 miếng)" href="#">Tã quần Huggies Thin & Soft  (XL, 12-17kg, 62 miếng)</a></h6>
+                <h6><a title="Bình sữa Gluck Baby Natural silicone cổ rộng 240ml (MMD240, Hồng)" href="#">Bình sữa Gluck Baby Natural silicone cổ rộng 240ml (MMD240, Hồng)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/57131-87386-large_mobile/ta-dan-huggies-thin-soft-l-9-14kg-46-mieng.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2015/01/34881-38237-large_mobile/may-ham-sua-va-thuc-an-da-nang-kenjo-kj-01n.jpg">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -469,14 +468,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Tã dán Huggies Thin & Soft  (L, 9-14kg, 46 miếng)" href="#">Tã dán Huggies Thin & Soft  (L, 9-14kg, 46 miếng)</a></h6>
+                <h6><a title="Máy hâm sữa và thức ăn đa năng Kenjo KJ-01N" href="#">Máy hâm sữa và thức ăn đa năng Kenjo KJ-01N</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/10/51849-75494-large_mobile/ta-quan-merries-ultra-jumbo-l-9-14kg-56-mieng.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/04/51054-71787-large_mobile/binh-sua-thuy-tinh-boc-silicone-gluck-baby-gs240-xanh.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -484,7 +483,7 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Tã quần Merries Ultra Jumbo (L, 9-14kg, 56 miếng)" href="#">Tã quần Merries Ultra Jumbo (L, 9-14kg, 56 miếng)</a></h6>
+                <h6><a title="Bình sữa thủy tinh bọc silicone Gluck Baby GS240 (xanh)" href="#">Bình sữa thủy tinh bọc silicone Gluck Baby GS240 (xanh)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>

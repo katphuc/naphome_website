@@ -190,7 +190,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-416-2023-05-62581-trans.png">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2020/03/44809-58564-large_mobile/banh-vien-petit-boro-20g-x-6-goi.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -198,14 +198,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bộ tính năng ngắn vải modal Animo VĐ522022 (12-24M,Kem)" href="#">Bộ tính năng ngắn vải modal Animo VĐ522022 (12-24M,Kem)</a></h6>
+                                <h6><a title="Bánh viên PETIT BORO 20g x 6 gói" href="#">Bánh viên PETIT BORO 20g x 6 gói</a></h6>
                                 <h5>110.000<sup>đ</sup><span class="discount">-10%</span></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/53691-88670-large_mobile/bodysuit-ss-dai-vai-cellulose-animo-i1221011-0-12m-trang.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2020/03/44812-58560-large_mobile/banh-vien-boro-90g.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -213,14 +213,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bodysuit SS dài vải Cellulose, Animo I1221011 (0-12M,Hồng)" href="#">Bodysuit SS dài vải Cellulose, Animo I1221011 (0-12M,Hồng)</a></h6>
+                                <h6><a title="Bánh viên BORO 90g" href="#">Bánh viên BORO 90g</a></h6>
                                 <h5>149.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/500x500-822-2023-02-61549-trans.png">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/64094-1696229191-trans.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -228,14 +228,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bộ tính năng ngắn vải modal Animo VĐ522023 (0-24M,Xám)" href="#">Bộ tính năng ngắn vải modal Animo VĐ522023 (0-24M,Xám)</a></h6>
+                                <h6><a title="Combo 2 Nước ép thạch dưa hấu Fruit Me Up 90g" href="#">Combo 2 Nước ép thạch dưa hấu Fruit Me Up 90g</a></h6>
                                 <h5>149.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/64179-1696844910-trans.png">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/11/60178-95057-large_mobile/combo-2-fruit-me-up-nuoc-ep-thach-dao-tui-90g.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -243,14 +243,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bodysuit tính năng tam giác, vải lưới Animo I0322028 (0-12M,Beige)" href="#">Bodysuit tính năng tam giác, vải lưới Animo I0322028 (0-12M,Beige)</a></h6>
+                                <h6><a title="Combo 2 Fruit Me Up Nước ép thạch đào túi 90g" href="#">Combo 2 Fruit Me Up Nước ép thạch đào túi 90g</a></h6>
                                 <h5>149.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-644-2023-03-61951-trans.png">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/08/510x600-506-2022-04-56901-86883-large_mobile-trai-cay-xay-nhuyen-nguyen-chat-fruit-me-up-tao-chuoi.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -258,14 +258,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bodysuit tính năng tam giác, vải lưới Animo I0322029 (0-12M,Xanh)" href="#">Bodysuit tính năng tam giác, vải lưới Animo I0322029 (0-12M,Xanh)</a></h6>
+                                <h6><a title="Combo 2 Trái Cây Xay Nhuyễn Nguyên Chất Fruit Me Up Táo Chuối" href="#">Combo 2 Trái Cây Xay Nhuyễn Nguyên Chất Fruit Me Up Táo Chuối</a></h6>
                                 <h5>149.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/53392-88713-large_mobile/bodysuit-tam-giac-det-jacquard-animo-i1121050-0-12m-hong.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/64095-1696229258-trans.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -273,14 +273,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bodysuit tam giác dệt jacquard Animo I1121050 (0-12M,Hồng)" href="#">Bodysuit tam giác dệt jacquard Animo I1121050 (0-12M,Hồng)</a></h6>
+                                <h6><a title="Combo 2 FRUIT ME UP NƯỚC ÉP THẠCH TÁO TÚI 90G/ FRUIT ME UP APPLE JELLY JUICE 90G" href="#">Combo 2 FRUIT ME UP NƯỚC ÉP THẠCH TÁO TÚI 90G/ FRUIT ME UP APPLE JELLY JUICE 90G</a></h6>
                                 <h5>278.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/10/59188-93386-large_mobile/giay-tap-di-cao-cap-animo-a2204-mn015-16-17-18-19-kem.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/11/60175-95052-large_mobile/combo-2-trai-cay-xay-nhuyen-nguyen-chat-fruit-me-up-tao.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -288,14 +288,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Giày tập đi cao cấp Animo A2204_MN015 (16 - 17 - 18 - 19, Kem)" href="#">Giày tập đi cao cấp Animo A2204_MN015 (16 - 17 - 18 - 19, Kem)</a></h6>
+                                <h6><a title="Combo 2 Trái Cây Xay Nhuyễn Nguyên Chất Fruit Me Up Táo" href="#">Combo 2 Trái Cây Xay Nhuyễn Nguyên Chất Fruit Me Up Táo</a></h6>
                                 <h5>438.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/10/59187-93381-large_mobile/giay-tap-di-cao-cap-animo-a2204-mn015-16-17-18-19-xanh.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/09/58829-92561-large_mobile/combo-3-xuc-xich-tiet-trung-goldkids-ga-rau-cu.jpg">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -303,14 +303,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Giày tập đi cao cấp Animo A2204_MN015 (16 - 17 - 18 - 19, Xanh)" href="#">Giày tập đi cao cấp Animo A2204_MN015 (16 - 17 - 18 - 19, Xanh)</a></h6>
+                                <h6><a title="Combo 3 Xúc Xích Tiệt Trùng Goldkids Gà & Rau Củ" href="#">Combo 3 Xúc Xích Tiệt Trùng Goldkids Gà & Rau Củ</a></h6>
                                 <h5>238.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/11/60024-94926-large_mobile/bo-be-trai-dai-bst-be-dan-animo-hn622035-6-9m-trang.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/64092-1696229121-trans.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -318,14 +318,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bộ bé trai dài, BST Bé dần Animo HN622035 (6M-3Y,Trắng)" href="#">Bộ bé trai dài, BST Bé dần Animo HN622035 (6M-3Y,Trắng)</a></h6>
+                                <h6><a title="Combo 2 Dầu Ô-liu dinh dưỡng cho trẻ em nhãn hiệu Kiddy 250 ml" href="#">Combo 2 Dầu Ô-liu dinh dưỡng cho trẻ em nhãn hiệu Kiddy 250 ml</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/11/60017-94945-large_mobile/bo-be-trai-dai-bst-su-tu-gam-gu-animo-hn722039-6-9m-soc-nhieu-mau.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/09/58831-92563-large_mobile/combo-3-xuc-xich-tiet-trung-goldkids-ca-pho-mai.jpg">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -333,14 +333,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bộ bé trai dài, BST Sư tử gầm gừ Animo HN722039 (6M-3Y,Sọc nhiều màu)" href="#">Bộ bé trai dài, BST Sư tử gầm gừ Animo HN722039 (6M-3Y,Sọc nhiều màu)</a></h6>
+                                <h6><a title="Combo 3 Xúc Xích Tiệt Trùng Goldkids Cá & Phô Mai" href="#">Combo 3 Xúc Xích Tiệt Trùng Goldkids Cá & Phô Mai</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/54751-88233-large_mobile/giay-tap-di-cao-cap-animo-a2109-mn014-16-17-18-19-vang.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/55521-1696475599-trans.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -348,14 +348,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Giày tập đi cao cấp Animo A2109_MN014 (16-17-18-19,Vàng)" href="#">Giày tập đi cao cấp Animo A2109_MN014 (16-17-18-19,Vàng)</a></h6>
+                                <h6><a title="Combo 2 Cháo tươi Cây Thị Cá hồi rong biển" href="#">Combo 2 Cháo tươi Cây Thị Cá hồi rong biển</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/12/54747-78895-large_mobile/giay-tap-di-cao-cap-animo-a2109-mn015-16-17-18-19-hong.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/55517-1696476028-trans.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -363,14 +363,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Giày tập đi cao cấp Animo A2109_MN015 (16-17-18-19,Hồng)" href="#">Giày tập đi cao cấp Animo A2109_MN015 (16-17-18-19,Hồng)</a></h6>
+                                <h6><a title="Combo 2 Cháo tươi Cây Thị Thịt bò cà rốt" href="#">Combo 2 Cháo tươi Cây Thị Thịt bò cà rốt</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/54731-88222-large_mobile/giay-tap-di-cao-cap-animo-a2107-mn016-16-xanh.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/57514-88470-large_mobile/bot-nem-dashi-tao-be-kombu.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -378,14 +378,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Tặng 1 Giỏ đựng đồ ConCung Good cho đơn hàng Thời trang và phụ kiện từ 500000 đồng" href="#">Tặng 1 Giỏ đựng đồ ConCung Good cho đơn hàng Thời trang và phụ kiện từ 500000 đồng</a></h6>
+                                <h6><a title="Bột nêm Dashi tảo bẹ Kombu" href="#">Bột nêm Dashi tảo bẹ Kombu</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/54727-88240-large_mobile/giay-tap-di-cao-cap-animo-a2109-mn016-16-17-18-19-vang-dam.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/04/56952-86849-large_mobile/thuyen-xua-an-dam-cho-con-gia-vi-rac-com-vi-rong-bien-19gr.jpg">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -393,14 +393,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Giày tập đi cao cấp Animo A2109_MN016 (16-17-18-19,Vàng đậm)" href="#">Giày tập đi cao cấp Animo A2109_MN016 (16-17-18-19,Vàng đậm)</a></h6>
+                                <h6><a title="Combo 2 sản phẩm Thuyền Xưa Ăn Dặm Cho Con  - Gia vị rắc cơm  - Vị Rong biển 19gr" href="#">Combo 2 sản phẩm Thuyền Xưa Ăn Dặm Cho Con  - Gia vị rắc cơm  - Vị Rong biển 19gr</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/54723-88243-large_mobile/giay-tap-di-cao-cap-animo-a2109-mn017-16-17-18-19-hong.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/08/56540-104215-large_mobile/thuyen-xua-an-dam-cho-con-gia-vi-rac-com-vi-ca-hoi-19gr.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -408,14 +408,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Giày tập đi cao cấp Animo A2109_MN017 (16-17-18-19,Hồng)" href="#">Giày tập đi cao cấp Animo A2109_MN017 (16-17-18-19,Hồng)</a></h6>
+                                <h6><a title="Combo 2 Thuyền Xưa Ăn Dặm Cho Con  - Gia vị rắc cơm  - Vị Cá Hồi 19gr" href="#">Combo 2 Thuyền Xưa Ăn Dặm Cho Con  - Gia vị rắc cơm  - Vị Cá Hồi 19gr</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/54718-88246-large_mobile/giay-tap-di-cao-cap-animo-a2109-mn017-16-17-18-19-xanh.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/08/63679-1692357415-trans.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -423,14 +423,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Giày tập đi cao cấp Animo A2109_MN017 (16-17-18-19,Xanh)" href="#">Giày tập đi cao cấp Animo A2109_MN017 (16-17-18-19,Xanh)</a></h6>
+                                <h6><a title="Combo 2 Thuyền Xưa Ăn Dặm Cho Con  - Gia vị rắc cơm  - Vị Cá Phô Mai 19gr" href="#">Combo 2 Thuyền Xưa Ăn Dặm Cho Con  - Gia vị rắc cơm  - Vị Cá Phô Mai 19gr</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/08/53879-92059-large_mobile/bo-be-trai-dai-bst-thu-cung-animo-b1121029-6m-3y-trang.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/10/59302-93500-large_mobile/thuyen-xua-an-dam-cho-con-gia-vi-rac-com-vi-bo-19gr-.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -438,14 +438,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bộ bé trai dài BST thú cưng Animo B1121029 (6M-3Y,Trắng)" href="#">Bộ bé trai dài BST thú cưng Animo B1121029 (6M-3Y,Trắng)</a></h6>
+                                <h6><a title="Combo 2 Thuyền Xưa Ăn Dặm Cho Con  - Gia vị rắc cơm  - Vị Bò 19gr" href="#">Combo 2 Thuyền Xưa Ăn Dặm Cho Con  - Gia vị rắc cơm  - Vị Bò 19gr</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/08/53779-92143-large_mobile/bo-be-trai-dai-bst-be-dan-animo-b1221014-6-9m-vang.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/57515-88471-large_mobile/gia-vi-rac-com-ca-hoi-nichifuri-khong-chat-phu-gia.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -453,14 +453,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bộ bé trai dài, bst bé dần Animo B1221014 (6M-3Y,Vàng)" href="#">Bộ bé trai dài, bst bé dần Animo B1221014 (6M-3Y,Vàng)</a></h6>
+                                <h6><a title="Gia vị rắc cơm cá hồi Nichifuri không chất phụ gia" href="#">Gia vị rắc cơm cá hồi Nichifuri không chất phụ gia</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/53777-88363-large_mobile/bo-be-trai-dai-bst-be-dan-animo-b1221017-6m-3y-xanh.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-162-2023-07-63088-1688717641-trans.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -468,14 +468,14 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bộ bé trai dài, bst bé dần Animo B1221017 (6M-3Y, Xanh)" href="#">Bộ bé trai dài, bst bé dần Animo B1221017 (6M-3Y, Xanh)</a></h6>
+                                <h6><a title="Combo 2 Cháo tươi Baby cá hồi cải bó xôi, SG Food, 10 tháng, 240g" href="#">Combo 2 Cháo tươi Baby cá hồi cải bó xôi, SG Food, 10 tháng, 240g</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/12/53471-78431-large_mobile/bodysuit-be-trai-tam-giac-animo-b1121006-0-3m-trang.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-164-2023-07-63086-1688717603-trans.png">
                                 <ul class="product__item__pic__hover">
                                     <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -483,7 +483,7 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                <h6><a title="Bodysuit bé trai tam giác Animo B1121006 (0-12M,Trắng)" href="#">Bodysuit bé trai tam giác Animo B1121006 (0-12M,Trắng)</a></h6>
+                                <h6><a title="Combo 2 Cháo tươi Baby thịt thăn bằm bí đỏ, SG Food, 10 tháng, 240g" href="#">Combo 2 Cháo tươi Baby thịt thăn bằm bí đỏ, SG Food, 10 tháng, 240g</a></h6>
                                 <h5>99.000<sup>đ</sup></h5>
                             </div>
                         </div>

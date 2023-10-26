@@ -28,23 +28,6 @@
   <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
   <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
-
-  <style>
-    .hero__search__phone__icon {
-      padding-top: 15px;
-      font-size: 18px;
-      color: #ffacac;
-      height: 50px;
-      width: 50px;
-      background: #f5f5f5;
-      line-height: 50px;
-      text-align: center;
-      border-radius: 50%;
-      float: left;
-      margin-right: 20px;
-      /*padding-top: 14px;*/
-    }
-  </style>
 </head>
 
 <body>
@@ -66,11 +49,7 @@
   </div>
 </section>
 <!-- Hero Section End -->
-<ul class="breadcrumb">
-  <li><a href="">Trang chủ</a></li>
-  <%--    <li><a href="/dung-cu/">  Giỏ hàng</a></li>--%>
-  <li><span>  Cửa hàng</span></li>
-</ul>
+
 
 
 <!-- Product Section Begin -->
@@ -191,7 +170,7 @@
         <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/08/600x509-204-2021-03-50875-71245-large_mobile-bim-ta-dan-huggies-platinum-nature-made-size-newborn-60-mieng-duoi-5kg.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/02/61413-trans.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -199,14 +178,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Combo 2 bỉm tã dán Huggies Platinum Nature Made size Newborn 60 miếng (dưới 5kg)" href="#">Combo 2 bỉm tã dán Huggies Platinum Nature Made size Newborn 60 miếng (dưới 5kg)</a></h6>
+                <h6><a title="Núm vú silicone siêu mềm Pigeon Plus WN3 (LL)" href="#">Núm vú silicone siêu mềm Pigeon Plus WN3 (LL)</a></h6>
                 <h5>110.000<sup>đ</sup><span class="discount">-10%</span></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/06/4696000000003.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/08/45789-74542-large_mobile/num-ty-wesser-co-rong-sieu-mem-size-l.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -214,14 +193,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Combo 2 Bỉm tã quần Elprairie AW (XL, 10-17kg, 42 miếng)" href="#">Combo 2 Bỉm tã quần Elprairie AW (XL, 10-17kg, 42 miếng)</a></h6>
+                <h6><a title="Núm ty Wesser cổ rộng siêu mềm (size L, 7M+, Y cut)" href="#">Núm ty Wesser cổ rộng siêu mềm (size L, 7M+, Y cut) </a></h6>
                 <h5>149.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/06/4694000000002.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2020/05/35679-60808-large_mobile/vi-2-num-ty-silicone-philips-avent-mo-phong-tu-nhien-scf654-23-6m.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -229,14 +208,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Combo 2 Bỉm tã dán Elprairie AW (S, dưới 6.5kg, 34 miếng)" href="#">Combo 2 Bỉm tã dán Elprairie AW (S, dưới 6.5kg, 34 miếng)</a></h6>
+                <h6><a title="Vỉ 2 núm ty silicone Philips Avent mô phỏng tự nhiên (SCF654/23, 6M+)" href="#">Vỉ 2 núm ty silicone Philips Avent mô phỏng tự nhiên (SCF654/23, 6M+)</a></h6>
                 <h5>149.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/10/42703-75454-large_mobile/mieng-lot-so-sinh-bobby-newborn-1-duoi-5-kg-64-mieng.jpg">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/08/600x529-1299-2022-10-59284-93495-large_mobile-set-2-num-ty-silicone-aga-ae-sieu-mem-size.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -244,14 +223,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Miếng lót Bobby size Newborn 1 64 miếng (dưới 5kg)" href="#">Miếng lót Bobby size Newborn 1 64 miếng (dưới 5kg)</a></h6>
+                <h6><a title="Set 2 núm ty silicone Aga-ae siêu mềm size + (bé 3-24 tháng)" href="#">Set 2 núm ty silicone Aga-ae siêu mềm size + (bé 3-24 tháng)</a></h6>
                 <h5>149.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/12/60450-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2019/09/43247-52461-large_mobile/vi-2-num-ty-co-thuong-wesser-size.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -259,14 +238,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Miếng lót Huggies (Newborn 1, dưới 5kg, 108 miếng)" href="#">Miếng lót Huggies (Newborn 1, dưới 5kg, 108 miếng)</a></h6>
+                <h6><a title="Vỉ 2 núm ty Wesser silicone cổ hẹp size +" href="#">Vỉ 2 núm ty Wesser silicone cổ hẹp size +</a></h6>
                 <h5>149.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/54917-1696411000-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2019/10/26281-52630-large_mobile/ty-thay-binh-sua-silicone-sieu-mem-pigeon-size-l-2-cai.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -274,14 +253,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Tã quần Molfix (L, 9 - 13kg, 68 miếng) (giao bao bì ngẫu nhiên)" href="#">Tã quần Molfix (L, 9 - 13kg, 68 miếng) (giao bao bì ngẫu nhiên)</a></h6>
+                <h6><a title="Núm ty thay bình sữa Pigeon cổ hẹp size L (9M+, lỗ tròn)" href="#">Núm ty thay bình sữa Pigeon cổ hẹp size L (9M+, lỗ tròn)</a></h6>
                 <h5>278.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/01/54921-79372-large_mobile/bim-ta-dan-molfix-thien-nhien-xs-5kg-72-mieng.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/02/61412-trans.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -289,14 +268,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã dán Molfix thiên nhiên (XS, < 5kg, 72 miếng + 8 miếng)" href="#">Bỉm tã dán Molfix thiên nhiên (XS, < 5kg, 72 miếng + 8 miếng)</a></h6>
+                <h6><a title="Núm ty Pigeon silicone siêu mềm plus WN3 phiên bản Nhật (LL)" href="#">Núm ty Pigeon silicone siêu mềm plus WN3 phiên bản Nhật (LL)</a></h6>
                 <h5>438.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/10/42704-75451-large_mobile/mieng-lot-so-sinh-bobby-fresh-newborn-1-duoi-5-kg-108-mieng.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/08/45790-74541-large_mobile/num-ty-wesser-co-rong-sieu-mem-size-m.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -304,14 +283,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Miếng lót Bobby size Newborn 1 108 miếng (dưới 5kg)" href="#">Miếng lót Bobby size Newborn 1 108 miếng (dưới 5kg)</a></h6>
+                <h6><a title="Núm ty Wesser cổ rộng siêu mềm (size M, 4M+, Y cut)" href="#">Núm ty Wesser cổ rộng siêu mềm (size M, 4M+, Y cut)</a></h6>
                 <h5>238.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/03/27666-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/05/51642-72613-large_mobile/num-ty-cho-be-tommee-tippee-closer-to-nature-fast-flow-tu-6-thang-vi-doi.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -319,14 +298,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã dán Bobby siêu thấm size M 76 miếng (6-10kg) (giao bao bì ngẫu nhiên)" href="#">Bỉm tã dán Bobby siêu thấm size M 76 miếng (6-10kg) (giao bao bì ngẫu nhiên)</a></h6>
+                <h6><a title="Núm ty cho bé Tommee Tippee Closer to Nature Fast Flow từ 6 tháng (vỉ đôi)" href="#">Núm ty cho bé Tommee Tippee Closer to Nature Fast Flow từ 6 tháng (vỉ đôi)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/10/48752-75515-large_mobile/bim-ta-quan-moony-be-trai-size-xxl-26-mieng-13-28kg.jpg">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/03/61316-trans.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -334,14 +313,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã quần Moony bé trai size XXL 26 miếng (13-28kg)" href="#">Bỉm tã quần Moony bé trai size XXL 26 miếng (13-28kg)</a></h6>
+                <h6><a title="Núm ty Moyuum step 4 (từ 8 tháng tuổi, 2 cái/hộp)" href="#">Núm ty Moyuum step 4 (từ 8 tháng tuổi, 2 cái/hộp)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/04/48750-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2020/05/20823-60733-large_mobile/ty-thay-binh-sua-co-hep-dr-brown-s-2-cai-so-2-3-6m.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -349,14 +328,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã quần Moony bé trai size XL 38 miếng (12-22kg) (giao bao bì ngẫu nhiên)" href="#">Bỉm tã quần Moony bé trai size XL 38 miếng (12-22kg) (giao bao bì ngẫu nhiên)</a></h6>
+                <h6><a title="Núm ty bình sữa cổ hẹp Dr Brown's 2 cái, số 2, 3-6M" href="#">Núm ty bình sữa cổ hẹp Dr Brown's 2 cái, số 2, 3-6M</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/04/50926-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2019/10/26280-52632-large_mobile/ty-thay-binh-sua-silicone-sieu-mem-pigeon-size-s-2-cai.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -364,14 +343,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã dán Moony size S, 84 miếng (4-8kg) (giao bao bì ngẫu nhiên)" href="#">Bỉm tã dán Moony size S, 84 miếng (4-8kg) (giao bao bì ngẫu nhiên)</a></h6>
+                <h6><a title="Núm ty thay bình sữa Pigeon cổ hẹp size S, 2 cái (0M+, lỗ tròn)" href="#">Núm ty thay bình sữa Pigeon cổ hẹp size S, 2 cái (0M+, lỗ tròn)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-221-2023-07-42698-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2020/05/20825-60739-large_mobile/ty-thay-binh-sua-co-hep-dr-brown-s-2-cai-so-4-9-12m.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -379,14 +358,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã quần Bobby size XL 62 miếng (12-17kg) (giao bao bì ngẫu nhiên)" href="#">Bỉm tã quần Bobby size XL 62 miếng (12-17kg) (giao bao bì ngẫu nhiên)</a></h6>
+                <h6><a title="Núm ty bình sữa cổ hẹp Dr Brown's 2 cái, số 4, 9-12M" href="#">Núm ty bình sữa cổ hẹp Dr Brown's 2 cái, số 4, 9-12M</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-222-2023-07-42697-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/10/54407-93971-large_mobile/num-vu-silicon-sieu-mem-plus-nhat-ban-l.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -394,14 +373,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã quần Bobby size XXL 56 miếng (trên 16kg) (sản phẩm được giao với bao bì ngẫu nhiên)" href="#">Bỉm tã quần Bobby size XXL 56 miếng (trên 16kg) (sản phẩm được giao với bao bì ngẫu nhiên)</a></h6>
+                <h6><a title="Núm Vú Silicon Siêu Mềm Plus Pigeon Nhật Bản (L)" href="#">Núm Vú Silicon Siêu Mềm Plus Pigeon Nhật Bản (L)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/08/380x560-710-2021-10-19187-75493-large_mobile-bim-ta-quan-merries-m-6-11kg-58-mieng.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2019/10/8614-52628-large_mobile/num-vu-pigeon-silicone-sieu-mem-2-cai-vi-m-bp.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -409,14 +388,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Bỉm tã quần Merries size M 58 miếng (6-11kg)" href="#">Bỉm tã quần Merries size M 58 miếng (6-11kg)</a></h6>
+                <h6><a title="Núm ty thay bình sữa  Pigeon cổ hẹp M (4M+, lỗ tròn)" href="#">Núm ty thay bình sữa  Pigeon cổ hẹp M (4M+, lỗ tròn)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/03/62031-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2020/05/2485-60742-large_mobile/hop-2-dau-ty-dr-brown-s-binh-co-thuong-co-y-cut.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -424,14 +403,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Tã dán sơ sinh Huggies Dry (S, 4-8kg, 80 miếng) + 2 miếng" href="#">Tã dán sơ sinh Huggies Dry (S, 4-8kg, 80 miếng) + 2 miếng</a></h6>
+                <h6><a title="Núm ty bình sữa cổ hẹp Dr Brown's 2 cái, Y cut" href="#">Núm ty bình sữa cổ hẹp Dr Brown's 2 cái, Y cut</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-257-2023-06-62987-trans.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/02/61410-trans.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -439,14 +418,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Tã dán Huggies Skincare cực đại (M, 6-11kg, 76 miếng)" href="#">Tã dán Huggies Skincare cực đại (M, 6-11kg, 76 miếng)</a></h6>
+                <h6><a title="Núm ty Pigeon silicone siêu mềm plus WN3 phiên bản Nhật (M)" href="#">Núm ty Pigeon silicone siêu mềm plus WN3 phiên bản Nhật (M)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/57126-87376-large_mobile/ta-quan-huggies-thin-soft-xl-12-17kg-62-mieng.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/03/61313-trans.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -454,14 +433,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Tã quần Huggies Thin & Soft  (XL, 12-17kg, 62 miếng)" href="#">Tã quần Huggies Thin & Soft  (XL, 12-17kg, 62 miếng)</a></h6>
+                <h6><a title="Núm ty Moyuum step 2 (từ 2 tháng tuổi, 2 cái/hộp)" href="#">Núm ty Moyuum step 2 (từ 2 tháng tuổi, 2 cái/hộp)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/57131-87386-large_mobile/ta-dan-huggies-thin-soft-l-9-14kg-46-mieng.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/04/50794-71534-large_mobile/num-ty-binh-sua-mam-4m.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -469,14 +448,14 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Tã dán Huggies Thin & Soft  (L, 9-14kg, 46 miếng)" href="#">Tã dán Huggies Thin & Soft  (L, 9-14kg, 46 miếng)</a></h6>
+                <h6><a title="Núm ty MAM silicone (4 tháng trở lên)" href="#">Núm ty MAM silicone (4 tháng trở lên)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="product__item">
-              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/10/51849-75494-large_mobile/ta-quan-merries-ultra-jumbo-l-9-14kg-56-mieng.png">
+              <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2020/07/46084-63578-large_mobile/vi-2-num-ty-olababy-lo-tron-6m.png">
                 <ul class="product__item__pic__hover">
                   <li><a href="#"><i class="fa fa-heart"></i></a></li>
                   <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
@@ -484,7 +463,7 @@
                 </ul>
               </div>
               <div class="product__item__text">
-                <h6><a title="Tã quần Merries Ultra Jumbo (L, 9-14kg, 56 miếng)" href="#">Tã quần Merries Ultra Jumbo (L, 9-14kg, 56 miếng)</a></h6>
+                <h6><a title="Vỉ 2 núm ty Olababy lỗ tròn (6M+)" href="#">Vỉ 2 núm ty Olababy lỗ tròn (6M+)</a></h6>
                 <h5>99.000<sup>đ</sup></h5>
               </div>
             </div>
