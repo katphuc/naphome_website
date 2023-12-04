@@ -1,4 +1,5 @@
 <%--
+
   Created by IntelliJ IDEA.
   User: HP
   Date: 22/10/2023
@@ -35,7 +36,7 @@
             </ul>
         </div>
         <div class="header__top__right__auth">
-            <a href="login_register.jsp"><i class="fa fa-user"></i> Đăng nhập</a>
+            <a href="register.jsp"><i class="fa fa-user"></i> Đăng nhập</a>
         </div>
     </div>
     <nav class="humberger__menu__nav mobile-menu">
@@ -101,8 +102,18 @@
                             </ul>
                         </div>
                         <div class="header__top__right__auth">
-                            <a href="login_register.jsp"><i class="fa fa-user"></i> Đăng nhập</a>
+                            <%-- Kiểm tra xem người dùng đã đăng nhập hay chưa --%>
+                            <% if (session.getAttribute("name") == null) { %>
+                            <a href="login.jsp"><i class="fa fa-user"></i> Đăng nhập</a>
+                            <% } else { %>
+                            <a href="UserInfo"><i class="fa fa-user"></i> <%= session.getAttribute("name") %></a>
+                            <div class="header__top__right__auth">
+                                <a href="LogoutServlet"><i></i> Đăng xuất</a>
+                            </div>
+                            <% } %>
                         </div>
+
+
                     </div>
                 </div>
             </div>
@@ -119,7 +130,7 @@
                 <nav class="header__menu">
                     <ul>
                         <li class="active"><a href="index.jsp">Trang chủ</a></li>
-                        <li><a href="product1.jsp">Cửa hàng</a></li>
+                        <li><a href="Product">Cửa hàng</a></li>
                         <!-- <li><a href="#">Pages</a>
                             <ul class="header__menu__dropdown">
                                 <li><a href="./shop-details.html">Shop Details</a></li>
