@@ -43,7 +43,11 @@ public class Login extends HttpServlet {
                     session.setAttribute("user", user);
                     String name = UserDao.getUserName(username);
                     session.setAttribute("name", name);
-                    response.sendRedirect("index.jsp"); // Chuyển hướng đến trang welcome.jsp
+                    if(user.getRole()==2) {
+                        response.sendRedirect("index.jsp"); // Chuyển hướng đến trang welcome.jsp
+                    } if (user.getRole()==1){
+                        response.sendRedirect("AdminWeb/index.jsp"); // Chuyển hướng đến trang welcome.jsp
+                    }
                 }
             } else {
                 // Đăng nhập thất bại
