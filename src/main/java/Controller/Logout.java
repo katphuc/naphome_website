@@ -17,6 +17,6 @@ public class Logout extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession();
         session.invalidate(); // Xóa phiên đăng nhập
-        response.sendRedirect("index.jsp"); // Chuyển hướng đến trang login.jsp
+        response.sendRedirect("Home"); // Chuyển hướng đến trang login.jsp
     }
 }

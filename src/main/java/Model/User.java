@@ -67,6 +67,31 @@ public class User {
     public int getRole() {
         return role;
     }
+    public String getNameRole() {
+        if(role==0){
+            return "Admin";
+        }
+        if(role==1) {
+            return "Mod";
+        }
+        if(role==2) {
+            return "User";
+        }
+        return null;
+
+    }
+
+    public String getNameActivate() {
+        if(activate==0){
+            return "Chưa kích hoạt";
+        }
+        if(activate==1) {
+            return "Đã kích hoạt";
+        }
+
+        return null;
+
+    }
 
     public void setRole(int role) {
         this.role = role;

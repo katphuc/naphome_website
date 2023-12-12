@@ -1,7 +1,6 @@
 package Controller;
 
 import Dao.ProductDao;
-import Model.Product;
 import Model.TypeProduct;
 
 import javax.servlet.*;

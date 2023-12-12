@@ -13,8 +13,23 @@ public class Product {
     private int amount_shop;
     private int amount_storage;
     private int id_vendor;
+    private String date;
 
     public Product() {
+    }
+
+    public Product(int id, int id_type, String name, int discount, double price, String describe, int status, int amount_shop, int amount_storage, int id_vendor, String date) {
+        this.id = id;
+        this.id_type = id_type;
+        this.name = name;
+        this.discount = discount;
+        this.price = price;
+        this.describe = describe;
+        this.status = status;
+        this.amount_shop = amount_shop;
+        this.amount_storage = amount_storage;
+        this.id_vendor = id_vendor;
+        this.date = date;
     }
 
     public Product(int id, int id_type, String name, int discount, double price, String describe, int status, int amount_shop, int amount_storage, int id_vendor) {
@@ -28,6 +43,14 @@ public class Product {
         this.amount_shop = amount_shop;
         this.amount_storage = amount_storage;
         this.id_vendor = id_vendor;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public int getId() {
@@ -67,7 +90,7 @@ public class Product {
     }
 
     public void setPrice(double price) {
-        this.price = price;
+        this.price = price-(price*discount/100);
     }
 
     public String getDescribe() {

@@ -1,4 +1,4 @@
-<%--
+<%@ page import="Model.Cart" %><%--
 
   Created by IntelliJ IDEA.
   User: HP
@@ -6,7 +6,9 @@
   Time: 4:19 pm
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!-- Page Preloder -->
 <%--<div id="preloder">--%>
 <%--    <div class="loader"></div>--%>
@@ -123,13 +125,13 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="header__logo">
-                    <a href="index.jsp"><img src="img/logo_lpn.png" alt=""></a>
+                    <a href="Home"><img src="img/logo_lpn.png" alt=""></a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <nav class="header__menu">
                     <ul>
-                        <li class="active"><a href="index.jsp">Trang chủ</a></li>
+                        <li class="active"><a href="Home">Trang chủ</a></li>
                         <li><a href="Product">Cửa hàng</a></li>
                         <!-- <li><a href="#">Pages</a>
                             <ul class="header__menu__dropdown">
@@ -148,10 +150,19 @@
             <div class="col-lg-3">
                 <div class="header__cart">
                     <ul>
-                        <li><a href="product_favourite.jsp"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                        <li><a href="cart.jsp"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+
+                        <%--                        <li><a href="product_favourite.jsp"><i class="fa fa-heart"></i> <span>1</span></a></li>--%>
+                        <%
+
+                            if (request.getSession().getAttribute("cart") == null) {
+                                request.getSession().setAttribute("cart", new Cart());
+                            }
+
+                        %>
+                        <li><a href="CartShow"><i class="fa fa-shopping-bag"></i> <span>${sessionScope.cart.getTotalQuantity()}</span></a></li>
+
                     </ul>
-                    <div class="header__cart__price">Tổng: <span>450.000<sup>đ</sup></span></div>
+                    <%--                    <div class="header__cart__price">Tổng: <span>450.000<sup>đ</sup></span></div>--%>
                 </div>
             </div>
         </div>

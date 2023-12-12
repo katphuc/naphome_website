@@ -10,8 +10,48 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserDao {
+
+    public static List<User> getAllUser() {
+        Connection connection = null;
+        List<User> users = new ArrayList<>();
+        try {
+            connection = DatabaseConnector.getConnection();
+
+            // Sử dụng PreparedStatement để tránh SQL injection
+            String sql = "SELECT * from user";
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+
+
+                ResultSet rs = ps.executeQuery();
+
+                while (rs.next()) {
+                    User user = new User();
+                    user.setId(rs.getInt("id"));
+                    user.setUsername(rs.getString("username"));
+                    user.setPassword(rs.getString("password"));
+                    user.setEmail(rs.getString("email"));
+                    user.setName(rs.getString("name"));
+                    user.setRole(rs.getInt("role"));
+                    user.setActivate(rs.getInt("activate"));
+                    users.add(user);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            DatabaseConnector.closeConnection(connection);
+        }
+
+
+        return users;
+    }
+
+
 
     public static boolean registerUser(String name, String username, String password, String email) {
         Connection connection = null;
@@ -26,6 +66,61 @@ public class UserDao {
             ps.setString(2, password_hash);
             ps.setString(3, email);
             ps.setString(4, name);
+
+            int i = ps.executeUpdate();
+
+            return i > 0;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+
+        } finally {
+            DatabaseConnector.closeConnection(connection);
+        }
+    }
+
+    public static boolean addDB(String name, String username, String password, String email) {
+        Connection connection = null;
+
+        try {
+
+            connection = DatabaseConnector.getConnection();
+
+            PreparedStatement ps = connection.prepareStatement(
+                    "INSERT INTO user (username, password, email, `name`, `role`, activate ) VALUES (?, ?, ?,?,2,0)");
+            ps.setString(1, username);
+            ps.setString(2, password);
+            ps.setString(3, email);
+            ps.setString(4, name);
+
+            int i = ps.executeUpdate();
+
+            return i > 0;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+
+        } finally {
+            DatabaseConnector.closeConnection(connection);
+        }
+    }
+
+    public static boolean addDB2(String name, String username, String password, String email, int role) {
+        Connection connection = null;
+
+        try {
+
+            connection = DatabaseConnector.getConnection();
+
+            PreparedStatement ps = connection.prepareStatement(
+                    "INSERT INTO user (username, password, email, `name`, `role`, activate ) VALUES (?, ?, ?,?,?,1)");
+            ps.setString(1, username);
+            ps.setString(2, password);
+            ps.setString(3, email);
+            ps.setString(4, name);
+            ps.setInt(5, role);
 
             int i = ps.executeUpdate();
 
@@ -65,6 +160,31 @@ public class UserDao {
         } finally {
             DatabaseConnector.closeConnection(connection);
         }
+    }
+
+    public static int getNewIDUser() {
+        Connection connection = null;
+
+        try {
+            connection = DatabaseConnector.getConnection();
+
+            PreparedStatement ps = connection.prepareStatement("SELECT id FROM user order by id desc limit 1");
+
+
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                return rs.getInt("id");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        } finally {
+            DatabaseConnector.closeConnection(connection);
+        }
+
+        return 0;
     }
 
     public static String getUserName(String username) {
@@ -381,6 +501,67 @@ public class UserDao {
 
         // Nếu có lỗi hoặc không có dòng nào được cập nhật
         return false;
+    }
+
+    public static int getNewiduserAdmin() {
+        Connection connection = null;
+
+        try {
+            connection = DatabaseConnector.getConnection();
+
+            PreparedStatement ps = connection.prepareStatement("SELECT max(id) +1 as new_id FROM user");
+
+
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                return rs.getInt("new_id");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        } finally {
+            DatabaseConnector.closeConnection(connection);
+        }
+
+        return 0;
+    }
+
+    public static boolean RemoveUser(int iduser) {
+        Connection connection = null;
+
+        try {
+            connection = DatabaseConnector.getConnection();
+
+            // Sử dụng PreparedStatement để tránh SQL injection
+            String sql = "delete from user where id =?";
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+                ps.setInt(1,iduser);
+
+
+                int rowsAffected = ps.executeUpdate();
+
+                // Kiểm tra xem có dòng nào được cập nhật không
+                if (rowsAffected > 0) {
+                    // Cập nhật thành công
+                    return true;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DatabaseConnector.closeConnection(connection);
+        }
+
+
+
+        // Nếu có lỗi hoặc không có dòng nào được cập nhật
+        return false;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getNewiduserAdmin());
     }
 
 

@@ -1,7 +1,6 @@
 package Controller;
 
 import Dao.UserDao;
-import Model.User;
 import Service.EmailSender;
 import Service.OTPGenerator;
 

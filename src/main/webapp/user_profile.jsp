@@ -1,4 +1,5 @@
-<%--
+<%@ page import="Model.User" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %><%--
   Created by IntelliJ IDEA.
   User: HP
   Date: 22/10/2023
@@ -374,9 +375,9 @@
 <!-- Product Section Begin -->
 <div class="tabtab">
     <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Thông tin cá nhân</button>
-        <button class="tablinks" onclick="openCity(event, 'Paris')">Tình trạng đơn hàng</button>
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Đổi mật khẩu</button>
+        <a> <button class="tablinks" id="defaultOpen">Thông tin cá nhân</button></a>
+        <a href="OrderStatus"> <button class="tablinks">Tình trạng đơn hàng</button></a>
+        <a href="changePassword.jsp"> <button  class="tablinks" >Đổi mật khẩu</button></a>
     </div>
 
     <div id="London" class="tabcontent">
@@ -390,51 +391,54 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <form>
+                        <form action="UpdateProfile" method="post">
+                            <%
+                                User user = (User) request.getAttribute("user");
+                            %>
                             <div class="form-group row">
                                 <label  for="username" class="col-4 col-form-label">Tên</label>
                                 <div class="col-8">
-                                    <input id="username" name="username" placeholder=""
+                                    <input id="username" name="name" placeholder="" value="<%= user.getName() %>"
                                            class="form-control here" required="required" type="text">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="name" class="col-4 col-form-label">Số điện thoại</label>
                                 <div class="col-8">
-                                    <input id="name" name="name" placeholder="" class="form-control here"
+                                    <input id="name" name="phone" placeholder="" class="form-control here" value="<%=user.getPhone()!=null? user.getPhone():"" %>"
                                            type="text">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="lastname" class="col-4 col-form-label">Email</label>
                                 <div class="col-8">
-                                    <input id="lastname" name="lastname" placeholder=""
+                                    <input id="lastname" name="email" placeholder="" value="<%= user.getEmail() %>"
                                            class="form-control here" type="text">
                                 </div>
                             </div>
 
-<%--                                <label for="text" class="col-4 col-form-label">Biệt danh*</label>--%>
-<%--                                <div class="col-8">--%>
-<%--                                    <input id="text" name="text" placeholder="Nick Name" class="form-control here"--%>
-<%--                                           required="required" type="text">--%>
-<%--                                </div>--%>
+                            <%--                                <label for="text" class="col-4 col-form-label">Biệt danh*</label>--%>
+                            <%--                                <div class="col-8">--%>
+                            <%--                                    <input id="text" name="text" placeholder="Nick Name" class="form-control here"--%>
+                            <%--                                           required="required" type="text">--%>
+                            <%--                                </div>--%>
 
 
                             <div class="form-group row">
                                 <label for="city" class="col-4 col-form-label">Chọn tỉnh thành</label>
                                 <div class="col-8">
-                                    <select class="form-select form-control form-select-sm mb-3" id="city" aria-label=".form-select-sm">
-                                        <option value="" selected></option>
+                                    <select  class="form-select form-control form-select-sm mb-3" id="city" aria-label=".form-select-sm" onchange="update()">
+                                        <option value=""  selected><%= user.getProvince()!=null ? user.getProvince():""%></option>
                                     </select>
                                 </div>
                             </div>
 
 
                             <div class="form-group row">
-                                <label for="district" class="col-4 col-form-label">Chọn quận huyện</label>
+                                <label for="dist" class="col-4 col-form-label">Chọn quận huyện</label>
                                 <div class="col-8">
-                                    <select class="form-select form-control form-select-sm mb-3" id="district" aria-label=".form-select-sm">
-                                        <option value="" selected></option>
+                                    <select  class="form-select form-control form-select-sm mb-3" id="dist" aria-label=".form-select-sm" onchange="update()">
+                                        <option  value=""  selected><%=user.getDistrict()!=null? user.getDistrict():""%></option>
                                     </select>
                                 </div>
                             </div>
@@ -445,18 +449,23 @@
                             <div class="form-group row">
                                 <label for="ward" class="col-4 col-form-label">Chọn phường xã</label>
                                 <div class="col-8">
-                                    <select class="form-select form-control form-select-sm" id="ward" aria-label=".form-select-sm">
-                                        <option value="" selected></option>
+                                    <select  class="form-select form-control form-select-sm" id="ward" aria-label=".form-select-sm" onchange="update()">
+                                        <option  value=""  selected><%= user.getWard()!=null ? user.getWard():""%></option>
                                     </select>
                                 </div>
                             </div>
 
 
+                            <input class="p" name="province" type="hidden" value="" id="text1">
+                            <input class="d" name="district" type="hidden" value="" id="text2">
+                            <input class="w" name="ward" type="hidden" value="" id="text3">
+
+
                             <div class="form-group row">
                                 <label  for="address" class="col-4 col-form-label">Địa chỉ</label>
                                 <div class="col-8">
-                                    <input id="address" name="username" placeholder=""
-                                           class="form-control here" required="required" type="text">
+                                    <input id="address" name="address" placeholder=""
+                                           class="form-control here" required="required" type="text" value="<%= user.getAddress()!=null ? user.getAddress():""%>">
                                 </div>
                             </div>
 
@@ -473,6 +482,9 @@
                                     </button>
                                 </div>
                             </div>
+                            <c:if test="${not empty receivedMessage}">
+                                <p>${receivedMessage}</p>
+                            </c:if>
                         </form>
                     </div>
                 </div>
@@ -480,300 +492,253 @@
         </div>
     </div>
 
-    <div id="Paris" class="tabcontent">
+    <%--    <div id="Paris" class="tabcontent">--%>
 
-        <div class="tab-1">
-            <button class="tablinks-1" onclick="openCity1(event, 'tab1')" id="default">Chờ xác nhận</button>
-            <button class="tablinks-1" onclick="openCity1(event, 'tab4')">Đang vận chuyển</button>
-            <button class="tablinks-1" onclick="openCity1(event, 'tab2')">Đã giao</button>
-            <button class="tablinks-1" onclick="openCity1(event, 'tab3')">Đã hủy</button>
-        </div>
+    <%--        <div class="tab-1">--%>
+    <%--            <button class="tablinks-1" onclick="openCity1(event, 'tab1')" id="default">Chờ xác nhận</button>--%>
+    <%--            <button class="tablinks-1" onclick="openCity1(event, 'tab4')">Đang vận chuyển</button>--%>
+    <%--            <button class="tablinks-1" onclick="openCity1(event, 'tab2')">Đã giao</button>--%>
+    <%--            <button class="tablinks-1" onclick="openCity1(event, 'tab3')">Đã hủy</button>--%>
+    <%--        </div>--%>
 
-        <div id="tab1" class="tabcontent-1">
-            <div class="card">
-                <div class="card-body">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th scope="col">Mã đơn hàng</th>
-                            <th scope="col">Ngày đặt hàng</th>
-                            <th scope="col">Tổng tiền</th>
-                            <th scope="col">Chức năng</th>
-<%--                            <th scope="col">Xem chi tiết đơn hàng</th>--%>
+    <%--        <div id="tab1" class="tabcontent-1">--%>
+    <%--            <div class="card">--%>
+    <%--                <div class="card-body">--%>
+    <%--                    <table class="table">--%>
+    <%--                        <thead>--%>
+    <%--                        <tr>--%>
+    <%--                            <th scope="col">Mã đơn hàng</th>--%>
+    <%--                            <th scope="col">Ngày đặt hàng</th>--%>
+    <%--                            <th scope="col">Tổng tiền</th>--%>
+    <%--                            <th scope="col">Chức năng</th>--%>
+    <%--&lt;%&ndash;                            <th scope="col">Xem chi tiết đơn hàng</th>&ndash;%&gt;--%>
 
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">1001</th>
-                            <td><a>27/10/2023</a></td>
-                            <td>300.000<sup>đ</sup></td>
-                            <td>
-                                <a title="xem chi tiết đơn hàng" href="bill_detail_user.jsp" class="icon-link">
-                                    <i class="icon-wrapper">
-                                        <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->
-                                    </i>
-                                </a>
-                                <a title="hủy đơn hàng" href="#" class="icon-link">
-                                    <i class="icon-wrapper">
-                                        <i class="fas fa-trash-alt"></i> <!-- Biểu tượng thùng rác -->
-                                    </i>
-                                </a>
-
-
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">1002</th>
-                            <td><a>27/10/2023</a></td>
-                            <td>300.000<sup>đ</sup></td>
-                            <td>
-                                <a title="xem chi tiết đơn hàng" href="bill_detail_user.jsp" class="icon-link">
-                                    <i class="icon-wrapper">
-                                        <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->
-                                    </i>
-                                </a>
-                                <a title="hủy đơn hàng" href="#" class="icon-link">
-                                    <i class="icon-wrapper">
-                                        <i class="fas fa-trash-alt"></i> <!-- Biểu tượng thùng rác -->
-                                    </i>
-                                </a>
+    <%--                        </tr>--%>
+    <%--                        </thead>--%>
+    <%--                        <tbody>--%>
+    <%--                        <tr>--%>
+    <%--                            <th scope="row">1001</th>--%>
+    <%--                            <td><a>27/10/2023</a></td>--%>
+    <%--                            <td>300.000<sup>đ</sup></td>--%>
+    <%--                            <td>--%>
+    <%--                                <a title="xem chi tiết đơn hàng" href="bill_detail_user.jsp" class="icon-link">--%>
+    <%--                                    <i class="icon-wrapper">--%>
+    <%--                                        <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->--%>
+    <%--                                    </i>--%>
+    <%--                                </a>--%>
+    <%--                                <a title="hủy đơn hàng" href="#" class="icon-link">--%>
+    <%--                                    <i class="icon-wrapper">--%>
+    <%--                                        <i class="fas fa-trash-alt"></i> <!-- Biểu tượng thùng rác -->--%>
+    <%--                                    </i>--%>
+    <%--                                </a>--%>
 
 
-                            </td>
+    <%--                            </td>--%>
 
-                        </tr>
-                        <tr>
-                            <th scope="row">1003</th>
-                            <td><a>27/10/2023</a></td>
-                            <td>300.000<sup>đ</sup></td>
-                            <td>
-                                <a title="xem chi tiết đơn hàng" href="#" class="icon-link">
-                                    <i class="icon-wrapper">
-                                        <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->
-                                    </i>
-                                </a>
-                                <a title="hủy đơn hàng" href="#" class="icon-link">
-                                    <i class="icon-wrapper">
-                                        <i class="fas fa-trash-alt"></i> <!-- Biểu tượng thùng rác -->
-                                    </i>
-                                </a>
-
-
-                            </td>
-
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div id="tab2" class="tabcontent-1">
-            <div class="card">
-                <div class="card-body">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th scope="col">Mã đơn hàng</th>
-                            <th scope="col">Ngày đặt hàng</th>
-                            <th scope="col">Tổng tiền</th>
-                            <th scope="col">Chức năng</th>
+    <%--                        </tr>--%>
+    <%--                        <tr>--%>
+    <%--                            <th scope="row">1002</th>--%>
+    <%--                            <td><a>27/10/2023</a></td>--%>
+    <%--                            <td>300.000<sup>đ</sup></td>--%>
+    <%--                            <td>--%>
+    <%--                                <a title="xem chi tiết đơn hàng" href="bill_detail_user.jsp" class="icon-link">--%>
+    <%--                                    <i class="icon-wrapper">--%>
+    <%--                                        <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->--%>
+    <%--                                    </i>--%>
+    <%--                                </a>--%>
+    <%--                                <a title="hủy đơn hàng" href="#" class="icon-link">--%>
+    <%--                                    <i class="icon-wrapper">--%>
+    <%--                                        <i class="fas fa-trash-alt"></i> <!-- Biểu tượng thùng rác -->--%>
+    <%--                                    </i>--%>
+    <%--                                </a>--%>
 
 
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">1001</th>
-                            <td><a>27/10/2023</a></td>
-                            <td>300.000<sup>đ</sup></td>
-                            <td>
-                                <a title="xem chi tiết đơn hàng" href="#" class="icon-link">
-                                    <i class="icon-wrapper">
-                                        <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->
-                                    </i>
-                                </a>
+    <%--                            </td>--%>
+
+    <%--                        </tr>--%>
+    <%--                        <tr>--%>
+    <%--                            <th scope="row">1003</th>--%>
+    <%--                            <td><a>27/10/2023</a></td>--%>
+    <%--                            <td>300.000<sup>đ</sup></td>--%>
+    <%--                            <td>--%>
+    <%--                                <a title="xem chi tiết đơn hàng" href="#" class="icon-link">--%>
+    <%--                                    <i class="icon-wrapper">--%>
+    <%--                                        <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->--%>
+    <%--                                    </i>--%>
+    <%--                                </a>--%>
+    <%--                                <a title="hủy đơn hàng" href="#" class="icon-link">--%>
+    <%--                                    <i class="icon-wrapper">--%>
+    <%--                                        <i class="fas fa-trash-alt"></i> <!-- Biểu tượng thùng rác -->--%>
+    <%--                                    </i>--%>
+    <%--                                </a>--%>
 
 
+    <%--                            </td>--%>
 
-                            </td>
+    <%--                        </tr>--%>
+    <%--                        </tbody>--%>
+    <%--                    </table>--%>
+    <%--                </div>--%>
+    <%--            </div>--%>
+    <%--        </div>--%>
+    <%--        <div id="tab2" class="tabcontent-1">--%>
+    <%--            <div class="card">--%>
+    <%--                <div class="card-body">--%>
+    <%--                    <table class="table">--%>
+    <%--                        <thead>--%>
+    <%--                        <tr>--%>
+    <%--                            <th scope="col">Mã đơn hàng</th>--%>
+    <%--                            <th scope="col">Ngày đặt hàng</th>--%>
+    <%--                            <th scope="col">Tổng tiền</th>--%>
+    <%--                            <th scope="col">Chức năng</th>--%>
 
-                        </tr>
-                        <tr>
-                            <th scope="row">1001</th>
-                            <td><a>27/10/2023</a></td>
-                            <td>300.000<sup>đ</sup></td>
-                            <td>
-                                <a title="xem chi tiết đơn hàng" href="#" class="icon-link">
-                                    <i class="icon-wrapper">
-                                        <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->
-                                    </i>
-                                </a>
+
+    <%--                        </tr>--%>
+    <%--                        </thead>--%>
+    <%--                        <tbody>--%>
+    <%--                        <tr>--%>
+    <%--                            <th scope="row">1001</th>--%>
+    <%--                            <td><a>27/10/2023</a></td>--%>
+    <%--                            <td>300.000<sup>đ</sup></td>--%>
+    <%--                            <td>--%>
+    <%--                                <a title="xem chi tiết đơn hàng" href="#" class="icon-link">--%>
+    <%--                                    <i class="icon-wrapper">--%>
+    <%--                                        <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->--%>
+    <%--                                    </i>--%>
+    <%--                                </a>--%>
 
 
 
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div id="tab3" class="tabcontent-1">
-            <div class="card">
-                <div class="card-body">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th scope="col">Mã đơn hàng</th>
-                            <th scope="col">Ngày đặt hàng</th>
-                            <th scope="col">Tổng tiền</th>
-                            <th scope="col">Chức năng</th>
+    <%--                            </td>--%>
 
-
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">1001</th>
-                            <td><a>27/10/2023</a></td>
-                            <td>300.000<sup>đ</sup></td>
-                            <td>
-                                <a title="xem chi tiết đơn hàng" href="#" class="icon-link">
-                                    <i class="icon-wrapper">
-                                        <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->
-                                    </i>
-                                </a>
+    <%--                        </tr>--%>
+    <%--                        <tr>--%>
+    <%--                            <th scope="row">1001</th>--%>
+    <%--                            <td><a>27/10/2023</a></td>--%>
+    <%--                            <td>300.000<sup>đ</sup></td>--%>
+    <%--                            <td>--%>
+    <%--                                <a title="xem chi tiết đơn hàng" href="#" class="icon-link">--%>
+    <%--                                    <i class="icon-wrapper">--%>
+    <%--                                        <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->--%>
+    <%--                                    </i>--%>
+    <%--                                </a>--%>
 
 
 
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div id="tab4" class="tabcontent-1">
-            <div class="card">
-                <div class="card-body">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th scope="col">Mã đơn hàng</th>
-                            <th scope="col">Ngày đặt hàng</th>
-                            <th scope="col">Tổng tiền</th>
-                            <th scope="col">Chức năng</th>
-                            <%--                            <th scope="col">Xem chi tiết đơn hàng</th>--%>
-
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">1001</th>
-                            <td><a>27/10/2023</a></td>
-                            <td>300.000<sup>đ</sup></td>
-                            <td>
-                                <a title="xem chi tiết đơn hàng" href="#" class="icon-link">
-                                    <i class="icon-wrapper">
-                                        <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->
-                                    </i>
-                                </a>
+    <%--                            </td>--%>
+    <%--                        </tr>--%>
+    <%--                        </tbody>--%>
+    <%--                    </table>--%>
+    <%--                </div>--%>
+    <%--            </div>--%>
+    <%--        </div>--%>
+    <%--        <div id="tab3" class="tabcontent-1">--%>
+    <%--            <div class="card">--%>
+    <%--                <div class="card-body">--%>
+    <%--                    <table class="table">--%>
+    <%--                        <thead>--%>
+    <%--                        <tr>--%>
+    <%--                            <th scope="col">Mã đơn hàng</th>--%>
+    <%--                            <th scope="col">Ngày đặt hàng</th>--%>
+    <%--                            <th scope="col">Tổng tiền</th>--%>
+    <%--                            <th scope="col">Chức năng</th>--%>
 
 
-
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">1002</th>
-                            <td><a>27/10/2023</a></td>
-                            <td>300.000<sup>đ</sup></td>
-                            <td>
-                                <a title="xem chi tiết đơn hàng" href="#" class="icon-link">
-                                    <i class="icon-wrapper">
-                                        <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->
-                                    </i>
-                                </a>
+    <%--                        </tr>--%>
+    <%--                        </thead>--%>
+    <%--                        <tbody>--%>
+    <%--                        <tr>--%>
+    <%--                            <th scope="row">1001</th>--%>
+    <%--                            <td><a>27/10/2023</a></td>--%>
+    <%--                            <td>300.000<sup>đ</sup></td>--%>
+    <%--                            <td>--%>
+    <%--                                <a title="xem chi tiết đơn hàng" href="#" class="icon-link">--%>
+    <%--                                    <i class="icon-wrapper">--%>
+    <%--                                        <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->--%>
+    <%--                                    </i>--%>
+    <%--                                </a>--%>
 
 
 
-                            </td>
+    <%--                            </td>--%>
+    <%--                        </tr>--%>
+    <%--                        </tbody>--%>
+    <%--                    </table>--%>
+    <%--                </div>--%>
+    <%--            </div>--%>
+    <%--        </div>--%>
+    <%--        <div id="tab4" class="tabcontent-1">--%>
+    <%--            <div class="card">--%>
+    <%--                <div class="card-body">--%>
+    <%--                    <table class="table">--%>
+    <%--                        <thead>--%>
+    <%--                        <tr>--%>
+    <%--                            <th scope="col">Mã đơn hàng</th>--%>
+    <%--                            <th scope="col">Ngày đặt hàng</th>--%>
+    <%--                            <th scope="col">Tổng tiền</th>--%>
+    <%--                            <th scope="col">Chức năng</th>--%>
+    <%--                            &lt;%&ndash;                            <th scope="col">Xem chi tiết đơn hàng</th>&ndash;%&gt;--%>
 
-                        </tr>
-                        <tr>
-                            <th scope="row">1003</th>
-                            <td><a>27/10/2023</a></td>
-                            <td>300.000<sup>đ</sup></td>
-                            <td>
-                                <a title="xem chi tiết đơn hàng" href="#" class="icon-link">
-                                    <i class="icon-wrapper">
-                                        <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->
-                                    </i>
-                                </a>
+    <%--                        </tr>--%>
+    <%--                        </thead>--%>
+    <%--                        <tbody>--%>
+    <%--                        <tr>--%>
+    <%--                            <th scope="row">1001</th>--%>
+    <%--                            <td><a>27/10/2023</a></td>--%>
+    <%--                            <td>300.000<sup>đ</sup></td>--%>
+    <%--                            <td>--%>
+    <%--                                <a title="xem chi tiết đơn hàng" href="#" class="icon-link">--%>
+    <%--                                    <i class="icon-wrapper">--%>
+    <%--                                        <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->--%>
+    <%--                                    </i>--%>
+    <%--                                </a>--%>
 
 
 
-                            </td>
+    <%--                            </td>--%>
 
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+    <%--                        </tr>--%>
+    <%--                        <tr>--%>
+    <%--                            <th scope="row">1002</th>--%>
+    <%--                            <td><a>27/10/2023</a></td>--%>
+    <%--                            <td>300.000<sup>đ</sup></td>--%>
+    <%--                            <td>--%>
+    <%--                                <a title="xem chi tiết đơn hàng" href="#" class="icon-link">--%>
+    <%--                                    <i class="icon-wrapper">--%>
+    <%--                                        <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->--%>
+    <%--                                    </i>--%>
+    <%--                                </a>--%>
 
-    </div>
 
-    <div id="Tokyo" class="tabcontent">
-        <div class="card">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h4>Đổi mật khẩu</h4>
-                        <hr>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <form>
-                            <div class="form-group row">
-                                <label for="username" class="col-4 col-form-label">Mật khẩu hiện tại</label>
-                                <div class="col-8">
-                                    <input name="username"
-                                           class="form-control here" required="required" type="password">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="name" class="col-4 col-form-label">Mật khẩu mới</label>
-                                <div class="col-8">
-                                    <input name="name" class="form-control here"
-                                           type="password">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="lastname" class="col-4 col-form-label">Nhập lại mật khẩu mới</label>
-                                <div class="col-8">
-                                    <input name="lastname"
-                                           class="form-control here" type="password">
-                                </div>
-                            </div>
 
-                            <div class="form-group row">
-                                <div class="offset-4 col-8">
-                                    <button name="submit" type="submit" class="btn btn-black"
-                                            style="background-color: #ffacac; color: white">
-                                        Hoàn tất
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <%--                            </td>--%>
+
+    <%--                        </tr>--%>
+    <%--                        <tr>--%>
+    <%--                            <th scope="row">1003</th>--%>
+    <%--                            <td><a>27/10/2023</a></td>--%>
+    <%--                            <td>300.000<sup>đ</sup></td>--%>
+    <%--                            <td>--%>
+    <%--                                <a title="xem chi tiết đơn hàng" href="#" class="icon-link">--%>
+    <%--                                    <i class="icon-wrapper">--%>
+    <%--                                        <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->--%>
+    <%--                                    </i>--%>
+    <%--                                </a>--%>
+
+
+
+    <%--                            </td>--%>
+
+    <%--                        </tr>--%>
+    <%--                        </tbody>--%>
+    <%--                    </table>--%>
+    <%--                </div>--%>
+    <%--            </div>--%>
+    <%--        </div>--%>
+
+    <%--    </div>--%>
+
+
 </div>
 
 
@@ -797,8 +762,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 <script>
     var citis = document.getElementById("city");
-    var districts = document.getElementById("district");
+    var districts = document.getElementById("dist");
     var wards = document.getElementById("ward");
+
+
     var Parameter = {
         url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json",
         method: "GET",
@@ -808,23 +775,37 @@
     promise.then(function (result) {
         renderCity(result.data);
     });
+    function update(){
+        var citis = document.getElementById("city");
+        var districts = document.getElementById("dist");
+        var wards = document.getElementById("ward");
+
+        var option1 = citis.options[citis.selectedIndex];
+        var option2 = districts.options[districts.selectedIndex];
+        var option3 = wards.options[wards.selectedIndex];
+
+        document.getElementById('text1').value = option1.text;
+        document.getElementById('text2').value = option2.text;
+        document.getElementById('text3').value = option3.text;
+    }
+    update();
 
     function renderCity(data) {
         for (const x of data) {
             citis.options[citis.options.length] = new Option(x.Name, x.Id);
         }
         citis.onchange = function () {
-            district.length = 1;
+            dist.length = 1;
             ward.length = 1;
             if(this.value != ""){
                 const result = data.filter(n => n.Id === this.value);
 
                 for (const k of result[0].Districts) {
-                    district.options[district.options.length] = new Option(k.Name, k.Id);
+                    dist.options[dist.options.length] = new Option(k.Name, k.Id);
                 }
             }
         };
-        district.onchange = function () {
+        dist.onchange = function () {
             ward.length = 1;
             const dataCity = data.filter((n) => n.Id === citis.value);
             if (this.value != "") {

@@ -1,4 +1,6 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <html lang="zxx">
 
 <head>
@@ -68,19 +70,19 @@
         }
 
         .hero__search__phone__icon {
-             padding-top: 15px;
-             font-size: 18px;
-             color: #ffacac;
-             height: 50px;
-             width: 50px;
-             background: #f5f5f5;
-             line-height: 50px;
-             text-align: center;
-             border-radius: 50%;
-             float: left;
-             margin-right: 20px;
-             /*padding-top: 14px;*/
-         }
+            padding-top: 15px;
+            font-size: 18px;
+            color: #ffacac;
+            height: 50px;
+            width: 50px;
+            background: #f5f5f5;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            float: left;
+            margin-right: 20px;
+            /*padding-top: 14px;*/
+        }
     </style>
 </head>
 
@@ -97,17 +99,9 @@
                         <span>Danh mục</span>
                     </div>
                     <ul>
-                        <li><a href="product_type1.jsp">Sữa bột cao cấp</a></li>
-                        <li><a href="product_type2.jsp">Bỉm tã khuyến mãi</a></li>
-                        <li><a href="#">Sữa tươi các loại</a></li>
-                        <li><a href="#">Ăn dặm, dinh dưỡng</a></li>
-                        <li><a href="#">Vitamin & sức khỏe</a></li>
-                        <li><a href="#">Chăm sóc gia đình</a></li>
-                        <li><a href="#">Đồ dùng mẹ & bé</a></li>
-                        <li><a href="#">Thời trang & Phụ kiện</a></li>
-                        <li><a href="#">Đồ chơi, học tập</a></li>
-                        <!-- <li><a href="#">Oatmeal</a></li>
-                        <li><a href="#">Fresh Bananas</a></li> -->
+                        <c:forEach var="typeproduct" items="${typeproduct}">
+                            <li><a href="ProductByCategory?categoryId=${typeproduct.id}">${typeproduct.name} </a></li>
+                        </c:forEach>
                     </ul>
                 </div>
             </div>
@@ -185,101 +179,8 @@
                         <h2 style="user-select: none">Mua nhanh giảm ngay</h2>
                     </div>
                     <a id="eye-view-all" href="index.jsp">
-                    <div class="view-all-icon">
-                         Xem tất cả   >
-                    </div>
-                    </a>
-                </div>
-<%--                <div class="featured__controls">--%>
-<%--                    <ul>--%>
-<%--                        <li class="active" data-filter="*" style="user-select: none">Mới</li>--%>
-<%--                        <li data-filter=".oranges" style="user-select: none">Hot</li>--%>
-<%--                        <li data-filter=".fresh-meat" style="user-select: none">Ưu đãi</li>--%>
-<%--                        <!-- <li data-filter=".vegetables">Vegetables</li>--%>
-<%--                        <li data-filter=".fastfood">Fastfood</li> -->--%>
-<%--                    </ul>--%>
-<%--                </div>--%>
-            </div>
-        </div>
-        <div class="row featured__filter">
-            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/03/56291-85271-large_mobile/sua-growplus-do-1-5kg-tu-1-tuoi.png">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a title="Sữa GrowPlus+ Đỏ 1,5kg (từ 1 tuổi)" href="#">Sữa GrowPlus+ Đỏ 1,5kg (từ 1 tuổi)</a></h6>
-                        <h5>575.000<sup>đ</sup> <span class="discount">-10%</span></h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/05/62439-trans.png">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a title="Tã quần Huggies Skincare gói cực đại (L, 9-14kg, 68 miếng)" href="#">Tã quần Huggies Skincare gói cực đại (L, 9-14kg, 68 miếng)</a></h6>
-                        <h5>335.000<sup>đ</sup><span class="discount">-10%</span></h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/02/61719-trans.png">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a title="Tã quần Nhật Bản Takato siêu mềm mại (L, 68 miếng)" href="#">Tã quần Nhật Bản Takato siêu mềm mại (L, 68 miếng)</a></h6>
-                        <h5>325.000<sup>đ</sup><span class="discount">-10%</span></h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/52365-1696583967-trans.png">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a title="Sữa Enfagrow A+ số 4 830g (2-6 tuổi) 2Flex" href="#">Sữa Enfagrow A+ số 4 830g (2-6 tuổi) 2Flex</a></h6>
-                        <h5>485.000<sup>đ</sup><span class="discount">-10%</span></h5>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-<section class="featured spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title">
-                    <div class="title">
-                        <h2 style="user-select: none">Sản phẩm bán chạy</h2>
-                    </div>
-                    <a  href="index.jsp">
-                        <div class="view-all-icon">
-                            Xem tất cả   >
+                        <div  class="view-all-icon">
+                            <a href="DiscountProduct">  Xem tất cả   > </a>
                         </div>
                     </a>
                 </div>
@@ -295,129 +196,181 @@
             </div>
         </div>
         <div class="row featured__filter">
-            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/03/56291-85271-large_mobile/sua-growplus-do-1-5kg-tu-1-tuoi.png">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a title="Sữa GrowPlus+ Đỏ 1,5kg (từ 1 tuổi)" href="#">Sữa GrowPlus+ Đỏ 1,5kg (từ 1 tuổi)</a></h6>
-                        <h5>575.000<sup>đ</sup> <span class="discount">-10%</span></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/04/48750-trans.png">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a title="Bỉm tã quần Moony bé trai size XL 38 miếng (12-22kg) (giao bao bì ngẫu nhiên)" href="#">Bỉm tã quần Moony bé trai size XL 38 miếng (12-22kg) (giao bao bì ngẫu nhiên)</a></h6>
-                        <h5>335.000<sup>đ</sup></h5>
+            <c:forEach var="product" items="${productsDis}">
+                <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="${product.getImageUrl()}">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                    <%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
+                                <li><a href="AddToCart?id=${product.id}"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a title="${product.name}" href="#">${product.name}</a></h6>
+                            <h5><fmt:formatNumber value="${product.price}" pattern="#,##0"/><sup>đ</sup>
+                                <c:if test="${product.discount ne 0}">
+                                <span class="discount">-${product.discount}%</span>
+                                </c:if>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/05/62439-trans.png">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a title="Tã quần Huggies Skincare gói cực đại (L, 9-14kg, 68 miếng)" href="#">Tã quần Huggies Skincare gói cực đại (L, 9-14kg, 68 miếng)</a></h6>
-                        <h5>335.000<sup>đ</sup><span class="discount">-10%</span></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-748-2023-03-59031-trans.png">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a title="Máy xay đa năng cao cấp Animo 0.3L (SW-MG808)" href="#">Máy xay đa năng cao cấp Animo 0.3L (SW-MG808)</a></h6>
-                        <h5>590.000<sup>đ</sup></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/02/61719-trans.png">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a title="Tã quần Nhật Bản Takato siêu mềm mại (L, 68 miếng)" href="#">Tã quần Nhật Bản Takato siêu mềm mại (L, 68 miếng)</a></h6>
-                        <h5>325.000<sup>đ</sup><span class="discount">-10%</span></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fastfood">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2020/09/42532-65686-large_mobile/sua-tam-goi-toan-than-johnson-baby-500ml.png">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a title="Sữa tắm gội toàn thân Johnson Baby 500ml" href="#">Sữa tắm gội toàn thân Johnson Baby 500ml</a></h6>
-                        <h5>124.000<sup>đ</sup></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/52365-1696583967-trans.png">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a title="Sữa Enfagrow A+ số 4 830g (2-6 tuổi) 2Flex" href="#">Sữa Enfagrow A+ số 4 830g (2-6 tuổi) 2Flex</a></h6>
-                        <h5>485.000<sup>đ</sup><span class="discount">-10%</span></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood vegetables">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/10/26391-75896-large_mobile/dung-dich-giat-quan-ao-aga-ae-chai-3l.png">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a title="Nước giặt Hàn quốc AGA - AE kháng khuẩn & bảo vệ da bé - Moonlight 3L" href="#">Nước giặt Hàn quốc AGA - AE kháng khuẩn & bảo vệ da bé - Moonlight 3L</a></h6>
-                        <h5>193.500<sup>đ</sup></h5>
-                    </div>
-                </div>
-            </div>
+            </c:forEach>
+
+
+
         </div>
     </div>
 </section>
+<%--<section class="featured spad">--%>
+<%--    <div class="container">--%>
+<%--        <div class="row">--%>
+<%--            <div class="col-lg-12">--%>
+<%--                <div class="section-title">--%>
+<%--                    <div class="title">--%>
+<%--                        <h2 style="user-select: none">Sản phẩm bán chạy</h2>--%>
+<%--                    </div>--%>
+<%--                    <a  href="index.jsp">--%>
+<%--                        <div class="view-all-icon">--%>
+<%--                            Xem tất cả   >--%>
+<%--                        </div>--%>
+<%--                    </a>--%>
+<%--                </div>--%>
+<%--                &lt;%&ndash;                <div class="featured__controls">&ndash;%&gt;--%>
+<%--                &lt;%&ndash;                    <ul>&ndash;%&gt;--%>
+<%--                &lt;%&ndash;                        <li class="active" data-filter="*" style="user-select: none">Mới</li>&ndash;%&gt;--%>
+<%--                &lt;%&ndash;                        <li data-filter=".oranges" style="user-select: none">Hot</li>&ndash;%&gt;--%>
+<%--                &lt;%&ndash;                        <li data-filter=".fresh-meat" style="user-select: none">Ưu đãi</li>&ndash;%&gt;--%>
+<%--                &lt;%&ndash;                        <!-- <li data-filter=".vegetables">Vegetables</li>&ndash;%&gt;--%>
+<%--                &lt;%&ndash;                        <li data-filter=".fastfood">Fastfood</li> -->&ndash;%&gt;--%>
+<%--                &lt;%&ndash;                    </ul>&ndash;%&gt;--%>
+<%--                &lt;%&ndash;                </div>&ndash;%&gt;--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--        <div class="row featured__filter">--%>
+<%--            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">--%>
+<%--                <div class="featured__item">--%>
+<%--                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/03/56291-85271-large_mobile/sua-growplus-do-1-5kg-tu-1-tuoi.png">--%>
+<%--                        <ul class="featured__item__pic__hover">--%>
+<%--                            <li><a href="#"><i class="fa fa-heart"></i></a></li>--%>
+<%--&lt;%&ndash;                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>&ndash;%&gt;--%>
+<%--                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>--%>
+<%--                        </ul>--%>
+<%--                    </div>--%>
+<%--                    <div class="featured__item__text">--%>
+<%--                        <h6><a title="Sữa GrowPlus+ Đỏ 1,5kg (từ 1 tuổi)" href="#">Sữa GrowPlus+ Đỏ 1,5kg (từ 1 tuổi)</a></h6>--%>
+<%--                        <h5>575.000<sup>đ</sup> <span class="discount">-10%</span></h5>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--            <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">--%>
+<%--                <div class="featured__item">--%>
+<%--                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/04/48750-trans.png">--%>
+<%--                        <ul class="featured__item__pic__hover">--%>
+<%--                            <li><a href="#"><i class="fa fa-heart"></i></a></li>--%>
+<%--&lt;%&ndash;                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>&ndash;%&gt;--%>
+<%--                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>--%>
+<%--                        </ul>--%>
+<%--                    </div>--%>
+<%--                    <div class="featured__item__text">--%>
+<%--                        <h6><a title="Bỉm tã quần Moony bé trai size XL 38 miếng (12-22kg) (giao bao bì ngẫu nhiên)" href="#">Bỉm tã quần Moony bé trai size XL 38 miếng (12-22kg) (giao bao bì ngẫu nhiên)</a></h6>--%>
+<%--                        <h5>335.000<sup>đ</sup></h5>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--            <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">--%>
+<%--                <div class="featured__item">--%>
+<%--                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/05/62439-trans.png">--%>
+<%--                        <ul class="featured__item__pic__hover">--%>
+<%--                            <li><a href="#"><i class="fa fa-heart"></i></a></li>--%>
+<%--&lt;%&ndash;                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>&ndash;%&gt;--%>
+<%--                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>--%>
+<%--                        </ul>--%>
+<%--                    </div>--%>
+<%--                    <div class="featured__item__text">--%>
+<%--                        <h6><a title="Tã quần Huggies Skincare gói cực đại (L, 9-14kg, 68 miếng)" href="#">Tã quần Huggies Skincare gói cực đại (L, 9-14kg, 68 miếng)</a></h6>--%>
+<%--                        <h5>335.000<sup>đ</sup><span class="discount">-10%</span></h5>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--            <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">--%>
+<%--                <div class="featured__item">--%>
+<%--                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-748-2023-03-59031-trans.png">--%>
+<%--                        <ul class="featured__item__pic__hover">--%>
+<%--                            <li><a href="#"><i class="fa fa-heart"></i></a></li>--%>
+<%--&lt;%&ndash;                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>&ndash;%&gt;--%>
+<%--                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>--%>
+<%--                        </ul>--%>
+<%--                    </div>--%>
+<%--                    <div class="featured__item__text">--%>
+<%--                        <h6><a title="Máy xay đa năng cao cấp Animo 0.3L (SW-MG808)" href="#">Máy xay đa năng cao cấp Animo 0.3L (SW-MG808)</a></h6>--%>
+<%--                        <h5>590.000<sup>đ</sup></h5>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--            <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">--%>
+<%--                <div class="featured__item">--%>
+<%--                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/02/61719-trans.png">--%>
+<%--                        <ul class="featured__item__pic__hover">--%>
+<%--                            <li><a href="#"><i class="fa fa-heart"></i></a></li>--%>
+<%--&lt;%&ndash;                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>&ndash;%&gt;--%>
+<%--                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>--%>
+<%--                        </ul>--%>
+<%--                    </div>--%>
+<%--                    <div class="featured__item__text">--%>
+<%--                        <h6><a title="Tã quần Nhật Bản Takato siêu mềm mại (L, 68 miếng)" href="#">Tã quần Nhật Bản Takato siêu mềm mại (L, 68 miếng)</a></h6>--%>
+<%--                        <h5>325.000<sup>đ</sup><span class="discount">-10%</span></h5>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fastfood">--%>
+<%--                <div class="featured__item">--%>
+<%--                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2020/09/42532-65686-large_mobile/sua-tam-goi-toan-than-johnson-baby-500ml.png">--%>
+<%--                        <ul class="featured__item__pic__hover">--%>
+<%--                            <li><a href="#"><i class="fa fa-heart"></i></a></li>--%>
+<%--&lt;%&ndash;                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>&ndash;%&gt;--%>
+<%--                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>--%>
+<%--                        </ul>--%>
+<%--                    </div>--%>
+<%--                    <div class="featured__item__text">--%>
+<%--                        <h6><a title="Sữa tắm gội toàn thân Johnson Baby 500ml" href="#">Sữa tắm gội toàn thân Johnson Baby 500ml</a></h6>--%>
+<%--                        <h5>124.000<sup>đ</sup></h5>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--            <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">--%>
+<%--                <div class="featured__item">--%>
+<%--                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/52365-1696583967-trans.png">--%>
+<%--                        <ul class="featured__item__pic__hover">--%>
+<%--                            <li><a href="#"><i class="fa fa-heart"></i></a></li>--%>
+<%--&lt;%&ndash;                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>&ndash;%&gt;--%>
+<%--                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>--%>
+<%--                        </ul>--%>
+<%--                    </div>--%>
+<%--                    <div class="featured__item__text">--%>
+<%--                        <h6><a title="Sữa Enfagrow A+ số 4 830g (2-6 tuổi) 2Flex" href="#">Sữa Enfagrow A+ số 4 830g (2-6 tuổi) 2Flex</a></h6>--%>
+<%--                        <h5>485.000<sup>đ</sup><span class="discount">-10%</span></h5>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--            <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood vegetables">--%>
+<%--                <div class="featured__item">--%>
+<%--                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2021/10/26391-75896-large_mobile/dung-dich-giat-quan-ao-aga-ae-chai-3l.png">--%>
+<%--                        <ul class="featured__item__pic__hover">--%>
+<%--                            <li><a href="#"><i class="fa fa-heart"></i></a></li>--%>
+<%--&lt;%&ndash;                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>&ndash;%&gt;--%>
+<%--                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>--%>
+<%--                        </ul>--%>
+<%--                    </div>--%>
+<%--                    <div class="featured__item__text">--%>
+<%--                        <h6><a title="Nước giặt Hàn quốc AGA - AE kháng khuẩn & bảo vệ da bé - Moonlight 3L" href="#">Nước giặt Hàn quốc AGA - AE kháng khuẩn & bảo vệ da bé - Moonlight 3L</a></h6>--%>
+<%--                        <h5>193.500<sup>đ</sup></h5>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--</section>--%>
 <section class="featured spad">
     <div class="container">
         <div class="row">
@@ -426,9 +379,9 @@
                     <div class="title">
                         <h2 style="user-select: none">Sản phẩm mới</h2>
                     </div>
-                    <a href="index.jsp">
+                    <a href="">
                         <div class="view-all-icon">
-                            Xem tất cả   >
+                            <a href="NewProduct">  Xem tất cả   > </a>
                         </div>
                     </a>
                 </div>
@@ -444,111 +397,27 @@
             </div>
         </div>
         <div class="row featured__filter">
-            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/03/56291-85271-large_mobile/sua-growplus-do-1-5kg-tu-1-tuoi.png">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a title="Sữa GrowPlus+ Đỏ 1,5kg (từ 1 tuổi)" href="#">Sữa GrowPlus+ Đỏ 1,5kg (từ 1 tuổi)</a></h6>
-                        <h5>575.000<sup>đ</sup> <span class="discount">-10%</span></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/04/48750-trans.png">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a title="Bỉm tã quần Moony bé trai size XL 38 miếng (12-22kg) (giao bao bì ngẫu nhiên)" href="#">Bỉm tã quần Moony bé trai size XL 38 miếng (12-22kg) (giao bao bì ngẫu nhiên)</a></h6>
-                        <h5>335.000<sup>đ</sup></h5>
+            <c:forEach var="product" items="${productsNew}">
+                <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg="${product.getImageUrl()}">
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                    <%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
+                                <li><a href="AddToCart?id=${product.id}"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a title="${product.name}" href="#">${product.name}</a></h6>
+                            <h5><fmt:formatNumber value="${product.price}" pattern="#,##0"/><sup>đ</sup>
+                                <c:if test="${product.discount ne 0}">
+                                <span class="discount">-${product.discount}%</span>
+                                </c:if>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/05/62439-trans.png">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a title="Tã quần Huggies Skincare gói cực đại (L, 9-14kg, 68 miếng)" href="#">Tã quần Huggies Skincare gói cực đại (L, 9-14kg, 68 miếng)</a></h6>
-                        <h5>335.000<sup>đ</sup><span class="discount">-10%</span></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-748-2023-03-59031-trans.png">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a title="Máy xay đa năng cao cấp Animo 0.3L (SW-MG808)" href="#">Máy xay đa năng cao cấp Animo 0.3L (SW-MG808)</a></h6>
-                        <h5>590.000<sup>đ</sup></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/02/61719-trans.png">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a title="Tã quần Nhật Bản Takato siêu mềm mại (L, 68 miếng)" href="#">Tã quần Nhật Bản Takato siêu mềm mại (L, 68 miếng)</a></h6>
-                        <h5>325.000<sup>đ</sup><span class="discount">-10%</span></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fastfood">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2020/09/42532-65686-large_mobile/sua-tam-goi-toan-than-johnson-baby-500ml.png">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a title="Sữa tắm gội toàn thân Johnson Baby 500ml" href="#">Sữa tắm gội toàn thân Johnson Baby 500ml</a></h6>
-                        <h5>124.000<sup>đ</sup></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
-                <div class="featured__item">
-                    <div class="featured__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/52365-1696583967-trans.png">
-                        <ul class="featured__item__pic__hover">
-                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="featured__item__text">
-                        <h6><a title="Sữa Enfagrow A+ số 4 830g (2-6 tuổi) 2Flex" href="#">Sữa Enfagrow A+ số 4 830g (2-6 tuổi) 2Flex</a></h6>
-                        <h5>485.000<sup>đ</sup><span class="discount">-10%</span></h5>
-                    </div>
-                </div>
-            </div>
+            </c:forEach>
+
 
         </div>
     </div>
