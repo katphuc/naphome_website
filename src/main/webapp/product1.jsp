@@ -5,7 +5,16 @@
   Time: 6:00 pm
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ page import="javax.servlet.http.HttpServletRequest" %>
+<%@ page import="java.net.URLDecoder" %>
+
+
+
+
+
 <html lang="zxx">
 
 <head>
@@ -42,7 +51,16 @@
             float: left;
             margin-right: 20px;
             /*padding-top: 14px;*/
+
+
         }
+       .paginationn a {
+           border: #ffacac 1px solid;
+           padding: 5px 10px;
+           color: white;
+           text-decoration: none;
+           background-color: #ffacac;
+       }
     </style>
 </head>
 
@@ -175,335 +193,86 @@
                         <div class="col-lg-3 col-md-5">
                             <div class="filter__sort">
 <%--                                <span>Bộ lọc</span>--%>
-                                <select>
-                                    <option value="0">Giá từ thấp - cao</option>
-                                    <option value="0">Giá từ cao - thấp</option>
-                                    <option value="0">Thứ tự A - Z</option>
-                                    <option value="0">Thứ tự Z - A</option>
+    <%
+
+        String sortingOption = (String) request.getAttribute("sortingOption");
+
+    %>
+    <form id="filterForm" action="Filter" method="post">
+                                <select id="sortingOption" name="sortingOption" onchange="submitForm()">
+                                    <option value="lowtohigh">Bộ lọc</option>
+                                    <option value="lowtohigh"> Giá từ thấp - cao</option>
+                                    <option value="hightolow">Giá từ cao - thấp</option>
+                                    <option value="atoz">Thứ tự A - Z</option>
+                                    <option value="ztoa">Thứ tự Z - A</option>
                                 </select>
+    </form>
                             </div>
                         </div>
 
 
                     </div>
                 </div>
+
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/64221-1697710018-trans.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a title="Set 2 body tam giác Animo NB522014 (0-12M,xanh-trắng mũi tên)" href="product_detail.jsp">Set 2 body tam giác Animo NB522014 (0-12M,xanh-trắng mũi tên)</a></h6>
-                                <h5>149.000<sup>đ</sup><span class="discount">-10%</span></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/64225-1697709895-trans.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a title="Set 2 body tam giác Animo NB522013 (0-12M,cam-trắng sọc cam)" href="#">Set 2 body tam giác Animo NB522013 (0-12M,cam-trắng sọc cam)</a></h6>
-                                <h5>149.000<sup>đ</sup></h5>
+                    <c:forEach var="product" items="${products}">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg" data-setbg="${product.getImageUrl()}">
+                                    <ul class="product__item__pic__hover">
+                                        <li><a href=""><i class="fa fa-heart"></i></a></li>
+                                        <li><a href="AddToCart?id=${product.id}"><i class="fa fa-shopping-cart"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a title="${product.name}" href="DetailProduct?id=${product.id}">${product.name}</a></h6>
+                                    <h5><fmt:formatNumber value="${product.price}" pattern="#,##0"/><sup>đ</sup>
+                                        <c:if test="${product.discount ne 0}">
+                                        <span class="discount">-${product.discount}%</span>
+                                        </c:if>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/64339-1697598112-trans.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a title="Set Bodysuit tam giác DT Animo KV423007 (0-12M,Cam_Xám họa tiết)" href="#">Set Bodysuit tam giác DT Animo KV423007 (0-12M,Cam_Xám họa tiết)</a></h6>
-                                <h5>149.000<sup>đ</sup></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/64307-1697440760-trans.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-<%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a title="Bộ tính năng dài vải modal Animo VĐ522025 (0-12M,Kem)" href="#">Bộ tính năng dài vải modal Animo VĐ522025 (0-12M,Kem)</a></h6>
-                                <h5>149.000<sup>đ</sup></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/64301-1697441881-trans.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a title="Body tính năng đùi vải modal Animo VĐ522031 (0-12M,Kem)" href="#">Body tính năng đùi vải modal Animo VĐ522031 (0-12M,Kem)</a></h6>
-                                <h5>149.000<sup>đ</sup></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/64249-1697529079-trans.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a title="Combo 2 Cặp áo sơ sinh 0-3M cài chéo tay dài Animo KV223016 (Cam họa tiết_Trắng) và KV223021 (Trắng họa tiết_Tím)" href="#">Combo 2 Cặp áo sơ sinh 0-3M cài chéo tay dài Animo KV223016 (Cam họa tiết_Trắng) và KV223021 (Trắng họa tiết_Tím)</a></h6>
-                                <h5>278.000<sup>đ</sup></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/64274-1697710393-trans.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a title="Combo 2 Set 2 body tam giác 0-3M Animo NB522013 (cam-trắng sọc cam) và NB522014 (xanh-trắng mũi tên)" href="#">Combo 2 Set 2 body tam giác 0-3M Animo NB522013 (cam-trắng sọc cam) và NB522014 (xanh-trắng mũi tên)</a></h6>
-                                <h5>438.000<sup>đ</sup></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/64269-1697532562-trans.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a title="Combo 2 Cặp quần sơ sinh 3-6M ngắn Animo KV223014 (Trắng họa tiết_Xám) và KV223013 (Xám họa tiết_Trắng)" href="#">Combo 2 Cặp quần sơ sinh 3-6M ngắn Animo KV223014 (Trắng họa tiết_Xám) và KV223013 (Xám họa tiết_Trắng)</a></h6>
-                                <h5>238.000<sup>đ</sup></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/07/56668-90367-large_mobile/bo-so-sinh-tinh-nang-ngan-vai-luoi-animo-i0322018-0-24m-cam.jpg">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a title="Bộ sơ sinh tính năng ngắn, vải lưới Animo I0322018 (0-12M,Cam)" href="#">Bộ sơ sinh tính năng ngắn, vải lưới Animo I0322018 (0-12M,Cam)</a></h6>
-                                <h5>99.000<sup>đ</sup></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/08/56656-1692155038-trans.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a title="Bộ sơ sinh tính năng ngắn, vải lưới Animo I0322020 (0-12M,Cam)" href="#">Bộ sơ sinh tính năng ngắn, vải lưới Animo I0322020 (0-12M,Cam)</a></h6>
-                                <h5>99.000<sup>đ</sup></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/56686-1696842641-trans.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a title="Bộ sơ sinh tính năng ngắn, vải lưới Animo I0322022 (0-24M,Xám)" href="#">Bộ sơ sinh tính năng ngắn, vải lưới Animo I0322022 (0-24M,Xám)</a></h6>
-                                <h5>99.000<sup>đ</sup></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/06/56674-89630-large_mobile/bo-so-sinh-tinh-nang-ngan-vai-luoi-animo-i0322017-0-24m-beige.jpg">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a title="Bộ sơ sinh tính năng ngắn, vải lưới Animo I0322017 (0-12M,Beige)" href="#">Bộ sơ sinh tính năng ngắn, vải lưới Animo I0322017 (0-12M,Beige)</a></h6>
-                                <h5>99.000<sup>đ</sup></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/07/56641-90348-large_mobile/bo-so-sinh-tinh-nang-ngan-vai-luoi-animo-0-24m-hong.jpg">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a title="Bộ sơ sinh tính năng ngắn, vải lưới Animo I0322013 (0-12M,Hồng)" href="#">Bộ sơ sinh tính năng ngắn, vải lưới Animo I0322013 (0-12M,Hồng)</a></h6>
-                                <h5>99.000<sup>đ</sup></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/07/56629-90360-large_mobile/bo-so-sinh-tinh-nang-ngan-vai-luoi-animo-0-9m-beige.jpg">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a title="Bộ sơ sinh tính năng ngắn, vải lưới Animo (0-12M,Beige)" href="#">Bộ sơ sinh tính năng ngắn, vải lưới Animo (0-12M,Beige)</a></h6>
-                                <h5>99.000<sup>đ</sup></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/02/56652-98112-large_mobile/bo-so-sinh-tinh-nang-ngan-vai-luoi-animo-i0322020-12-24m-cam.jpg">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a href="#">Bộ sơ sinh tính năng ngắn, vải lưới Animo I0322020 (12-24M,Cam)</a></h6>
-                                <h5>99.000<sup>đ</sup></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/07/56635-90352-large_mobile/bo-so-sinh-tinh-nang-ngan-vai-luoi-animo-0-9m-xanh.jpg">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a title="Bộ sơ sinh tính năng ngắn, vải lưới Animo I0322014 (0-12M,Xanh)" href="#">Bộ sơ sinh tính năng ngắn, vải lưới Animo I0322014 (0-12M,Xanh)</a></h6>
-                                <h5>99.000<sup>đ</sup></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/10/52983-1696414473-trans.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a title="Đầm bé gái_BST hoa nhí Animo G1221005 (6M-3Y,Trắng họa tiết)" href="#">Đầm bé gái_BST hoa nhí Animo G1221005 (6M-3Y,Trắng họa tiết)</a></h6>
-                                <h5>99.000<sup>đ</sup></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/combo/2023/07/600x600-415-2023-05-62585-trans.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a title="Bộ tính năng ngắn vải modal Animo VĐ522022 (0-12M,Kem)" href="#">Bộ tính năng ngắn vải modal Animo VĐ522022 (0-12M,Kem)</a></h6>
-                                <h5>99.000<sup>đ</sup></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2023/05/62591-101001-large_mobile/bo-tinh-nang-ngan-vai-modal-animo-vd522021-0-3m-hong.png">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a title="Bộ tính năng ngắn vải modal Animo VĐ522021 (0-12M,Hồng)" href="#">Bộ tính năng ngắn vải modal Animo VĐ522021 (0-12M,Hồng)</a></h6>
-                                <h5>99.000<sup>đ</sup></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="https://cdn1.concung.com/2022/05/53703-88667-large_mobile/bodysuit-ss-dai-vai-cellulose-animo-i1221006-0-12m-trang.jpg">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <%--                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="product__item__text">
-                                <h6><a title="Bodysuit SS dài vải Cellulose, Animo I1221006 (0-12M,Trắng)" href="#">Bodysuit SS dài vải Cellulose, Animo I1221006 (0-12M,Trắng)</a></h6>
-                                <h5>99.000<sup>đ</sup></h5>
-                            </div>
-                        </div>
-                    </div>
+                    </c:forEach>
+
+
 
                 </div>
-                <div class="product__pagination">
-                    <a href="product1.jsp">1</a>
-                    <a href="product2.jsp">2</a>
-                    <a href="product3.jsp">3</a>
-                    <a href="product4.jsp">4</a>
-                    <a href="product5.jsp">5</a>
-                    <a href="product6.jsp">6</a>
-                    <a href="product7.jsp">7</a>
-                    <a href="product8.jsp">8</a>
-                    <a href="product9.jsp">9</a>
-                    <a href="product10.jsp">10</a>
-                    <a href="product11.jsp">11</a>
-                    <a href="product12.jsp">>></a>
+<%--                <div class="product__pagination">--%>
+<%--                    <a href="product1.jsp">1</a>--%>
+<%--                    <a href="product2.jsp">2</a>--%>
+<%--                    <a href="product3.jsp">3</a>--%>
+<%--                    <a href="product4.jsp">4</a>--%>
+<%--                    <a href="product5.jsp">5</a>--%>
+<%--                    <a href="product6.jsp">6</a>--%>
+<%--                    <a href="product7.jsp">7</a>--%>
+<%--                    <a href="product8.jsp">8</a>--%>
+<%--                    <a href="product9.jsp">9</a>--%>
+<%--                    <a href="product10.jsp">10</a>--%>
+<%--                    <a href="product11.jsp">11</a>--%>
+<%--                    <a href="product12.jsp">>></a>--%>
+<%--                </div>--%>
+                <div class="paginationn">
+                <c:if test="${currentPage > 1}">
+                    <a href="?page=${currentPage - 1}">Trang trước</a>
+                </c:if>
+
+                <c:forEach var="i" begin="1" end="${totalPages}">
+                    <c:choose>
+                        <c:when test="${i == currentPage}">
+                          <a style="color: black"> <b>${i}</b></a>
+                        </c:when>
+                        <c:otherwise>
+                            <a href="?page=${i}">${i}</a>
+                        </c:otherwise>
+                    </c:choose>
+                </c:forEach>
+
+                <c:if test="${currentPage < totalPages}">
+                    <a href="?page=${currentPage + 1}">Trang tiếp</a>
+                </c:if>
                 </div>
+
             </div>
         </div>
     </div>
@@ -523,6 +292,24 @@
 <script src="js/mixitup.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
+<script>
+    function submitForm() {
+        var sortingOption = document.getElementById("sortingOption").value;
+
+        // Lưu giá trị hiện tại của option để có thể đặt lại sau khi gửi form
+        var selectedOption = document.getElementById("sortingOption").value;
+
+        // Gửi form
+        document.getElementById("filterForm").submit();
+
+        // Đặt lại giá trị đã chọn sau khi form được gửi, sau 100ms
+        setTimeout(function() {
+            document.getElementById("sortingOption").value = selectedOption;
+        }, 100);
+    }
+
+</script>
+
 
 
 
