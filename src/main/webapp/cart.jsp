@@ -1,4 +1,10 @@
+<%@ page import="Model.Cart" %>
+<%@ page import="Model.CartItem" %>
+<%@ page import="java.util.List" %>
+<%@ page import="Model.Product" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.text.NumberFormat" %>
+<%@ page import="java.util.Locale" %>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -50,7 +56,7 @@
 
 <ul class="breadcrumb">
   <li><a href="">Trang chủ</a></li>
-<%--  <li><a href="/dung-cu/">  Tin tức</a></li>--%>
+  <%--  <li><a href="/dung-cu/">  Tin tức</a></li>--%>
   <li><span>  Giỏ hàng</span></li>
 </ul>
 
@@ -59,7 +65,26 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
+        <%
+          // Kiểm tra xem có thông báo lỗi hay không
+          String errorMessage = (String) request.getAttribute("errorMessage");
+          if (errorMessage != null && !errorMessage.isEmpty()) {
+        %>
+        <div style="color: red;">
+          <%= errorMessage %>
+        </div>
+        <%
+          }
+        %>
         <div class="shoping__cart__table">
+          <%
+            Cart cart = (Cart) session.getAttribute("cart");
+            if (cart != null) {
+              List<CartItem> items = cart.getItems();
+              if (!items.isEmpty()) {
+                double grandTotal = 0;
+
+          %>
           <table>
             <thead>
             <tr>
@@ -71,72 +96,48 @@
             </tr>
             </thead>
             <tbody>
+
+            <%
+              Locale locale = new Locale("vi", "VN"); // Đặt locale theo định dạng tiền tệ của Việt Nam
+              NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(locale);
+              for (CartItem item : items) {
+                Product product = item.getProduct();
+                int quantity = item.getQuantity();
+                double price = product.getPrice();
+                double total = quantity * price;
+                grandTotal += total; %>
             <tr>
               <td class="shoping__cart__item">
-                <img src="https://cdn1.concung.com/2023/10/64221-1697710018-trans.png" alt="">
-                <h5 title="Set 2 body tam giác Animo NB522014 (0-12M,xanh-trắng mũi tên)">Set 2 body tam giác Animo NB522014 (0-12M,xanh-trắng mũi tên)</h5>
+                <img src="<%= product.getImageUrl() %>" alt="">
+                <h5 title="<%= product.getName() %>"><%= product != null ? product.getName() : "Unknown" %></h5>
               </td>
               <td class="shoping__cart__price">
-                149.000<sup>đ</sup>
+                <%= currencyFormatter.format(price) %>
               </td>
               <td class="shoping__cart__quantity">
                 <div class="quantity">
                   <div class="pro-qty">
-                    <input type="text" value="2">
+                    <a href="UpdateCart?num=-1&id=<%= product.getId() %>"> <span class="dec qtybtn">-</span></a>
+                    <input type="text"  value="<%= quantity %> ">
+                    <a href="UpdateCart?num=1&id=<%= product.getId() %>"><span class="inc qtybtn">+</span></a>
                   </div>
                 </div>
               </td>
-              <td class="shoping__cart__total">
-                298.000<sup>đ</sup>
+              <td class="shoping__cart__total" >
+                <%= currencyFormatter.format(total) %>
               </td>
               <td class="shoping__cart__item__close">
-                <span class="icon_close"></span>
+                <a  href="RemoveItemCart?id=<%= product.getId() %>"><span class="icon_close"></span></a>
               </td>
             </tr>
-            <tr>
-              <td class="shoping__cart__item">
-                <img src="https://cdn1.concung.com/2023/10/64225-1697709895-trans.png" alt="">
-                <h5 title="Set 2 body tam giác Animo NB522013 (0-12M,cam-trắng sọc cam)">Set 2 body tam giác Animo NB522013 (0-12M,cam-trắng sọc cam)</h5>
-              </td>
-              <td class="shoping__cart__price">
-                90.000<sup>đ</sup>
-              </td>
-              <td class="shoping__cart__quantity">
-                <div class="quantity">
-                  <div class="pro-qty">
-                    <input type="text" value="1">
-                  </div>
-                </div>
-              </td>
-              <td class="shoping__cart__total">
-                90.000<sup>đ</sup>
-              </td>
-              <td class="shoping__cart__item__close">
-                <span class="icon_close"></span>
-              </td>
-            </tr>
-            <tr>
-              <td class="shoping__cart__item">
-                <img src="https://cdn1.concung.com/2021/10/51849-75494-large_mobile/ta-quan-merries-ultra-jumbo-l-9-14kg-56-mieng.png" alt="">
-                <h5 title="Tã quần Merries Ultra Jumbo (L, 9-14kg, 56 miếng)">Tã quần Merries Ultra Jumbo (L, 9-14kg, 56 miếng)</h5>
-              </td>
-              <td class="shoping__cart__price">
-                120.000<sup>đ</sup>
-              </td>
-              <td class="shoping__cart__quantity">
-                <div class="quantity">
-                  <div class="pro-qty">
-                    <input type="text" value="2">
-                  </div>
-                </div>
-              </td>
-              <td class="shoping__cart__total">
-                240.000<sup>đ</sup>
-              </td>
-              <td class="shoping__cart__item__close">
-                <span class="icon_close"></span>
-              </td>
-            </tr>
+            <%
+              }
+            %>
+
+
+
+
+
 
             </tbody>
           </table>
@@ -146,8 +147,8 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="shoping__cart__btns">
-          <a href="#" class="primary-btn cart-btn">Tiếp tục mua hàng</a>
-          <a href="#" class="primary-btn cart-btn cart-btn-right"><span ></span>
+          <a href="Product" class="primary-btn cart-btn">Tiếp tục mua hàng</a>
+          <a href="RemoveAllCart" class="primary-btn cart-btn cart-btn-right"><span ></span>
             Xóa giỏ hàng</a>
         </div>
       </div>
@@ -166,15 +167,28 @@
         <div class="shoping__checkout">
           <h5>Tổng tiền giỏ hàng</h5>
           <ul>
-            <li>Tổng tiền <span>628.000<sup>đ</sup></span></li>
-            <li>Tổng tiền phải trả <span>500.000<sup>đ</sup></span></li>
+            <li>Tổng tiền <span><%= currencyFormatter.format(grandTotal) %></span></li>
+            <li>Tổng tiền phải trả <span><%= currencyFormatter.format(grandTotal) %></span></li>
           </ul>
-          <a href="checkout.jsp" class="primary-btn">Thanh toán</a>
+          <a href="ShoppingCart" class="primary-btn">Thanh toán</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<%
+} else {
+%>
+<p>Giỏ hàng của bạn hiện chưa có sản phẩm</p>
+<%
+  }
+} else {
+%>
+<p>Giỏ hàng của bạn hiện chưa có sản phẩm</p>
+<%
+  }
+%>
 <!-- Shoping Cart Section End -->
 
 <!-- Footer Section Begin -->
@@ -189,7 +203,10 @@
 <script src="js/jquery.slicknav.js"></script>
 <script src="js/mixitup.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
-<script src="js/main.js"></script>
+<%--<script src="js/main.js"></script>--%>
+
+
+
 
 
 </body>

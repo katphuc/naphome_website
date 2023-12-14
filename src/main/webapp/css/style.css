@@ -403,7 +403,7 @@ ol {
 }
 
 .header__top__right__auth a {
-	display: block;
+
 	font-size: 14px;
 	color: white;
 }
@@ -566,7 +566,7 @@ ol {
 -----------------------*/
 
 .hero {
-	padding-bottom: 30px;
+	/*padding-bottom: 50px;*/
 }
 
 .hero.hero-normal {
@@ -821,7 +821,7 @@ ol {
 -----------------------*/
 
 .featured {
-	/*padding-top: 50px;*/
+	padding-top: 0px;
 	padding-bottom: 40px;
 }
 
@@ -3553,7 +3553,7 @@ ol {
 	align-items: center;
 }
 
-.view-all-icon {
+.view-all-icon , .view-all-icon a {
 	font-weight: bold;
 	/*border: #ff379b solid 2px;*/
 	text-align: right;
@@ -3584,7 +3584,7 @@ ol {
 .breadcrumb {
 	font-size: 15px;
 	list-style: none;
-	padding-left: 180px;
+	padding-left: 100px;
 	margin: 0;
 	background-color: white;
 }

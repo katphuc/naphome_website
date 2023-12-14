@@ -375,7 +375,7 @@
 <div class="tabtab">
   <div class="tab">
     <a href="UserInfo"><button class="tablinks">Thông tin cá nhân</button></a>
-    <button class="tablinks" onclick="openCity(event, 'Paris')">Tình trạng đơn hàng</button>
+    <a href="OrderStatus"><button class="tablinks" onclick="openCity(event, 'Paris')">Tình trạng đơn hàng</button></a>
     <button class="tablinks" onclick="openCity(event, 'Tokyo')">Đổi mật khẩu</button>
   </div>
 

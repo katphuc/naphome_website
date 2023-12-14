@@ -1,4 +1,12 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="Model.Product" %>
+<%@ page import="Model.CartItem" %>
+<%@ page import="java.util.List" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@page import="java.text.NumberFormat" %>
+<%@ page import="java.util.Locale" %>
+<%@ page import="Model.User" %>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -152,86 +160,105 @@
         <div class="checkout__form">
             <h4>Hoàn tất đơn hàng của bạn</h4>
 
-                <div class="row">
-                    <div class="col-lg-7 col-md-6">
-                        <div class="checkout-form">
+            <div class="row">
+                <div class="col-lg-7 col-md-6">
+                    <div class="checkout-form">
 
-                            <form>
-                                <label for="name">Tên người nhận</label>
-                                <input type="text" id="name" name="name" required>
+                        <form id="myForm" action="Checkout" method="post">
+                            <%
+                                User user = (User) request.getAttribute("user");
+                            %>
+                            <label for="name">Tên người nhận</label>
+                            <input type="text" value="<%= user.getName()!=null ? user.getName():"" %>" id="name" name="name" required>
 
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
+                            <label for="phone">Số điện thoại:</label>
+                            <input type="number" id="phone" name="phone" value="<%=user.getPhone()!=null? user.getPhone():"" %>" required>
 
-                                <div class="select_auto">
-                                    <label for="city">Chọn tỉnh thành:</label>
-                                    <select class="form-select form-select-sm mb-3" id="city" aria-label=".form-select-sm">
-                                        <option value="" selected></option>
-                                    </select>
+                            <div class="select_auto">
+                                <label for="city">Chọn tỉnh thành:</label>
+                                <select class="form-select form-select-sm mb-3" id="city" aria-label=".form-select-sm" onchange="update()">
+                                    <option  value="" selected><%= user.getProvince()!=null ? user.getProvince():""%></option>
+                                </select>
 
-                                    <label for="district">Chọn quận huyện:</label>
-                                    <select class="form-select form-select-sm mb-3" id="district" aria-label=".form-select-sm">
-                                        <option value="" selected></option>
-                                    </select>
+                                <label for="dist">Chọn quận huyện:</label>
+                                <select class="form-select form-select-sm mb-3" id="dist" aria-label=".form-select-sm" onchange="update()">
+                                    <option  value=""  selected><%=user.getDistrict()!=null? user.getDistrict():""%></option>
+                                </select>
 
-                                    <label for="ward">Chọn phường xã:</label>
-                                    <select class="form-select form-select-sm" id="ward" aria-label=".form-select-sm">
-                                        <option value="" selected></option>
-                                    </select>
-                                </div>
+                                <label for="ward">Chọn phường xã:</label>
+                                <select class="form-select form-select-sm" id="ward" aria-label=".form-select-sm" onchange="update()">
+                                    <option  value="" selected><%= user.getWard()!=null ? user.getWard():""%></option>
+                                </select>
 
-                                <label for="address">Địa chỉ:</label>
-                                <input type="text" id="address" name="address" required>
+                                <input class="p" name="province" type="hidden" value="" id="text1">
+                                <input class="d" name="district" type="hidden" value="" id="text2">
+                                <input class="w" name="ward" type="hidden" value="" id="text3">
+                            </div>
 
-                                <label for="card">Ghi chú:</label>
-                                <input type="text" id="card" name="card" required>
+                            <label for="address">Địa chỉ:</label>
+                            <input type="text" id="address" name="address" value="<%= user.getAddress()!=null ? user.getAddress():""%>" required>
 
 
 
 
-                            </form>
-                        </div>
+
+
+                        </form>
+                    </div>
 
 
 
 
                     <%--                        <div class="checkout__input">--%>
-<%--                            <p>Địa chỉ<span>*</span></p>--%>
-<%--                            <input type="text" placeholder="Street Address" class="checkout__input__add">--%>
-<%--                            <input type="text" placeholder="Apartment, suite, unite ect (optinal)">--%>
-<%--                        </div>--%>
-                    </div>
-                    <div class="col-lg-5 col-md-6">
-                        <div class="checkout__order">
-                            <h4>Đơn hàng của bạn</h4>
-                            <div class="checkout__order__products">
-                                <span class="product-title">Sản phẩm</span>
-                                <span class="product-price">Thành tiền</span>
-                            </div>
-                            <ul>
-                                <li>
-                                    <span class="product-title">Set 2 body tam giác Animo NB522014 (0-12M,xanh-trắng mũi tên)</span>
-                                    <span class="product-price">100.000<sup>đ</sup>(x2)</span>
-                                </li>
-                                <li>
-                                    <span class="product-title">Đầm bé gái_BST hoa nhí Animo G1221005 (6M-3Y,Trắng họa tiết)</span>
-                                    <span class="product-price">200.000<sup>đ</sup>(x1)</span>
-                                </li>
-                                <li>
-                                    <span class="product-title">Bỉm tã dán Moony size S, 84 miếng (4-8kg) (giao bao bì ngẫu nhiên)</span>
-                                    <span class="product-price">100.000<sup>đ</sup>(x1)</span>
-                                </li>
-                            </ul>
-                            <div class="checkout__order__subtotal">Tổng tiền <span style="color: #dd2222">500.000<sup>đ</sup></span></div>
-                            <div class="checkout__order__total">Phí giao hàng <span>0<sup>đ</sup></span></div>
-                            <div class="checkout__order__total">Tổng tiền phải trả <span>500.000<sup>đ</sup></span></div>
-
-
-
-                            <button type="submit" class="site-btn" style="font-family: math">ĐẶT HÀNG</button>
+                    <%--                            <p>Địa chỉ<span>*</span></p>--%>
+                    <%--                            <input type="text" placeholder="Street Address" class="checkout__input__add">--%>
+                    <%--                            <input type="text" placeholder="Apartment, suite, unite ect (optinal)">--%>
+                    <%--                        </div>--%>
+                </div>
+                <div class="col-lg-5 col-md-6">
+                    <div class="checkout__order">
+                        <h4>Đơn hàng của bạn</h4>
+                        <div class="checkout__order__products">
+                            <span class="product-title">Sản phẩm</span>
+                            <span class="product-price">Thành tiền</span>
                         </div>
+
+                        <ul>
+                            <c:forEach var="item" items="${cart.items}">
+                                <li>
+                                    <span title="${item.product.name}" class="product-title">${item.product.name}</span>
+                                    <span class="product-price"><fmt:formatNumber value="${item.product.price}" pattern="#,##0"/><sup>đ</sup>(x${item.quantity})</span>
+                                </li>
+                            </c:forEach>
+                        </ul>
+                        <%
+                            Cart cart = (Cart) session.getAttribute("cart");
+
+                            List<CartItem> items = cart.getItems();
+
+                            double grandTotal = 0;
+                            double grandTotalShip =0;
+                            Locale locale = new Locale("vi", "VN"); // Đặt locale theo định dạng tiền tệ của Việt Nam
+                            NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(locale);
+                            for (CartItem item : items) {
+                                Product product = item.getProduct();
+                                int quantity = item.getQuantity();
+                                double price = product.getPrice();
+                                double total = quantity * price;
+                                grandTotal += total;
+                                grandTotalShip = grandTotal + 30000;}
+
+                        %>
+                        <div class="checkout__order__subtotal">Tổng tiền <span style="color: #dd2222"><%= currencyFormatter.format(grandTotal) %></span></div>
+                        <div class="checkout__order__total">Phí giao hàng <span>30.000<sup>đ</sup></span></div>
+                        <div class="checkout__order__total">Tổng tiền phải trả <span><%= currencyFormatter.format(grandTotalShip) %></span></div>
+
+
+
+                        <button type="submit" class="site-btn" id="externalButton" style="font-family: math">ĐẶT HÀNG</button>
                     </div>
                 </div>
+            </div>
 
         </div>
     </div>
@@ -244,11 +271,22 @@
 
 <!-- Js Plugins -->
 
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<%--<script src="js/jquery.nice-select.min.js"></script>--%>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script src="js/mixitup.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<%--<script src="js/main.js"></script>--%>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 <script>
     var citis = document.getElementById("city");
-    var districts = document.getElementById("district");
+    var districts = document.getElementById("dist");
     var wards = document.getElementById("ward");
+
+
     var Parameter = {
         url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json",
         method: "GET",
@@ -258,23 +296,37 @@
     promise.then(function (result) {
         renderCity(result.data);
     });
+    function update(){
+        var citis = document.getElementById("city");
+        var districts = document.getElementById("dist");
+        var wards = document.getElementById("ward");
+
+        var option1 = citis.options[citis.selectedIndex];
+        var option2 = districts.options[districts.selectedIndex];
+        var option3 = wards.options[wards.selectedIndex];
+
+        document.getElementById('text1').value = option1.text;
+        document.getElementById('text2').value = option2.text;
+        document.getElementById('text3').value = option3.text;
+    }
+    update();
 
     function renderCity(data) {
         for (const x of data) {
             citis.options[citis.options.length] = new Option(x.Name, x.Id);
         }
         citis.onchange = function () {
-            district.length = 1;
+            dist.length = 1;
             ward.length = 1;
             if(this.value != ""){
                 const result = data.filter(n => n.Id === this.value);
 
                 for (const k of result[0].Districts) {
-                    district.options[district.options.length] = new Option(k.Name, k.Id);
+                    dist.options[dist.options.length] = new Option(k.Name, k.Id);
                 }
             }
         };
-        district.onchange = function () {
+        dist.onchange = function () {
             ward.length = 1;
             const dataCity = data.filter((n) => n.Id === citis.value);
             if (this.value != "") {
@@ -287,14 +339,25 @@
         };
     }
 </script>
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<%--<script src="js/jquery.nice-select.min.js"></script>--%>
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/jquery.slicknav.js"></script>
-<script src="js/mixitup.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<%--<script src="js/main.js"></script>--%>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Bắt sự kiện click cho nút ở ngoài form
+        document.getElementById("externalButton").addEventListener("click", function () {
+            // Gọi hàm submitForm() khi nút được nhấn
+            submitForm();
+        });
+    });
+
+    // Hàm để gửi form
+    function submitForm() {
+        // Lấy đối tượng form bằng ID
+        var form = document.getElementById("myForm");
+
+        // Gửi form
+        form.submit();
+    }
+</script>
+
 
 
 
