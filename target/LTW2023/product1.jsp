@@ -54,13 +54,13 @@
 
 
         }
-        .paginationn a {
-            border: #ffacac 1px solid;
-            padding: 5px 10px;
-            color: white;
-            text-decoration: none;
-            background-color: #ffacac;
-        }
+       .paginationn a {
+           border: #ffacac 1px solid;
+           padding: 5px 10px;
+           color: white;
+           text-decoration: none;
+           background-color: #ffacac;
+       }
     </style>
 </head>
 
@@ -74,7 +74,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
-                <%@include file="include/menu.jsp"%>
+             <%@include file="include/menu.jsp"%>
             </div>
             <div class="col-lg-9">
                 <%@include file="include/search.jsp"%>
@@ -192,21 +192,21 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-5">
                             <div class="filter__sort">
-                                <%--                                <span>Bộ lọc</span>--%>
-                                <%
+<%--                                <span>Bộ lọc</span>--%>
+    <%
 
-                                    String sortingOption = (String) request.getAttribute("sortingOption");
+        String sortingOption = (String) request.getAttribute("sortingOption");
 
-                                %>
-                                <form id="filterForm" action="Filter" method="post">
-                                    <select id="sortingOption" name="sortingOption" onchange="submitForm()">
-                                        <option value="lowtohigh">Bộ lọc</option>
-                                        <option value="lowtohigh"> Giá từ thấp - cao</option>
-                                        <option value="hightolow">Giá từ cao - thấp</option>
-                                        <option value="atoz">Thứ tự A - Z</option>
-                                        <option value="ztoa">Thứ tự Z - A</option>
-                                    </select>
-                                </form>
+    %>
+    <form id="filterForm" action="Filter" method="post">
+                                <select id="sortingOption" name="sortingOption" onchange="submitForm()">
+                                    <option value="lowtohigh">Bộ lọc</option>
+                                    <option value="lowtohigh"> Giá từ thấp - cao</option>
+                                    <option value="hightolow">Giá từ cao - thấp</option>
+                                    <option value="atoz">Thứ tự A - Z</option>
+                                    <option value="ztoa">Thứ tự Z - A</option>
+                                </select>
+    </form>
                             </div>
                         </div>
 
@@ -238,39 +238,39 @@
 
 
                 </div>
-                <%--                <div class="product__pagination">--%>
-                <%--                    <a href="product1.jsp">1</a>--%>
-                <%--                    <a href="product2.jsp">2</a>--%>
-                <%--                    <a href="product3.jsp">3</a>--%>
-                <%--                    <a href="product4.jsp">4</a>--%>
-                <%--                    <a href="product5.jsp">5</a>--%>
-                <%--                    <a href="product6.jsp">6</a>--%>
-                <%--                    <a href="product7.jsp">7</a>--%>
-                <%--                    <a href="product8.jsp">8</a>--%>
-                <%--                    <a href="product9.jsp">9</a>--%>
-                <%--                    <a href="product10.jsp">10</a>--%>
-                <%--                    <a href="product11.jsp">11</a>--%>
-                <%--                    <a href="product12.jsp">>></a>--%>
-                <%--                </div>--%>
+<%--                <div class="product__pagination">--%>
+<%--                    <a href="product1.jsp">1</a>--%>
+<%--                    <a href="product2.jsp">2</a>--%>
+<%--                    <a href="product3.jsp">3</a>--%>
+<%--                    <a href="product4.jsp">4</a>--%>
+<%--                    <a href="product5.jsp">5</a>--%>
+<%--                    <a href="product6.jsp">6</a>--%>
+<%--                    <a href="product7.jsp">7</a>--%>
+<%--                    <a href="product8.jsp">8</a>--%>
+<%--                    <a href="product9.jsp">9</a>--%>
+<%--                    <a href="product10.jsp">10</a>--%>
+<%--                    <a href="product11.jsp">11</a>--%>
+<%--                    <a href="product12.jsp">>></a>--%>
+<%--                </div>--%>
                 <div class="paginationn">
-                    <c:if test="${currentPage > 1}">
-                        <a href="?page=${currentPage - 1}">Trang trước</a>
-                    </c:if>
+                <c:if test="${currentPage > 1}">
+                    <a href="?page=${currentPage - 1}">Trang trước</a>
+                </c:if>
 
-                    <c:forEach var="i" begin="1" end="${totalPages}">
-                        <c:choose>
-                            <c:when test="${i == currentPage}">
-                                <a style="color: black"> <b>${i}</b></a>
-                            </c:when>
-                            <c:otherwise>
-                                <a href="?page=${i}">${i}</a>
-                            </c:otherwise>
-                        </c:choose>
-                    </c:forEach>
+                <c:forEach var="i" begin="1" end="${totalPages}">
+                    <c:choose>
+                        <c:when test="${i == currentPage}">
+                          <a style="color: black"> <b>${i}</b></a>
+                        </c:when>
+                        <c:otherwise>
+                            <a href="?page=${i}">${i}</a>
+                        </c:otherwise>
+                    </c:choose>
+                </c:forEach>
 
-                    <c:if test="${currentPage < totalPages}">
-                        <a href="?page=${currentPage + 1}">Trang tiếp</a>
-                    </c:if>
+                <c:if test="${currentPage < totalPages}">
+                    <a href="?page=${currentPage + 1}">Trang tiếp</a>
+                </c:if>
                 </div>
 
             </div>
