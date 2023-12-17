@@ -256,7 +256,7 @@
                     </c:forEach>
 
                     <c:if test="${currentPage < totalPages}">
-                        <a href="?categoryId${categoryId}&page=${currentPage + 1}">Trang tiếp</a>
+                        <a href="?categoryId=${categoryId}&page=${currentPage + 1}">Trang tiếp</a>
                     </c:if>
                 </div>
 

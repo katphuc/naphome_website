@@ -1,3 +1,4 @@
+<%@ page import="Model.User" %>
 <%--
   Created by IntelliJ IDEA.
   User: HP
@@ -8,6 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
 <html lang="zxx">
 
 <head>
@@ -16,7 +18,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Chi tiết đơn hàng</title>
+    <title>Thông tin tài khoản</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -343,12 +345,6 @@
         }
 
 
-        .table td, .table th {
-            max-width: 360px;
-
-        }
-
-
     </style>
 </head>
 
@@ -373,8 +369,8 @@
 <!-- Hero Section End -->
 <ul class="breadcrumb">
     <li><a href="">Trang chủ</a></li>
-    <li><a href="/dung-cu/">  Thông tin tài khoản</a></li>
-    <li><span>  Chi tiết đơn hàng </span></li>
+    <%--  <li><a href="/dung-cu/">  Cửa hàng</a></li>--%>
+    <li><span>  Thông tin tài khoản </span></li>
 </ul>
 
 
@@ -382,79 +378,226 @@
 <!-- Product Section Begin -->
 <div class="tabtab">
     <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'Paris')" id="defaultOpen">Tình trạng đơn hàng</button>
-
+        <a href="UserInfo"> <button class="tablinks" id="defaultOpen">Thông tin cá nhân</button></a>
+        <a href="OrderStatus"><button class="tablinks">Tình trạng đơn hàng</button></a>
+        <a href="changePassword.jsp"> <button  class="tablinks" >Đổi mật khẩu</button></a>
     </div>
 
 
 
-    <div id="Paris" class="tabcontent">
+        <div id="Paris" class="tabcontent">
 
-        <div class="tab-1">
-            <button class="tablinks-1" onclick="openCity1(event, 'tab1')" id="default">Chi tiết đơn hàng</button>
+            <div class="tab-1">
+                <button class="tablinks-1" onclick="openCity1(event, 'tab1')" id="default">Chờ xác nhận</button>
+                <button class="tablinks-1" onclick="openCity1(event, 'tab5')">Đã xác nhận</button>
+                <button class="tablinks-1" onclick="openCity1(event, 'tab4')">Đang vận chuyển</button>
+                <button class="tablinks-1" onclick="openCity1(event, 'tab2')">Đã giao</button>
+                <button class="tablinks-1" onclick="openCity1(event, 'tab3')">Đã hủy</button>
+            </div>
 
-        </div>
-
-        <div id="tab1" class="tabcontent-1">
-            <p><span style="font-weight: bold">Tên người nhận: </span> ${name}</p>
-            <p><span style="font-weight: bold">Số điện thoại: </span>${phone}</p>
-            <p><span style="font-weight: bold">Ngày đặt hàng: </span> <fmt:formatDate value="${date}" pattern="dd/MM/yyyy" /></p>
-            <p><span style="font-weight: bold">Địa chỉ: </span> ${address}, ${ward}, ${district}, ${province}</p>
-
-
-            <div class="card">
-                <div class="card-body">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th scope="col">Sản phẩm</th>
-                            <th scope="col">Giá tiền</th>
-                            <th scope="col">Số lượng</th>
-                            <th scope="col">Thành tiền</th>
-
-
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <c:forEach items="${bd}" var="bd">
+            <div id="tab1" class="tabcontent-1">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
                             <tr>
-                                <th style="font-weight: normal"  scope="row">${bd.getNameProduct()}</th>
-                                <td><a><fmt:formatNumber value="${bd.price}" pattern="#,##0"/><sup>đ</sup></a></td>
-                                <td><a>${bd.amount}</a></td>
-                                <td><fmt:formatNumber value="${bd.getTotal()}" pattern="#,##0"/><sup>đ</sup></td>
+                                <th scope="col">Mã đơn hàng</th>
+                                <th scope="col">Ngày đặt hàng</th>
+                                <th scope="col">Tổng tiền</th>
+                                <th scope="col">Chức năng</th>
+    <%--                            <th scope="col">Xem chi tiết đơn hàng</th>--%>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+<c:forEach items="${br}" var="b">
+                            <tr>
+                                <th scope="row">${b.id}</th>
+
+                                <td><a> <fmt:formatDate value="${b.date}" pattern="dd/MM/yyyy" /></a></td>
+                                <td><fmt:formatNumber value="${b.total}" pattern="#,##0"/><sup>đ</sup></td>
+                                <td>
+                                    <a title="xem chi tiết đơn hàng" href="BillDetailUser?id=${b.id}" class="icon-link" >
+                                        <i class="icon-wrapper">
+                                            <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->
+                                        </i>
+                                    </a>
+                                    <a title="hủy đơn hàng" href="CancelBillUser?id=${b.id}" class="icon-link">
+                                        <i class="icon-wrapper">
+                                            <i class="fas fa-trash-alt"></i> <!-- Biểu tượng thùng rác -->
+                                        </i>
+                                    </a>
+
+
+                                </td>
+
+                            </tr>
+</c:forEach>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="tab2" class="tabcontent-1">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Mã đơn hàng</th>
+                                <th scope="col">Ngày đặt hàng</th>
+                                <th scope="col">Tổng tiền</th>
+                                <th scope="col">Chức năng</th>
 
 
                             </tr>
-                        </c:forEach>
+                            </thead>
+                            <tbody>
+                            <c:forEach items="${bd}" var="b">
+                                <tr>
+                                    <th scope="row">${b.id}</th>
 
-                        </tbody>
-                    </table>
+                                    <td><a> <fmt:formatDate value="${b.date}" pattern="dd/MM/yyyy" /></a></td>
+                                    <td><fmt:formatNumber value="${b.total}" pattern="#,##0"/><sup>đ</sup></td>
+                                    <td>
+                                        <a title="xem chi tiết đơn hàng" href="BillDetailUser?id=${b.id}" class="icon-link">
+                                            <i class="icon-wrapper">
+                                                <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->
+                                            </i>
+                                        </a>
+
+
+
+                                    </td>
+
+                                </tr>
+                            </c:forEach>
+
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-            <p style="margin-left: 702px; color: red"><span style="font-weight: bold">Phí giao hàng: </span> 30,000<sup>đ</sup> </p>
-            <p style="margin-left: 702px; color: red"><span style="font-weight: bold">Tổng tiền: </span> <fmt:formatNumber value="${grandTotal}" pattern="#,##0"/><sup>đ</sup> </p>
+            <div id="tab3" class="tabcontent-1">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Mã đơn hàng</th>
+                                <th scope="col">Ngày đặt hàng</th>
+                                <th scope="col">Tổng tiền</th>
+                                <th scope="col">Chức năng</th>
 
-            <%
-                // Lấy giá trị của status từ request
-                int status = (int) request.getAttribute("status");
-            %>
-            <%
-                // Kiểm tra điều kiện status == 0
-                if (status == 0) {
-            %>
-            <a title="hủy đơn hàng" href="CancelInBillUser?id=${idbill}" class="icon-link">
-                <i style="margin-left: 865px" class="icon-wrapper">
-                    <i class="fas fa-trash-alt"></i> <!-- Biểu tượng thùng rác -->
-                </i>
-            </a>
 
-            <%
-                }
-            %>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <c:forEach items="${bc}" var="b">
+                                <tr>
+                                    <th scope="row">${b.id}</th>
+
+                                    <td><a> <fmt:formatDate value="${b.date}" pattern="dd/MM/yyyy" /></a></td>
+                                    <td><fmt:formatNumber value="${b.total}" pattern="#,##0"/><sup>đ</sup></td>
+                                    <td>
+                                        <a title="xem chi tiết đơn hàng" href="BillDetailUser?id=${b.id}" class="icon-link">
+                                            <i class="icon-wrapper">
+                                                <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->
+                                            </i>
+                                        </a>
+
+
+
+                                    </td>
+
+                                </tr>
+                            </c:forEach>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="tab4" class="tabcontent-1">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Mã đơn hàng</th>
+                                <th scope="col">Ngày đặt hàng</th>
+                                <th scope="col">Tổng tiền</th>
+                                <th scope="col">Chức năng</th>
+                                <%--                            <th scope="col">Xem chi tiết đơn hàng</th>--%>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <c:forEach items="${bs}" var="b">
+                                <tr>
+                                    <th scope="row">${b.id}</th>
+
+                                    <td><a> <fmt:formatDate value="${b.date}" pattern="dd/MM/yyyy" /></a></td>
+                                    <td><fmt:formatNumber value="${b.total}" pattern="#,##0"/><sup>đ</sup></td>
+                                    <td>
+                                        <a title="xem chi tiết đơn hàng" href="BillDetailUser?id=${b.id}" class="icon-link">
+                                            <i class="icon-wrapper">
+                                                <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->
+                                            </i>
+                                        </a>
+
+
+
+                                    </td>
+
+                                </tr>
+                            </c:forEach>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="tab5" class="tabcontent-1">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Mã đơn hàng</th>
+                                <th scope="col">Ngày đặt hàng</th>
+                                <th scope="col">Tổng tiền</th>
+                                <th scope="col">Chức năng</th>
+                                <%--                            <th scope="col">Xem chi tiết đơn hàng</th>--%>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <c:forEach items="${bco}" var="b">
+                                <tr>
+                                    <th scope="row">${b.id}</th>
+
+                                    <td><a> <fmt:formatDate value="${b.date}" pattern="dd/MM/yyyy" /></a></td>
+                                    <td><fmt:formatNumber value="${b.total}" pattern="#,##0"/><sup>đ</sup></td>
+                                    <td>
+                                        <a title="xem chi tiết đơn hàng" href="BillDetailUser?id=${b.id}" class="icon-link">
+                                            <i class="icon-wrapper">
+                                                <i class="fas fa-search"></i> <!-- Biểu tượng kính lúp -->
+                                            </i>
+                                        </a>
+
+
+
+                                    </td>
+
+                                </tr>
+                            </c:forEach>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
         </div>
-
-
-    </div>
 
 
 </div>
@@ -463,7 +606,7 @@
 <!-- Product Section End -->
 
 <!-- Footer Section Begin -->
-<%@include file="include/footer.jsp"%>
+<%--<%@include file="include/footer.jsp"%>--%>
 <!-- Footer Section End -->
 
 <!-- Js Plugins -->
@@ -480,8 +623,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 <script>
     var citis = document.getElementById("city");
-    var districts = document.getElementById("district");
+    var districts = document.getElementById("dist");
     var wards = document.getElementById("ward");
+
+
     var Parameter = {
         url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json",
         method: "GET",
@@ -491,23 +636,37 @@
     promise.then(function (result) {
         renderCity(result.data);
     });
+    function update(){
+        var citis = document.getElementById("city");
+        var districts = document.getElementById("dist");
+        var wards = document.getElementById("ward");
+
+        var option1 = citis.options[citis.selectedIndex];
+        var option2 = districts.options[districts.selectedIndex];
+        var option3 = wards.options[wards.selectedIndex];
+
+        document.getElementById('text1').value = option1.text;
+        document.getElementById('text2').value = option2.text;
+        document.getElementById('text3').value = option3.text;
+    }
+    update();
 
     function renderCity(data) {
         for (const x of data) {
             citis.options[citis.options.length] = new Option(x.Name, x.Id);
         }
         citis.onchange = function () {
-            district.length = 1;
+            dist.length = 1;
             ward.length = 1;
             if(this.value != ""){
                 const result = data.filter(n => n.Id === this.value);
 
                 for (const k of result[0].Districts) {
-                    district.options[district.options.length] = new Option(k.Name, k.Id);
+                    dist.options[dist.options.length] = new Option(k.Name, k.Id);
                 }
             }
         };
-        district.onchange = function () {
+        dist.onchange = function () {
             ward.length = 1;
             const dataCity = data.filter((n) => n.Id === citis.value);
             if (this.value != "") {
@@ -571,9 +730,10 @@
 
 
 <script>
-    document.getElementById("defaultOpen").click();
+
     document.getElementById("default").click();
 </script>
+
 
 
 </body>

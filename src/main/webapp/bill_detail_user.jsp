@@ -5,7 +5,9 @@
   Time: 6:00 pm
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <html lang="zxx">
 
 <head>
@@ -371,7 +373,7 @@
 <!-- Hero Section End -->
 <ul class="breadcrumb">
     <li><a href="">Trang chủ</a></li>
-      <li><a href="/dung-cu/">  Thông tin tài khoản</a></li>
+    <li><a href="/dung-cu/">  Thông tin tài khoản</a></li>
     <li><span>  Chi tiết đơn hàng </span></li>
 </ul>
 
@@ -384,106 +386,7 @@
 
     </div>
 
-    <div id="London" class="tabcontent">
-        <div class="card">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h4 style="font-size: 20px">Thông tin cá nhân</h4>
-                        <hr>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <form>
-                            <div class="form-group row">
-                                <label  for="username" class="col-4 col-form-label">Tên</label>
-                                <div class="col-8">
-                                    <input id="username" name="username" placeholder=""
-                                           class="form-control here" required="required" type="text">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="name" class="col-4 col-form-label">Số điện thoại</label>
-                                <div class="col-8">
-                                    <input id="name" name="name" placeholder="" class="form-control here"
-                                           type="text">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="lastname" class="col-4 col-form-label">Email</label>
-                                <div class="col-8">
-                                    <input id="lastname" name="lastname" placeholder=""
-                                           class="form-control here" type="text">
-                                </div>
-                            </div>
 
-                            <%--                                <label for="text" class="col-4 col-form-label">Biệt danh*</label>--%>
-                            <%--                                <div class="col-8">--%>
-                            <%--                                    <input id="text" name="text" placeholder="Nick Name" class="form-control here"--%>
-                            <%--                                           required="required" type="text">--%>
-                            <%--                                </div>--%>
-
-
-                            <div class="form-group row">
-                                <label for="city" class="col-4 col-form-label">Chọn tỉnh thành</label>
-                                <div class="col-8">
-                                    <select class="form-select form-control form-select-sm mb-3" id="city" aria-label=".form-select-sm">
-                                        <option value="" selected></option>
-                                    </select>
-                                </div>
-                            </div>
-
-
-                            <div class="form-group row">
-                                <label for="district" class="col-4 col-form-label">Chọn quận huyện</label>
-                                <div class="col-8">
-                                    <select class="form-select form-control form-select-sm mb-3" id="district" aria-label=".form-select-sm">
-                                        <option value="" selected></option>
-                                    </select>
-                                </div>
-                            </div>
-
-
-
-
-                            <div class="form-group row">
-                                <label for="ward" class="col-4 col-form-label">Chọn phường xã</label>
-                                <div class="col-8">
-                                    <select class="form-select form-control form-select-sm" id="ward" aria-label=".form-select-sm">
-                                        <option value="" selected></option>
-                                    </select>
-                                </div>
-                            </div>
-
-
-                            <div class="form-group row">
-                                <label  for="address" class="col-4 col-form-label">Địa chỉ</label>
-                                <div class="col-8">
-                                    <input id="address" name="username" placeholder=""
-                                           class="form-control here" required="required" type="text">
-                                </div>
-                            </div>
-
-
-
-
-
-
-                            <div class="form-group row">
-                                <div class="offset-4 col-8">
-                                    <button name="submit" type="submit" class="btn btn-black"
-                                            style="background-color: #ffacac; color: white; border: 1px solid #ffacac">Cập nhật thông
-                                        tin cá nhân
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div id="Paris" class="tabcontent">
 
@@ -493,11 +396,11 @@
         </div>
 
         <div id="tab1" class="tabcontent-1">
-            <p><span style="font-weight: bold">Tên người nhận: </span> Ka Ân Thiên Phúc</p>
-            <p><span style="font-weight: bold">Số điện thoại: </span> 078 6191 721</p>
-            <p><span style="font-weight: bold">Ngày đặt hàng: </span> 27/10/2023</p>
-            <p><span style="font-weight: bold">Địa chỉ: </span> Đại học Nông Lâm TP.HCM</p>
-            <p><span style="font-weight: bold">Ghi chú: </span> Giao ở khoa CNTT</p>
+            <p><span style="font-weight: bold">Tên người nhận: </span> ${name}</p>
+            <p><span style="font-weight: bold">Số điện thoại: </span>${phone}</p>
+            <p><span style="font-weight: bold">Ngày đặt hàng: </span> <fmt:formatDate value="${date}" pattern="dd/MM/yyyy" /></p>
+            <p><span style="font-weight: bold">Địa chỉ: </span> ${address}, ${ward}, ${district}, ${province}</p>
+
 
             <div class="card">
                 <div class="card-body">
@@ -513,36 +416,41 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th style="font-weight: normal"  scope="row">Bỉm tã quần Moony bé trai size XL 38 miếng (12-22kg) (giao bao bì ngẫu nhiên)</th>
-                            <td><a>100.000<sup>đ</sup></a></td>
-                            <td><a>2</a></td>
-                            <td>200.000<sup>đ</sup></td>
+                        <c:forEach items="${bd}" var="bd">
+                            <tr>
+                                <th style="font-weight: normal"  scope="row">${bd.getNameProduct()}</th>
+                                <td><a><fmt:formatNumber value="${bd.price}" pattern="#,##0"/><sup>đ</sup></a></td>
+                                <td><a>${bd.amount}</a></td>
+                                <td><fmt:formatNumber value="${bd.getTotal()}" pattern="#,##0"/><sup>đ</sup></td>
 
 
-                        </tr>
-                        <tr>
-                            <th style="font-weight: normal" scope="row">Sữa GrowPlus+ Đỏ 1,5kg (từ 1 tuổi)</th>
-                            <td><a>500.000<sup>đ</sup></a></td>
-                            <td><a>1</a></td>
-                            <td>500.000<sup>đ</sup></td>
+                            </tr>
+                        </c:forEach>
 
-
-                        </tr>
-                        <tr>
-                            <th style="font-weight: normal" scope="row">Tã quần Huggies Skincare gói cực đại (L, 9-14kg, 68 miếng)</th>
-                            <td><a>200.000<sup>đ</sup></a></td>
-                            <td><a>1</a></td>
-                            <td>200.000<sup>đ</sup></td>
-
-
-                        </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-            <p style="margin-left: 702px; color: red"><span style="font-weight: bold">Phí giao hàng: </span> 0<sup>đ</sup> </p>
-            <p style="margin-left: 702px; color: red"><span style="font-weight: bold">Tổng tiền: </span> 900.000<sup>đ</sup> </p>
+            <p style="margin-left: 702px; color: red"><span style="font-weight: bold">Phí giao hàng: </span> 30,000<sup>đ</sup> </p>
+            <p style="margin-left: 702px; color: red"><span style="font-weight: bold">Tổng tiền: </span> <fmt:formatNumber value="${grandTotal}" pattern="#,##0"/><sup>đ</sup> </p>
+
+            <%
+                // Lấy giá trị của status từ request
+                int status = (int) request.getAttribute("status");
+            %>
+            <%
+                // Kiểm tra điều kiện status == 0
+                if (status == 0) {
+            %>
+            <a title="hủy đơn hàng" href="CancelInBillUser?id=${idbill}" class="icon-link">
+                <i style="margin-left: 865px" class="icon-wrapper">
+                    <i class="fas fa-trash-alt"></i> <!-- Biểu tượng thùng rác -->
+                </i>
+            </a>
+
+            <%
+                }
+            %>
         </div>
 
 
