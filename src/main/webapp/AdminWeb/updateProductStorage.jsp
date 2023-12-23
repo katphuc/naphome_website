@@ -5,7 +5,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Thêm sản phẩm</title>
+  <title>Quản lý</title>
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="AdminWeb/css/all.min.css">
   <link rel="stylesheet" href="AdminWeb/css/style.css">
@@ -17,11 +17,18 @@
 <section class="home-section">
   <div class="home-content">
     <div class="manager-product">
-      <div class="title">Nhập hàng</div>
-      <form id="myForm" action="AddProductAdmin" method="post" class="row">
+      <div class="title">Chỉnh sửa thông tin sản phẩm</div>
+      <form id="myForm" action="UpdateProductStorage" method="post" class="row">
         <%
-          int id = (int) request.getAttribute("id");
+          int id = (int) request.getAttribute("idP");
+          int id_type = (int) request.getAttribute("id_type");
+          String name = (String) request.getAttribute("name");
+          int discount = (int) request.getAttribute("discount");
+          int price = (int) request.getAttribute("price");
+          String describe = (String) request.getAttribute("describe");
 
+          String nameType = Product.getNameType(id_type);
+          String imageURL = ProductDao.getImageUrl(id);
 
 
         %>
@@ -31,7 +38,7 @@
         </div>
         <div class="form-group col-md-3">
           <label class="control-label">Tên sản phẩm</label>
-          <input name="name" class="form-control" type="text" value="">
+          <input name="name" class="form-control" type="text" value="<%= name %>">
         </div>
 
         <%--                <div class="form-group  col-md-3">--%>
@@ -42,7 +49,7 @@
         <div class="form-group col-md-3">
           <label class="control-label">Danh mục</label>
           <select name="type" class="form-control"  >
-            <option value="" disabled selected>--Chọn loại sản phẩm--</option>
+            <option value="<%=  id_type %>"> <%=  nameType %></option>
             <option value="1">Sữa bột cao cấp</option>
             <option value="2">Bỉm tả khuyến mãi</option>
             <option value="3">Ăn dặm, dinh dưỡng</option>
@@ -55,44 +62,24 @@
           </select>
         </div>
         <div class="form-group col-md-3">
-          <label class="control-label">Giá nhập</label>
-          <input name="import_price" class="form-control" type="text" value="">
-        </div>
-        <div class="form-group col-md-3">
           <label class="control-label">Giá bán</label>
-          <input name="price" class="form-control" type="text" value="">
+          <input name="price" class="form-control" type="text" value="<%=  price %>">
         </div>
         <div class="form-group col-md-3">
           <label class="control-label">Giảm giá (%)</label>
-          <input name="discount" class="form-control" type="number" value="">
+          <input name="discount" class="form-control" type="number" value="<%=  discount %>">
         </div>
         <div class="form-group col-md-4">
           <label class="control-label">Ảnh</label>
-          <input name="image" class="form-control" type="text" value="">
-        </div>
-        <div class="form-group col-md-3">
-          <label class="control-label">Nhà cung cấp</label>
-          <select name="vendor" class="form-control"  >
-            <option value="" disabled selected>--Chọn nhà cung cấp--</option>
-            <option value="1">Concung</option>
-            <option value="2">Kho mẹ bé Thiên An</option>
-            <option value="3">Sozo</option>
-            <option value="4">Chaang</option>
-
-
-          </select>
-        </div>
-        <div class="form-group col-md-3">
-          <label class="control-label">Số lượng</label>
-          <input name="amount" class="form-control" type="number" value="">
+          <input name="image" class="form-control" type="text" value="<%=  imageURL %>">
         </div>
         <div class="form-group col-md-12">
           <label class="control-label">Mô tả sản phẩm</label>
-          <textarea  class="form-control" name="describe" id="mota"></textarea>
+          <textarea  class="form-control" name="describe" id="mota"><%=  describe %></textarea>
         </div>
       </form>
       <button id="externalButton" class="btn btn-save" type="button">Lưu lại</button>
-      <a class="btn btn-cancel" href="StorageAdmin">Hủy bỏ</a>
+      <a class="btn btn-cancel" href="ProductAdmin">Hủy bỏ</a>
     </div>
   </div>
 </section>
