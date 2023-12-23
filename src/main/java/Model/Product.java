@@ -14,8 +14,24 @@ public class Product {
     private int amount_storage;
     private int id_vendor;
     private String date;
+    private double import_price;
 
     public Product() {
+    }
+
+    public Product(int id, int id_type, String name, int discount, double price, String describe, int status, int amount_shop, int amount_storage, int id_vendor, String date, double import_price) {
+        this.id = id;
+        this.id_type = id_type;
+        this.name = name;
+        this.discount = discount;
+        this.price = price;
+        this.describe = describe;
+        this.status = status;
+        this.amount_shop = amount_shop;
+        this.amount_storage = amount_storage;
+        this.id_vendor = id_vendor;
+        this.date = date;
+        this.import_price = import_price;
     }
 
     public Product(int id, int id_type, String name, int discount, double price, String describe, int status, int amount_shop, int amount_storage, int id_vendor, String date) {
@@ -43,6 +59,14 @@ public class Product {
         this.amount_shop = amount_shop;
         this.amount_storage = amount_storage;
         this.id_vendor = id_vendor;
+    }
+
+    public double getImport_price() {
+        return import_price;
+    }
+
+    public void setImport_price(double import_price) {
+        this.import_price = import_price;
     }
 
     public String getDate() {
@@ -126,6 +150,7 @@ public class Product {
     }
 
     public int getId_vendor() {
+
         return id_vendor;
     }
 
@@ -135,5 +160,82 @@ public class Product {
 
     public String getImageUrl() {
         return ProductDao.getImageUrl(id);
+    }
+
+    public String getNameType() {
+        String rs="";
+        if(id_type==1){
+            rs="Sữa bột cao cấp";
+        }
+        if(id_type==2){
+            rs="Bỉm tả khuyến mãi";
+        }
+        if(id_type==3){
+            rs="Ăn dặm dinh dưỡng";
+        }
+        if(id_type==4){
+            rs="Vitamin & Sức khỏe";
+        }
+        if(id_type==5){
+            rs="Chăm sóc gia đình";
+        }
+        if(id_type==6){
+            rs="Đồ dùng mẹ bé";
+        }
+        if(id_type==7){
+            rs="Thời trang & Phụ kiện";
+        }
+        if(id_type==8){
+            rs="Đồ chơi, học tập";
+        }
+        return rs;
+
+    }
+
+    public static String getNameType(int idtype) {
+        String rs="";
+        if(idtype==1){
+            rs="Sữa bột cao cấp";
+        }
+        if(idtype==2){
+            rs="Bỉm tả khuyến mãi";
+        }
+        if(idtype==3){
+            rs="Ăn dặm dinh dưỡng";
+        }
+        if(idtype==4){
+            rs="Vitamin & Sức khỏe";
+        }
+        if(idtype==5){
+            rs="Chăm sóc gia đình";
+        }
+        if(idtype==6){
+            rs="Đồ dùng mẹ bé";
+        }
+        if(idtype==7){
+            rs="Thời trang & Phụ kiện";
+        }
+        if(idtype==8){
+            rs="Đồ chơi, học tập";
+        }
+        return rs;
+
+    }
+
+    public String getNameVendor() {
+        String rs="";
+        if(id_vendor==1){
+            rs="Concung";
+        }
+        if(id_vendor==2){
+            rs="Kho mẹ bé Thiên An";
+        }
+        if(id_vendor==3){
+            rs="Sozo";
+        }
+        if(id_vendor==4){
+            rs="Chaang";
+        }
+        return rs;
     }
 }

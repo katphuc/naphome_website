@@ -201,16 +201,21 @@
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="${product.getImageUrl()}">
                             <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <c:if test="${product.amount_shop ne 0}">
+                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                                <li><a href="AddToCart?id=${product.id}"><i class="fa fa-shopping-cart"></i></a></li>
+                                    <li><a href="AddToCart?id=${product.id}"><i class="fa fa-shopping-cart"></i></a></li>
+                                </c:if>
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a title="${product.name}" href="#">${product.name}</a></h6>
+                            <h6><a title="${product.name}" href="DetailProduct?id=${product.id}">${product.name}</a></h6>
                             <h5><fmt:formatNumber value="${product.price}" pattern="#,##0"/><sup>đ</sup>
                                 <c:if test="${product.discount ne 0}">
                                 <span class="discount">-${product.discount}%</span>
+                                </c:if>
+                                <c:if test="${product.amount_shop == 0}">
+                                <span class="discount">Hết hàng</span>
                                 </c:if>
                         </div>
                     </div>
@@ -402,16 +407,21 @@
                     <div class="featured__item">
                         <div class="featured__item__pic set-bg" data-setbg="${product.getImageUrl()}">
                             <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <c:if test="${product.amount_shop ne 0}">
+                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                     <%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
-                                <li><a href="AddToCart?id=${product.id}"><i class="fa fa-shopping-cart"></i></a></li>
+                                    <li><a href="AddToCart?id=${product.id}"><i class="fa fa-shopping-cart"></i></a></li>
+                                </c:if>
                             </ul>
                         </div>
                         <div class="featured__item__text">
-                            <h6><a title="${product.name}" href="#">${product.name}</a></h6>
+                            <h6><a title="${product.name}" href="DetailProduct?id=${product.id}">${product.name}</a></h6>
                             <h5><fmt:formatNumber value="${product.price}" pattern="#,##0"/><sup>đ</sup>
                                 <c:if test="${product.discount ne 0}">
                                 <span class="discount">-${product.discount}%</span>
+                                </c:if>
+                                <c:if test="${product.amount_shop == 0}">
+                                <span class="discount">Hết hàng</span>
                                 </c:if>
                         </div>
                     </div>

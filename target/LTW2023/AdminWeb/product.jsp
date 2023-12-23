@@ -1,13 +1,15 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Quản lý</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="AdminWeb/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="AdminWeb/css/all.min.css">
+    <link rel="stylesheet" href="AdminWeb/css/style.css">
+    <link rel="stylesheet" href="AdminWeb/css/product.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         .icon-wrapper {
@@ -29,7 +31,7 @@
 <section class="home-section">
     <div class="home-content">
         <div class="manager-product">
-            <div class="title">Danh Sách Sản Phẩm</div>
+            <div class="title">Danh Sách Sản Phẩm Trong Cửa Hàng</div>
             <div class="row">
                 <div class="col-md-12">
 
@@ -38,7 +40,7 @@
                         <tr>
                             <th scope="col">Mã</th>
                             <th scope="col">Tên sản phẩm</th>
-<%--                            <th scope="col">Khối lượng</th>--%>
+                            <%--                            <th scope="col">Khối lượng</th>--%>
                             <th scope="col">Ảnh</th>
                             <th scope="col">Số lượng</th>
                             <th scope="col">Tình trạng</th>
@@ -49,92 +51,40 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th scope="row">101</th>
-                            <td>Bỉm tã quần Moony bé trai size XL 38 miếng (12-22kg) (giao bao bì ngẫu nhiên)</td>
-<%--                            <td>300G</td>--%>
-                            <td><img src="https://cdn1.concung.com/2023/04/48750-trans.png" style="max-width: 100px; max-height: 100px;"></td>
-                            <td>40</td>
-                            <td><span class="badge bg-success">Còn hàng</span></td>
-                            <td>250.000<sup>đ</sup></td>
-                            <td>0<span>%</span></td>
-                            <td>Bỉm tả khuyến mãi</td>
-                            <td>
-                                <a title="Xóa" href="#" class="icon-link">
-                                    <i class="icon-wrapper">
-                                        <i class="fas fa-trash-alt"></i> <!-- Biểu tượng thùng rác -->
-                                    </i>
-                                </a>
-                                <a title="Chỉnh sửa" href="#" class="icon-link">
-                                    <i class="icon-wrapper">
-                                        <i class="fas fa-pen"></i> <!-- Biểu tượng thùng rác -->
-                                    </i>
-                                </a>
-                                <a title="Chuyển hàng từ kho lên" href="#" class="icon-link">
-                                    <i class="icon-wrapper">
-                                        <i class="fas fa-arrow-up"></i> <!-- Biểu tượng thùng rác -->
-                                    </i>
-                                </a>
+                        <c:forEach var="products" items="${products}">
+                            <tr>
+                                <th scope="row">${products.id}</th>
+                                <td>${products.name}</td>
+                                    <%--                            <td>300G</td>--%>
+                                <td><img src="${products.getImageUrl()}" style="max-width: 100px; max-height: 100px;"></td>
+                                <td>${products.amount_shop}</td>
+                                <td><span class="badge ${products.amount_shop == 0 ? 'bg-danger' : 'bg-success'}">${products.amount_shop == 0 ? 'Hết hàng' : 'Còn hàng'}</span></td>
+                                <td><fmt:formatNumber value="${products.price}" pattern="#,##0"/><sup>đ</sup></td>
+                                <td>${products.discount}<span>%</span></td>
+                                <td>${products.getNameType()}</td>
+                                <td>
+                                    <a title="Chuyển hàng từ kho lên" href="UpToShop?id=${products.id}" class="icon-link">
+                                        <i class="icon-wrapper">
+                                            <i class="fas fa-arrow-up"></i>
+                                        </i>
+                                    </a>
+                                    <a title="Chỉnh sửa" href="UpdateProductAdmin?id=${products.id}" class="icon-link">
+                                        <i class="icon-wrapper">
+                                            <i class="fas fa-pen"></i>
+                                        </i>
+                                    </a>
+                                        <%--                                <a title="Xóa" href="#" class="icon-link">--%>
+                                        <%--                                    <i class="icon-wrapper">--%>
+                                        <%--                                        <i class="fas fa-trash-alt"></i> <!-- Biểu tượng thùng rác -->--%>
+                                        <%--                                    </i>--%>
+                                        <%--                                </a>--%>
 
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">102</th>
-                            <td>Tã quần Huggies Skincare gói cực đại (L, 9-14kg, 68 miếng)</td>
-<%--                            <td>300G</td>--%>
-                            <td><img src="https://cdn1.concung.com/2023/05/62439-trans.png" style="max-width: 100px; max-height: 100px;"></td>
-                            <td>40</td>
-                            <td><span class="badge bg-success">Còn hàng</span></td>
-                            <td>300.000<sup>đ</sup></td>
-                            <td>0<span>%</span></td>
-                            <td>Bỉm tả khuyến mãi</td>
-                            <td>
-                                <a title="Xóa" href="#" class="icon-link">
-                                    <i class="icon-wrapper">
-                                        <i class="fas fa-trash-alt"></i> <!-- Biểu tượng thùng rác -->
-                                    </i>
-                                </a>
-                                <a title="Chỉnh sửa" href="#" class="icon-link">
-                                    <i class="icon-wrapper">
-                                        <i class="fas fa-pen"></i> <!-- Biểu tượng thùng rác -->
-                                    </i>
-                                </a>
-                                <a title="Chuyển hàng từ kho lên" href="#" class="icon-link">
-                                    <i class="icon-wrapper">
-                                        <i class="fas fa-arrow-up"></i> <!-- Biểu tượng thùng rác -->
-                                    </i>
-                                </a>
 
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">103</th>
-                            <td>Sữa GrowPlus+ Đỏ 1,5kg (từ 1 tuổi)</td>
-<%--                            <td>300G</td>--%>
-                            <td><img src="https://cdn1.concung.com/2022/03/56291-85271-large_mobile/sua-growplus-do-1-5kg-tu-1-tuoi.png" style="max-width: 100px; max-height: 100px;"></td>
-                            <td>40</td>
-                            <td><span class="badge bg-success">Còn hàng</span></td>
-                            <td>575.000<sup>đ</sup></td>
-                            <td>0<span>%</span></td>
-                            <td>Sữa tươi cao cấp</td>
-                            <td>
-                                <a title="Xóa" href="#" class="icon-link">
-                                    <i class="icon-wrapper">
-                                        <i class="fas fa-trash-alt"></i> <!-- Biểu tượng thùng rác -->
-                                    </i>
-                                </a>
-                                <a title="Chỉnh sửa" href="#" class="icon-link">
-                                    <i class="icon-wrapper">
-                                        <i class="fas fa-pen"></i> <!-- Biểu tượng thùng rác -->
-                                    </i>
-                                </a>
-                                <a title="Chuyển hàng từ kho lên" href="#" class="icon-link">
-                                    <i class="icon-wrapper">
-                                        <i class="fas fa-arrow-up"></i> <!-- Biểu tượng thùng rác -->
-                                    </i>
-                                </a>
-                            </td>
-                        </tr>
+
+                                </td>
+                            </tr>
+                        </c:forEach>
+
                         </tbody>
                     </table>
                 </div>
@@ -143,10 +93,10 @@
     </div>
 </section>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery.dataTables.js"></script>
+<script src="AdminWeb/js/jquery.min.js"></script>
+<script src="AdminWeb/js/jquery.dataTables.js"></script>
 
-<script type="text/javascript" charset="utf8" src="js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" charset="utf8" src="AdminWeb/js/bootstrap.bundle.min.js"></script>
 <script>$("#table-id").DataTable();
 </script>
 

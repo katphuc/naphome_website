@@ -3,6 +3,7 @@ package Dao;
 
 
 import DB.DatabaseConnector;
+import Model.Product;
 import Model.User;
 import Service.MD5Hash;
 
@@ -407,7 +408,7 @@ public class UserDao {
         }
 
         // Nếu có lỗi, giả sử username không tồn tại
-            return null;
+        return null;
     }
 
     public static boolean changePassword(String password ,int iduser) {
