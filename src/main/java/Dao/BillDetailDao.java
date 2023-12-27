@@ -29,6 +29,7 @@ public class BillDetailDao {
                 ps.setDouble(3, cd.getQuantity());
                 ps.setDouble(4, cd.getProduct().getPrice());
                 ps.executeUpdate();
+                ProductDao.downAmountShop(cd.getQuantity(), cd.getProduct().getId());
             }
 
 
@@ -65,10 +66,10 @@ public class BillDetailDao {
 
                     while (rs.next()) {
                         BillDetail billDetail = new BillDetail();
-                       billDetail.setId_bill(rs.getInt("id_bill"));
-                       billDetail.setId_product(rs.getInt("id_product"));
-                       billDetail.setAmount(rs.getInt("amount"));
-                       billDetail.setPrice(rs.getDouble("price"));
+                        billDetail.setId_bill(rs.getInt("id_bill"));
+                        billDetail.setId_product(rs.getInt("id_product"));
+                        billDetail.setAmount(rs.getInt("amount"));
+                        billDetail.setPrice(rs.getDouble("price"));
                         billDetails.add(billDetail);
                     }
                 }
