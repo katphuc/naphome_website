@@ -66,43 +66,43 @@
                             int role = user.getRole();
 
                         %>
-                        <c:forEach var="products" items="${products}">
-                            <tr>
-                                <th scope="row">${products.id}</th>
-                                <td>${products.name}</td>
-                                    <%--                            <td>300G</td>--%>
-                                <td><img src="${products.getImageUrl()}" style="max-width: 100px; max-height: 100px;"></td>
-                                <td>${products.amount_storage}</td>
-                                <td><span class="badge ${products.amount_storage == 0 ? 'bg-danger' : 'bg-success'}">${products.amount_storage == 0 ? 'Hết hàng' : 'Còn hàng'}</span></td>
-                                <td><fmt:formatNumber value="${products.price}" pattern="#,##0"/><sup>đ</sup></td>
-                                <td><fmt:formatNumber value="${products.import_price}" pattern="#,##0"/><sup>đ</sup></td>
-                                <td>${products.discount}<span>%</span></td>
-                                <td>${products.getNameVendor()}</td>
-                                <td>${products.getNameType()}</td>
-                                <td>
-                                    <a title="Thêm số lượng" href="UpToStorage?id=${products.id}" class="icon-link">
-                                        <i class="icon-wrapper">
-                                            <i class="fas fa-plus"></i> <!-- Biểu tượng thùng rác -->
-                                        </i>
-                                    </a>
-                                    <a title="Chỉnh sửa" href="UpdateProductStorage?id=${products.id}" class="icon-link">
-                                        <i class="icon-wrapper">
-                                            <i class="fas fa-pen"></i> <!-- Biểu tượng thùng rác -->
-                                        </i>
-                                    </a>
-                                    <% if (role!=1) { %>
-                                    <a title="Xóa sản phẩm" href="RemoveProductAdmin?id=${products.id}" class="icon-link">
-                                        <i class="icon-wrapper">
-                                            <i class="fas fa-trash-alt"></i> <!-- Biểu tượng thùng rác -->
-                                        </i>
-                                    </a>
-                                    <% } %>
+<c:forEach var="products" items="${products}">
+                        <tr>
+                            <th scope="row">${products.id}</th>
+                            <td>${products.name}</td>
+                            <%--                            <td>300G</td>--%>
+                            <td><img src="${products.getImageUrl()}" style="max-width: 100px; max-height: 100px;"></td>
+                            <td>${products.amount_storage}</td>
+                            <td><span class="badge ${products.amount_storage == 0 ? 'bg-danger' : 'bg-success'}">${products.amount_storage == 0 ? 'Hết hàng' : 'Còn hàng'}</span></td>
+                            <td><fmt:formatNumber value="${products.price}" pattern="#,##0"/><sup>đ</sup></td>
+                            <td><fmt:formatNumber value="${products.import_price}" pattern="#,##0"/><sup>đ</sup></td>
+                            <td>${products.discount}<span>%</span></td>
+                            <td>${products.getNameVendor()}</td>
+                            <td>${products.getNameType()}</td>
+                            <td>
+                                <a title="Thêm số lượng" href="UpToStorage?id=${products.id}" class="icon-link">
+                                    <i class="icon-wrapper">
+                                        <i class="fas fa-plus"></i> <!-- Biểu tượng thùng rác -->
+                                    </i>
+                                </a>
+                                <a title="Chỉnh sửa" href="UpdateProductStorage?id=${products.id}" class="icon-link">
+                                    <i class="icon-wrapper">
+                                        <i class="fas fa-pen"></i> <!-- Biểu tượng thùng rác -->
+                                    </i>
+                                </a>
+                                <% if (role!=1) { %>
+                                <a title="Xóa sản phẩm" href="RemoveProductAdmin?id=${products.id}" class="icon-link">
+                                    <i class="icon-wrapper">
+                                        <i class="fas fa-trash-alt"></i> <!-- Biểu tượng thùng rác -->
+                                    </i>
+                                </a>
+                                <% } %>
 
 
 
-                                </td>
-                            </tr>
-                        </c:forEach>
+                            </td>
+                        </tr>
+</c:forEach>
 
                         </tbody>
                     </table>

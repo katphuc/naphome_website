@@ -47,7 +47,7 @@ public class Login extends HttpServlet {
                 if(user.getRole()==2) {
                     response.sendRedirect("Home"); // Chuyển hướng đến trang welcome.jsp
                 } if (user.getRole()==1 || user.getRole()==0 ){
-                    response.sendRedirect("AdminWeb/index.jsp"); // Chuyển hướng đến trang welcome.jsp
+                    response.sendRedirect("Statistical"); // Chuyển hướng đến trang welcome.jsp
                 }
             }
         } else {

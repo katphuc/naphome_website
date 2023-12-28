@@ -1,12 +1,16 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.text.NumberFormat" %>
+<%@ page import="java.util.Locale" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Quản lý</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="AdminWeb/css/all.min.css">
+    <link rel="stylesheet" href="AdminWeb/css/style.css">
+    <link rel="stylesheet" href="AdminWeb/css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
@@ -16,41 +20,58 @@
     <div class="home-content">
         <div class="view-box">
             <div class="header-box">
-                <div class="title">Thống kê</div>
-                <div>
-                    <select>
-                        <option value="0">Hôm nay</option>
-                        <option value="1">Tuần</option>
-                        <option value="2">Tháng</option>
-                    </select>
-                </div>
+                <div class="title">Thống kê trong tháng</div>
+                <%
+                    Integer totalBill = (Integer) request.getAttribute("totalBill");
+                    Integer totalBillCancel = (Integer) request.getAttribute("totalBillCancel");
+                    Integer totalProductSoldOut = (Integer) request.getAttribute("totalProductSoldOut");
+                    Integer totalIncome = (Integer) request.getAttribute("totalIncome");
+                    Locale locale = new Locale("vi", "VN");
+                    NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(locale);
+
+
+                    // Kiểm tra giá trị null trước khi truy cập intValue()
+// Kiểm tra giá trị null trước khi truy cập intValue()
+                    int totalBillValue = (totalBill != null) ? totalBill.intValue() : 0;
+                    int totalBillCancelValue = (totalBillCancel != null) ? totalBillCancel.intValue() : 0;
+                    int totalProductSoldOutValue = (totalProductSoldOut != null) ? totalProductSoldOut.intValue() : 0;
+                    int totalIncomeValue = (totalIncome != null) ? totalIncome.intValue() : 0;
+
+                %>
+                <%--                <div>--%>
+                <%--                    <select>--%>
+                <%--                        <option value="0">Hôm nay</option>--%>
+                <%--                        <option value="1">Tuần</option>--%>
+                <%--                        <option value="2">Tháng</option>--%>
+                <%--                    </select>--%>
+                <%--                </div>--%>
             </div>
             <div class="overview-boxes">
                 <div class="box">
                     <div class="right-side">
                         <div class="box-topic">Tổng Đơn Hàng</div>
-                        <div class="number">800 đơn hàng</div>
+                        <div class="number"><%= totalBillValue %> đơn hàng</div>
                     </div>
                     <i class="fa-solid fa-cart-plus cart"></i>
                 </div>
                 <div class="box">
                     <div class="right-side">
                         <div class="box-topic">Hết Hàng</div>
-                        <div class="number">4 sản phẩm</div>
+                        <div class="number"><%= totalProductSoldOutValue %> sản phẩm</div>
                     </div>
                     <i class="fa-solid fa-xmark cart two"></i>
                 </div>
                 <div class="box">
                     <div class="right-side">
                         <div class="box-topic">Doanh Thu</div>
-                        <div class="number">5.000.000<sup>đ</sup></div>
+                        <div class="number">   <%= currencyFormatter.format(totalIncomeValue) %></div>
                     </div>
                     <i class="fa-solid fa-dollar-sign cart three"></i>
                 </div>
                 <div class="box">
                     <div class="right-side">
                         <div class="box-topic">Đơn Hàng Hủy</div>
-                        <div class="number">5 đơn hàng</div>
+                        <div class="number"><%= totalBillCancelValue %> đơn hàng</div>
                     </div>
                     <i class="fa-solid fa-scroll cart four"></i>
                 </div>
@@ -66,91 +87,38 @@
                             <th scope="col">Mã đơn hàng</th>
                             <th scope="col">Tên khách hàng</th>
                             <th scope="col">Ngày đặt</th>
-                            <th scope="col">Số điện thoại</th>
                             <th scope="col">Tổng tiền</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th scope="row">000001</th>
-                            <td>Ka Ân Thiên Phúc</td>
-                            <td>27/10/2023</td>
-                            <td>0786191721</td>
-                            <td>10.000.000<sup>đ</sup></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">000002</th>
-                            <td>Nguyễn Đình Lưu</td>
-                            <td>27/10/2023</td>
-                            <td>0786191721</td>
-                            <td>10.000.000<sup>đ</sup></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">000003</th>
-                            <td>Trần Hữu Nhật Nam</td>
-                            <td>27/10/2023</td>
-                            <td>0786191721</td>
-                            <td>10.000.000<sup>đ</sup></td>
-                        </tr>
+                        <c:forEach var="b" items="${br}">
+                            <tr>
+                                <th scope="row">${b.id}</th>
+                                <td>${b.getNameUser()}</td>
+                                <td><fmt:formatDate value="${b.date}" pattern="dd/MM/yyyy" /></td>
+                                <td><fmt:formatNumber value="${b.total}" pattern="#,##0"/><sup>đ</sup></td>
+                            </tr>
+                        </c:forEach>
 
                         </tbody>
                     </table>
                 </div>
                 <div class="button">
-                    <a href="checkout.jsp">Xem tất cả</a>
+                    <a href="BillAdmin">Xem tất cả</a>
                 </div>
             </div>
             <div class="top-sales box">
                 <div class="title">Sản Phẩm Bán Chạy</div>
                 <ul class="top-sales-details">
-                    <li>
-                        <a href="#">
+                    <c:forEach var="hot" items="${hot}">
+                        <li>
+                            <a href="">
 
-                            <span title="Sữa GrowPlus+ Đỏ 1,5kg (từ 1 tuổi)" class="product">Sữa GrowPlus+ Đỏ 1,5kg (từ 1 tuổi)</span>
-                        </a>
-                        <span class="price">575.000<sup>đ</sup></span>
-                    </li>
-                    <li>
-                        <a href="#">
-
-                            <span title="Bỉm tã quần Moony bé trai size XL 38 miếng (12-22kg) (giao bao bì ngẫu nhiên)" class="product">Bỉm tã quần Moony bé trai size XL 38 miếng (12-22kg) (giao bao bì ngẫu nhiên)</span>
-                        </a>
-                        <span class="price">335.000<sup>đ</sup></span>
-                    </li>
-                    <li>
-                        <a href="#">
-
-                            <span title="Tã quần Huggies Skincare gói cực đại (L, 9-14kg, 68 miếng)" class="product">Tã quần Huggies Skincare gói cực đại (L, 9-14kg, 68 miếng)</span>
-                        </a>
-                        <span class="price">300.000<sup>đ</sup></span>
-                    </li>
-                    <li>
-                        <a href="#">
-
-                            <span title="Máy xay đa năng cao cấp Animo 0.3L (SW-MG808)" class="product">Máy xay đa năng cao cấp Animo 0.3L (SW-MG808)</span>
-                        </a>
-                        <span class="price">590.000<sup>đ</sup></span>
-                    </li>
-                    <li>
-                        <a href="#">
-
-                            <span title="Tã quần Nhật Bản Takato siêu mềm mại (L, 68 miếng)" class="product">Tã quần Nhật Bản Takato siêu mềm mại (L, 68 miếng)</span>
-                        </a>
-                        <span class="price">325.000<sup>đ</sup></span>
-                    </li>
-                    <li>
-                        <a href="#">
-
-                            <span title="Túi 3 xe trớn  phương tiện giao thông ngộ nghĩnh Animo JS054502G" class="product">Túi 3 xe trớn  phương tiện giao thông ngộ nghĩnh Animo JS054502G</span>
-                        </a>
-                        <span class="price">280.000<sup>đ</sup></span>
-                    <li>
-                        <a href="#">
-
-                            <span title="Bộ nhập vai máy nướng bánh mì CY294239" class="product">Bộ nhập vai máy nướng bánh mì CY294239</span>
-                        </a>
-                        <span class="price">150.000<sup>đ</sup></span>
-                    </li>
+                                <span title="${hot.name}" class="product">${hot.name}</span>
+                            </a>
+                            <span class="price"><fmt:formatNumber value="${hot.price}" pattern="#,##0"/><sup>đ</sup></span>
+                        </li>
+                    </c:forEach>
                 </ul>
             </div>
         </div>
