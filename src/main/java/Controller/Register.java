@@ -6,6 +6,7 @@ import Service.EmailSender;
 import Service.OTPGenerator;
 
 import java.io.IOException;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,70 +22,57 @@ public class Register extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html");
         response.setCharacterEncoding("UTF-8");
+        request.setCharacterEncoding("UTF8");
+//        lấy dữ liệu từ form để nó là tiếng việt
         request.setCharacterEncoding("UTF-8");
 
-        // Lấy dữ liệu từ form
         String name = request.getParameter("name");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String email = request.getParameter("email");
         String confirmPassword = request.getParameter("confirmPassword");
 
-        // Kiểm tra dữ liệu đầu vào
-        StringBuilder errorMessage = new StringBuilder();
 
-        // Kiểm tra tên
-        if (name == null || name.trim().isEmpty()) {
-            errorMessage.append("Tên của bạn không được để trống.<br>");
-        }
-
-        // Kiểm tra tên đăng nhập
-        if (username == null || username.trim().isEmpty()) {
-            errorMessage.append("Tên đăng nhập không được để trống.<br>");
-        } else if (UserDao.isUsernameExists(username)) {
-            errorMessage.append("Tên đăng nhập đã được sử dụng.<br>");
-        }
-
-        // Kiểm tra email
-        if (email == null || email.trim().isEmpty() || !email.contains("@")) {
-            errorMessage.append("Email không hợp lệ.<br>");
-        } else if (UserDao.isEmailExists(email)) {
-            errorMessage.append("Email đã được sử dụng.<br>");
-        }
-
-        // Kiểm tra mật khẩu
-        if (password == null || password.length() < 6) {
-            errorMessage.append("Mật khẩu phải có ít nhất 6 ký tự.<br>");
-        }
-
-        // Kiểm tra xác nhận mật khẩu
         if (confirmPassword == null || !confirmPassword.equals(password)) {
-            errorMessage.append("Mật khẩu nhập lại không trùng khớp.<br>");
-        }
+            request.getSession().setAttribute("message", "Mật khẩu nhập lại không trùng khớp");
 
-        // Nếu có lỗi, gửi thông báo trở lại trang đăng ký
-        if (errorMessage.length() > 0) {
-            request.getSession().setAttribute("message", errorMessage.toString());
+            // Chuyển hướng đến trang jsp
             RequestDispatcher dispatcher = request.getRequestDispatcher("register.jsp");
             dispatcher.forward(request, response);
-            return; // Kết thúc phương thức
-        }
-
-        // Nếu không có lỗi, tiến hành đăng ký
-        boolean registrationSuccess = UserDao.registerUser(name, username, password, email);
-        int userid = UserDao.getiduser(username);
-        InfoDeliverDao.addInfoDeliver(userid);
-
-        if (registrationSuccess) {
-            String otp = OTPGenerator.generateOTP();
-            EmailSender.sendEmail(email, "OTP", "Mã OTP: " + otp);
-            request.getSession().setAttribute("otp", otp);
-            request.getSession().setAttribute("username", username);
-            response.sendRedirect("enterOTP.jsp");
         } else {
-            request.getSession().setAttribute("message", "Lỗi không xác định");
-            RequestDispatcher dispatcher = request.getRequestDispatcher("register.jsp");
-            dispatcher.forward(request, response);
+            if(UserDao.isUsernameExists(username)){
+                request.getSession().setAttribute("message", "Tên đăng nhập đã được sử dụng");
+
+                // Chuyển hướng đến trang jsp
+                RequestDispatcher dispatcher = request.getRequestDispatcher("register.jsp");
+                dispatcher.forward(request, response);
+            } else {
+
+                boolean registrationSuccess = UserDao.registerUser(name, username, password, email);
+                int userid = UserDao.getiduser(username);
+                InfoDeliverDao.addInfoDeliver(userid);
+                if (registrationSuccess) {
+                    String otp = OTPGenerator.generateOTP();
+                    EmailSender.sendEmail(email, "OTP", "Mã OTP: " + otp);
+                    request.getSession().setAttribute("otp", otp);
+                    request.getSession().setAttribute("username", username);
+//                    // Thêm thông báo thành công vào session
+//                    request.getSession().setAttribute("message", "Đăng ký thành công");
+
+                    // Chuyển hướng đến trang jsp
+                    response.sendRedirect("enterOTP.jsp");
+                } else {
+                    request.getSession().setAttribute("message", "Lỗi không xác định");
+
+                    // Chuyển hướng đến trang jsp
+                    RequestDispatcher dispatcher = request.getRequestDispatcher("register.jsp");
+                    dispatcher.forward(request, response);
+
+                }
+
+            }
         }
     }
 }
+
+

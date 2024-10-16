@@ -1,105 +1,174 @@
-<%@ page import="Model.Cart" %>
+<%@ page import="Model.Cart" %><%--
+
+  Created by IntelliJ IDEA.
+  User: HP
+  Date: 22/10/2023
+  Time: 4:19 pm
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<!-- Page Preloder -->
+<%--<div id="preloder">--%>
+<%--    <div class="loader"></div>--%>
+<%--</div>--%>
+
+<!-- Humberger Begin -->
+<div class="humberger__menu__overlay"></div>
+<div class="humberger__menu__wrapper">
+    <div class="humberger__menu__logo">
+        <a href="#"><img src="img/logo.png" alt=""></a>
+    </div>
+    <div class="humberger__menu__cart">
+        <ul>
+            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+        </ul>
+        <div class="header__cart__price">item: <span>$150.00</span></div>
+    </div>
+    <div class="humberger__menu__widget">
+        <div class="header__top__right__language">
+            <img src="img/language.png" alt="">
+            <div>English</div>
+            <span class="arrow_carrot-down"></span>
+            <ul>
+                <li><a href="#">Spanis</a></li>
+                <li><a href="#">English</a></li>
+            </ul>
+        </div>
+        <div class="header__top__right__auth">
+            <a href="register.jsp"><i class="fa fa-user"></i> Đăng nhập</a>
+        </div>
+    </div>
+    <nav class="humberger__menu__nav mobile-menu">
+        <ul>
+            <li class="active"><a href="./index.html">Trang chủ</a></li>
+            <li><a href="./shop-grid.html">Shop</a></li>
+            <li><a href="#">Pages</a>
+                <ul class="header__menu__dropdown">
+                    <li><a href="./shop-details.html">Shop Details</a></li>
+                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+                    <li><a href="./checkout.html">Check Out</a></li>
+                    <li><a href="./blog-details.html">Blog Details</a></li>
+                </ul>
+            </li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="mobile-menu-wrap"></div>
+    <div class="header__top__right__social">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+    </div>
+    <div class="humberger__menu__contact">
+        <ul>
+            <li><i class="fa fa-envelope"></i> lpn@gmail.com</li>
+            <li>Free Shipping for all Order of $99</li>
+        </ul>
+    </div>
+</div>
+<!-- Humberger End -->
 
 <!-- Header Section Begin -->
 <header class="header">
     <div class="header__top">
         <div class="container">
             <div class="row">
-                <div class="col-lg-1" style="padding-top: 10px">
-                    <div class="header__logo">
-                        <a href="Home"><img src="img/logo_nap.png" alt="Logo"></a>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <nav class="header__menu">
+                <div class="col-lg-6 col-md-6">
+                    <div class="header__top__left">
                         <ul>
-                            <li class="active"><a href="Home">Trang chủ<i class="fa-solid fa-angle-down"></i></a></li>
-                            <li><a href="introduce.jsp">Giới thiệu<i class="fa-solid fa-angle-down"></i></a></li>
-                            <li><a href="Product">Cửa hàng<i class="fa-solid fa-angle-down"></i></a></li>
-                            <li><a href="blog.jsp">Tin tức<i class="fa-solid fa-angle-down"></i></a></li>
-                            <li><a href="contact.jsp">Liên hệ<i class="fa-solid fa-angle-down"></i></a></li>
+                            <li><i class="fa fa-envelope"></i> lpn@gmail.com</li>
+                            <li>Free ship cho đơn trên 300k</li>
                         </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-1" style="padding:0px">
-                    <div class="header__top__right__auth">
-                        <% if (session.getAttribute("name") == null) { %>
-                        <a href="login.jsp"><i class="fa-regular fa-circle-user"></i>Đăng nhập/<br>Đăng ký</a>
-                        <% } else { %>
-                        <a href="UserInfo"><i class="fa fa-user"></i> <%= session.getAttribute("name") %>
-                        </a>
-                        <div class="header__top__right__auth">
-                            <a href="LogoutServlet"><i class="fa fa-user"></i> Đăng xuất</a>
-                        </div>
-                        <% } %>
                     </div>
                 </div>
-                <div class="col-lg-1">
-                    <div class="header__top__right__language">
-                        <img src="img/language_vietnam.png" alt="" style="width: 100px; height: auto;">
+                <div class="col-lg-6 col-md-6">
+                    <div class="header__top__right">
+                        <!-- <div class="header__top__right__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                        </div> -->
+                        <div class="header__top__right__language">
+                            <img src="img/language_vietnam.png" alt="">
+                            <div>Tiếng Việt</div>
+                            <span class="arrow_carrot-down"></span>
+                            <ul>
+                                <li><a href="#">Tiếng Anh</a></li>
+                                <li><a href="#">Tiếng Việt</a></li>
+                            </ul>
+                        </div>
+                        <div class="header__top__right__auth">
+                            <%-- Kiểm tra xem người dùng đã đăng nhập hay chưa --%>
+                            <% if (session.getAttribute("name") == null) { %>
+                            <a href="login.jsp"><i class="fa fa-user"></i> Đăng nhập</a>
+                            <% } else { %>
+                            <a href="UserInfo"><i class="fa fa-user"></i> <%= session.getAttribute("name") %></a>
+                            <div class="header__top__right__auth">
+                                <a href="LogoutServlet"><i></i> Đăng xuất</a>
+                            </div>
+                            <% } %>
+                        </div>
+
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="divider"></div> <!-- Đường gạch mờ -->
     <div class="container">
         <div class="row">
-            <div class="col-lg-3" style="padding-top: 14px">
-                <div class="hero__categories">
-                    <div class="hero__categories__all">
-                        <i class="fa fa-bars"></i>
-                        <span id="category">Danh mục sản phẩm</span>
-                    </div>
+            <div class="col-lg-3">
+                <div class="header__logo">
+                    <a href="Home"><img src="img/logo_lpn.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <nav class="header__menu">
                     <ul>
-                        <c:forEach var="typeproduct" items="${typeproduct}">
-                            <li>
-                                <a href="ProductByCategory?categoryId=${typeproduct.id}">${typeproduct.name}</a>
-                            </li>
-                        </c:forEach>
+                        <li class="active"><a href="Home">Trang chủ</a></li>
+                        <li><a href="Product">Cửa hàng</a></li>
+                        <!-- <li><a href="#">Pages</a>
+                            <ul class="header__menu__dropdown">
+                                <li><a href="./shop-details.html">Shop Details</a></li>
+                                <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+                                <li><a href="./checkout.html">Check Out</a></li>
+                                <li><a href="./blog-details.html">Blog Details</a></li>
+                            </ul>
+                        </li> -->
+                        <li><a href="blog.jsp">Tin tức</a></li>
+                        <li><a href="contact.jsp">Liên hệ</a></li>
                     </ul>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-3">
+                <div class="header__cart">
+                    <ul>
+
+                        <%--                        <li><a href="product_favourite.jsp"><i class="fa fa-heart"></i> <span>1</span></a></li>--%>
+                        <%
+
+                            if (request.getSession().getAttribute("cart") == null) {
+                                request.getSession().setAttribute("cart", new Cart());
+                            }
+
+                        %>
+                        <li><a href="CartShow"><i class="fa fa-shopping-bag"></i> <span>${sessionScope.cart.getTotalQuantity()}</span></a></li>
+
+                    </ul>
+                    <%--                    <div class="header__cart__price">Tổng: <span>450.000<sup>đ</sup></span></div>--%>
                 </div>
             </div>
-            <div class="col-lg-9">
-                <div class="hero__search d-flex align-items-center justify-content-between">
-                    <div class="hero__search__form flex-grow-1">
-                        <form action="Search" method="post">
-                            <input type="text" placeholder="Hãy nhập sản phẩm bạn cần tìm tại đây..." name="searchTerm">
-                            <button type="submit">
-                                <i class="fa-solid fa-magnifying-glass"></i>Tìm kiếm
-                            </button>
-                        </form>
-                    </div>
-                    <div class="header__cart mx-3">
-                        <ul>
-                            <%
-                                if (request.getSession().getAttribute("cart") == null) {
-                                    request.getSession().setAttribute("cart", new Cart());
-                                }
-                            %>
-                            <li>
-                                <a href="CartShow">
-                                    <i class="fa-solid fa-cart-shopping"></i>
-                                    <span>${sessionScope.cart.getTotalQuantity()}</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="hero__search__phone d-flex align-items-center">
-                        <div class="hero__search__phone__icon">
-                            <i class="fa fa-phone"></i>
-                        </div>
-                        <div class="hero__search__phone__text">
-                            <h5>0963604877</h5>
-                            <span>Hỗ trợ 24/7</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
+        <div class="humberger__open">
+            <i class="fa fa-bars"></i>
         </div>
     </div>
 </header>
-
 <!-- Header Section End -->
