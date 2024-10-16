@@ -49,7 +49,7 @@ public class Product extends HttpServlet {
 
 
 
-        request.getRequestDispatcher("product1.jsp").forward(request, response);
+        request.getRequestDispatcher("typeproduct.jsp").forward(request, response);
     }
 
     @Override

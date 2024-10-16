@@ -123,30 +123,145 @@
 <body>
 <div class="login-page">
   <div class="form">
-
-    <form action="RegisterServlet" class="login-form" method="post" enctype="application/x-www-form-urlencoded">
+    <form action="RegisterServlet" class="login-form" method="post" enctype="application/x-www-form-urlencoded" id="registrationForm">
       <input type="text" placeholder="Tên của bạn" name="name" required/>
+      <div id="nameError" style="color: red;"></div>
+
       <input type="text" placeholder="Tên đăng nhập" name="username" required/>
+      <div id="usernameError" style="color: red;"></div>
+
       <input type="text" placeholder="Email" name="email" required/>
-      <input type="password" placeholder="Mật khẩu" name="password" required >
-      <input type="password" placeholder="Nhập lại mật khẩu" name="confirmPassword" required>
-      <button type="submit"><a>Đăng ký</a></button>
+      <div id="emailError" style="color: red;"></div>
+
+      <input type="password" placeholder="Mật khẩu" name="password" required/>
+      <div id="passwordError" style="color: red;"></div>
+
+      <input type="password" placeholder="Nhập lại mật khẩu" name="confirmPassword" required/>
+      <div id="confirmPasswordError" style="color: red;"></div>
+
+      <button type="submit">Đăng ký</button>
       <p class="message">Đã có tài khoản? <a href="login.jsp">Đăng nhập</a></p>
+
       <%
         String message = (String) request.getSession().getAttribute("message");
         if (message != null && !message.isEmpty()) {
       %>
-     <p style="color: red"> <%= message %> </p>
-
+      <p style="color: red"> <%= message %> </p>
       <%
-          // Đặt lại giá trị message sau khi đã hiển thị
           request.getSession().removeAttribute("message");
         }
       %>
     </form>
   </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    // Kiểm tra tên
+    $("input[name='name']").on("blur", function (){
+      const name = $(this).val();
+      if(!name) {
+        $("#nameError").text("* Tên không được để trống.");
+      }else {
+        $("#nameError").text(" ");
+      }
+    });
+
+    // Kiểm tra tên đăng nhập
+    $("input[name='username']").on("blur", function() {
+      const username = $(this).val();
+
+      if (!username) {
+        $("#usernameError").text("* Tên đăng nhập không được để trống.");
+      } else {
+        $("#usernameError").text(""); // Xóa thông báo nếu có nhập vào
+        $.ajax({
+          type: "POST",
+          url: "CheckUsernameServlet",
+          data: { username: username },
+          success: function(response) {
+            if (response.exists) {
+              $("#usernameError").text("* Tên đăng nhập đã được sử dụng.");
+            } else {
+              $("#usernameError").text(""); // Xóa thông báo nếu tên đăng nhập hợp lệ
+            }
+          },
+        });
+      }
+    });
+
+
+    // Kiểm tra email
+    $("input[name='email']").on("blur", function() {
+      const email = $(this).val();
+      if (!email) {
+        $("#emailError").text("* Email không được để trống.");
+      } else {
+        $("#emailError").text(""); // Xóa thông báo nếu có nhập vào
+        $.ajax({
+          type: "POST",
+          url: "CheckEmailServlet",
+          data: { email: email },
+          success: function(response) {
+            if (response.exists) {
+              $("#emailError").text("* Email đã được sử dụng.");
+            } else {
+              $("#emailError").text("");
+            }
+          },
+
+        });
+      }
+    });
+
+    // Kiểm tra xác nhận mật khẩu
+    $("input[name='confirmPassword']").on("blur", function() {
+      const password = $("input[name='password']").val();
+      const confirmPassword = $(this).val();
+      if (confirmPassword !== password) {
+        $("#confirmPasswordError").text("* Mật khẩu nhập lại không trùng khớp.");
+      } else {
+        $("#confirmPasswordError").text(""); // Xóa thông báo nếu khớp
+      }
+    });
+
+    // Kiểm tra khi gửi form
+    $("#registrationForm").on("submit", function(e) {
+      let hasError = false;
+
+      // Kiểm tra các trường không được để trống
+      $("input").each(function() {
+        if (!$(this).val().trim()) {
+          hasError = true;
+          if ($(this).attr("name") === "name") {
+            $("#nameError").text("* Tên của bạn không được để trống.");
+          } else if ($(this).attr("name") === "username") {
+            $("#usernameError").text("* Tên đăng nhập không được để trống.");
+          } else if ($(this).attr("name") === "email") {
+            $("#emailError").text("* Email không được để trống.");
+          } else if ($(this).attr("name") === "password") {
+            $("#passwordError").text("* Mật khẩu không được để trống.");
+          } else if ($(this).attr("name") === "confirmPassword") {
+            $("#confirmPasswordError").text("* Nhập lại mật khẩu không được để trống.");
+          }
+        } else {
+          // Xóa thông báo nếu trường không còn rỗng
+          if ($(this).attr("name") === "name") $("#nameError").text("");
+          else if ($(this).attr("name") === "username") $("#usernameError").text("");
+          else if ($(this).attr("name") === "email") $("#emailError").text("");
+          else if ($(this).attr("name") === "password") $("#passwordError").text("");
+          else if ($(this).attr("name") === "confirmPassword") $("#confirmPasswordError").text("");
+        }
+      });
+
+      if (hasError) {
+        e.preventDefault(); // Ngăn không cho gửi form
+      }
+    });
+  });
+</script>
 </body>
+
+
 </html>
