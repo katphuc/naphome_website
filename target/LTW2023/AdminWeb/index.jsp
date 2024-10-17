@@ -7,10 +7,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Quản lý</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="AdminWeb/css/all.min.css">
-    <link rel="stylesheet" href="AdminWeb/css/style.css">
     <link rel="stylesheet" href="AdminWeb/css/home.css">
+    <link rel="stylesheet" href="AdminWeb/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
@@ -20,7 +20,7 @@
     <div class="home-content">
         <div class="view-box">
             <div class="header-box">
-                <div class="title">Thống kê trong tháng</div>
+                <div class="title">Thống kê trong ngày</div>
                 <%
                     Integer totalBill = (Integer) request.getAttribute("totalBill");
                     Integer totalBillCancel = (Integer) request.getAttribute("totalBillCancel");
@@ -38,13 +38,6 @@
                     int totalIncomeValue = (totalIncome != null) ? totalIncome.intValue() : 0;
 
                 %>
-                <%--                <div>--%>
-                <%--                    <select>--%>
-                <%--                        <option value="0">Hôm nay</option>--%>
-                <%--                        <option value="1">Tuần</option>--%>
-                <%--                        <option value="2">Tháng</option>--%>
-                <%--                    </select>--%>
-                <%--                </div>--%>
             </div>
             <div class="overview-boxes">
                 <div class="box">
@@ -77,6 +70,9 @@
                 </div>
             </div>
         </div>
+        <div class="more">
+            <a href="/StatisticalAdmin">Xem Chi Tiết Thống Kê <i class="fa-solid fa-arrow-right-to-bracket"></i>   </a>
+        </div>
         <div class="sales-boxes">
             <div class="recent-sales box">
                 <div class="title">Đơn Hàng Gần Đây</div>
@@ -106,20 +102,6 @@
                 <div class="button">
                     <a href="BillAdmin">Xem tất cả</a>
                 </div>
-            </div>
-            <div class="top-sales box">
-                <div class="title">Sản Phẩm Bán Chạy</div>
-                <ul class="top-sales-details">
-                    <c:forEach var="hot" items="${hot}">
-                        <li>
-                            <a href="">
-
-                                <span title="${hot.name}" class="product">${hot.name}</span>
-                            </a>
-                            <span class="price"><fmt:formatNumber value="${hot.price}" pattern="#,##0"/><sup>đ</sup></span>
-                        </li>
-                    </c:forEach>
-                </ul>
             </div>
         </div>
     </div>

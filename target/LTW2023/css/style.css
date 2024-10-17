@@ -254,122 +254,26 @@ ol {
 /*---------------------
   Header
 -----------------------*/
-.header{
-	background: linear-gradient(to right,#201c1c,#9d2424);
+.header {
+	background: linear-gradient(to right, #201c1c, #9d2424);
 	height: 148px;
+	position: relative; /* Giữ .header là khung bao quanh */
 }
+/*PHẦN HEADER TOP*/
 .header__top {
 	height: 68px;
-	/* color: white; */
-}
-
-/*.header__top__left {*/
-/*	padding: 10px 0 13px;*/
-/*}*/
-
-/*.header__top__left ul li {*/
-/*	font-size: 14px;*/
-/*	color: white;*/
-/*	display: inline-block;*/
-/*	margin-right: 45px;*/
-/*	position: relative;*/
-/*}*/
-
-/*.header__top__left ul li:after {*/
-/*	position: absolute;*/
-/*	right: -25px;*/
-/*	top: 1px;*/
-/*	height: 20px;*/
-/*	width: 1px;*/
-/*	background: #000000;*/
-/*	opacity: 0.1;*/
-/*	content: "";*/
-/*}*/
-
-/*.header__top__left ul li:last-child {*/
-/*	margin-right: 0;*/
-/*}*/
-
-/*.header__top__left ul li:last-child:after {*/
-/*	display: none;*/
-/*}*/
-
-/*.header__top__left ul li i {*/
-/*	color: white;*/
-/*	margin-right: 5px;*/
-/*}*/
-
-/*.header__top__right {*/
-/*	text-align: right;*/
-/*	padding: 10px 0 13px;*/
-/*}*/
-
-/*.header__top__right__social {*/
-/*	position: relative;*/
-/*	display: inline-block;*/
-/*	margin-right: 35px;*/
-/*}*/
-
-/*.header__top__right__social:after {*/
-/*	position: absolute;*/
-/*	right: -20px;*/
-/*	top: 1px;*/
-/*	height: 20px;*/
-/*	width: 1px;*/
-/*	background: #000000;*/
-/*	opacity: 0.1;*/
-/*	content: "";*/
-/*}*/
-
-/*.header__top__right__social a {*/
-/*	font-size: 14px;*/
-/*	display: inline-block;*/
-/*	color: white;*/
-/*	margin-right: 20px;*/
-/*}*/
-
-/*.header__top__right__social a:last-child {*/
-/*	margin-right: 0;*/
-/*}*/
-
-.header__top__right__language {
-	position: relative;
-	display: inline-block;
-	/*margin-right: 40px;*/
-	cursor: pointer;
-	padding: 25px;
-}
-
-.header__top__right__language img {
-	/*margin: 10px;*/
-	display: flex;
-	font-size: 25px;
-	justify-content: center;
-	align-items: center;
-	/*height: 100%;*/
-}
-
-.header__top__right__auth {
-	display: inline-block;
-	padding-top: 15px;
-	padding-right: 0px;
-	padding-left: 0px;
-
-}
-
-.header__top__right__auth a {
-	font-size: 12px;
-	display: flex;             /* Biến thẻ <a> thành flex container */
-	align-items: center;
-	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000; /* Đảm bảo nằm trên các phần tử khác */
+	background: inherit; /* Kế thừa gradient từ .header */
 	color: white;
+	display: flex;
+	align-items: center;
+	padding: 0 15px; /* Tạo padding cho nội dung */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tạo đổ bóng nhẹ */
 }
-
-.header__top__right__auth a i {
-	margin-right: 6px;
-	font-size: 22px;
-}
-
 .header__logo {
 	padding: 0;
 	width: 50px;
@@ -380,7 +284,6 @@ ol {
 	text-align: center;
 
 }
-
 .header__menu {
 	padding: 24px 0;
 	cursor: pointer;
@@ -475,10 +378,164 @@ ol {
 	padding: 5px 0;
 	display: block;
 }
+.header__top__right__language {
+	position: relative;
+	display: inline-block;
+	/*margin-right: 40px;*/
+	cursor: pointer;
+	padding: 25px;
+}
+
+.header__top__right__language img {
+	/*margin: 10px;*/
+	display: flex;
+	font-size: 25px;
+	justify-content: center;
+	align-items: center;
+	/*height: 100%;*/
+}
+
+.header__top__right__auth {
+	display: inline-block;
+	padding-top: 15px;
+	padding-right: 0px;
+	padding-left: 0px;
+
+}
+
+.header__top__right__auth a {
+	font-size: 12px;
+	display: flex;             /* Biến thẻ <a> thành flex container */
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+.header__top__right__auth a i {
+	margin-right: 6px;
+	font-size: 22px;
+}
+/* PHẦN HEADER BOTTOM*/
+.header__bottom {
+	position: fixed; /* Đảm bảo header__bottom luôn ở vị trí cố định */
+	top: 68px; /* Đặt vị trí của header__bottom phía dưới header__top */
+	width: 100%; /* Đảm bảo chiều rộng bằng chiều rộng của viewport */
+	background-color: inherit; /* Kế thừa màu nền */
+	transition: transform 0.3s ease; /* Hiệu ứng chuyển động cho header__bottom */
+	z-index: 999; /* Đảm bảo header__bottom nằm dưới header__top */
+	padding: 10px 15px; /* Padding cho nội dung bên trong */
+}
+
+.header__bottom.hidden {
+	transform: translateY(-100%); /* Ẩn header__bottom */
+}
+
+/* Phần CSS cho các thành phần bên trong header__bottom */
+.hero__categories {
+	margin-bottom: 10px; /* Khoảng cách dưới danh mục */
+}
+.hero__categories__all {
+	background: linear-gradient(to right,#5d4848,#d83838);
+	position: relative;
+	padding: 10px 25px 10px 40px;
+	cursor: pointer;
+}
+
+.hero__categories__all i {
+	font-size: 16px;
+	color: #ffffff;
+	margin-right: 10px;
+}
+
+.hero__categories__all span {
+	font-size: 16px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.hero__categories__all:after {
+	/*position: absolute;*/
+	right: 18px;
+	top: 9px;
+	content: "";
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+	color: #ffffff;
+}
+
+.hero__categories ul {
+	border: 1px solid #ebebeb;
+	padding-left: 0px;
+	padding-top: 10px;
+	padding-bottom: 12px;
+	display: none;
+	/*position: absolute;*/
+	top: 100%; /* Hiển thị ngay dưới phần "Danh mục" */
+	left: 0;
+	width: 100%;
+	background-color: darkgrey;
+}
+
+.hero__categories ul li {
+	list-style: none;
+}
+
+.hero__categories ul li a {
+	font-size: 16px;
+	color: white;
+	line-height: 39px;
+	display: block;
+	margin-left: 40px;
+}
+
+.hero__search {
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.hero__search__form {
+	width: 100%;
+	max-width: 600px;
+	height: 58px;
+	border: none;
+	position: relative;
+	background-color: #2e2e2e;
+	border-radius: 15px;
+	padding: 5px;
+}
+
+.hero__search__form form input {
+	width: 78%;
+	border: none;
+	height: 48px;
+	font-size: 16px;
+	color: #b2b2b2;
+	padding-left: 20px;
+	flex: 1;
+	border-radius: 15px;
+}
+
+.hero__search__form form input::placeholder {
+	color: #b2b2b2;
+}
+
+.hero__search__form form button {
+	background-color: white; /* Nền trắng cho nút */
+	color: black; /* Chữ màu đen */
+	border: none; /* Bỏ viền nút */
+	padding: 8px 15px; /* Khoảng cách bên trong nút */
+	border-radius: 15px; /* Bo tròn góc nút */
+	cursor: pointer; /* Hiển thị con trỏ dạng tay khi hover */
+	white-space: nowrap; /* Đảm bảo không xuống dòng */
+	font-weight: bold;
+	gap: 5px;
+}
 
 .header__cart {
 	text-align: right;
-	padding: 24px 0;
+	padding: 0 15px; /* Padding cho cart */
 }
 
 .header__cart ul {
@@ -531,176 +588,6 @@ ol {
 	color: #252525;
 	font-weight: 700;
 }
-
-/*---------------------
-  Hero
------------------------*/
-
-.hero {
-	/*padding-bottom: 50px;*/
-	padding-top: 10px;
-}
-
-/*.hero.hero-normal {*/
-/*	!*padding-bottom: 30px;*!*/
-/*}*/
-
-/*.hero.hero-normal .hero__categories {*/
-/*	position: relative;*/
-/*}*/
-
-/*.hero.hero-normal .hero__categories ul {*/
-/*	!*display: none;*!*/
-/*	position: absolute;*/
-/*	left: 0;*/
-/*	top: 46px;*/
-/*	width: 100%;*/
-/*	z-index: 9;*/
-/*	background: darkgrey;*/
-/*}*/
-
-/*.hero.hero-normal .hero__search {*/
-/*	margin-bottom: 0;*/
-/*}*/
-
-.hero__categories__all {
-	background: darkgrey;
-	position: relative;
-	padding: 10px 25px 10px 40px;
-	cursor: pointer;
-}
-
-.hero__categories__all i {
-	font-size: 16px;
-	color: #ffffff;
-	margin-right: 10px;
-}
-
-.hero__categories__all span {
-	font-size: 16px;
-	font-weight: 700;
-	color: #ffffff;
-}
-
-.hero__categories__all:after {
-	position: absolute;
-	right: 18px;
-	top: 9px;
-	content: "";
-	font-family: Arial, sans-serif;
-	font-size: 18px;
-	color: #ffffff;
-}
-
-.hero__categories ul {
-	border: 1px solid #ebebeb;
-	padding-left: 0px;
-	padding-top: 10px;
-	padding-bottom: 12px;
-	display: none;
-	position: absolute;
-	top: 100%; /* Hiển thị ngay dưới phần "Danh mục" */
-	left: 0;
-	width: 100%;
-	background-color: darkgrey;
-}
-
-.hero__categories ul li {
-	list-style: none;
-}
-
-.hero__categories ul li a {
-	font-size: 16px;
-	color: white;
-	line-height: 39px;
-	display: block;
-	margin-left: 40px;
-}
-
-.hero__search {
-	overflow: hidden;
-	display: flex;
-	align-items: center;
-	margin-bottom: 30px;
-}
-
-.hero__search__form {
-	width: 100%;
-	max-width: 600px;
-	height: 58px;
-	border: none;
-	/*display: flex;*/
-	position: relative;
-	/*float: left;*/
-	background-color: #2e2e2e;
-	border-radius: 15px;
-	padding: 5px;
-}
-
-
-/*.hero__search__form form .hero__search__categories {*/
-/*	width: 30%;*/
-/*	float: left;*/
-/*	font-size: 16px;*/
-/*	color: #1c1c1c;*/
-/*	font-weight: 700;*/
-/*	padding-left: 18px;*/
-/*	padding-top: 11px;*/
-/*	position: relative;*/
-/*}*/
-
-/*.hero__search__form form .hero__search__categories:after {*/
-/*	position: absolute;*/
-/*	right: 0;*/
-/*	top: 14px;*/
-/*	height: 20px;*/
-/*	width: 1px;*/
-/*	background: #000000;*/
-/*	opacity: 0.1;*/
-/*	content: "";*/
-/*}*/
-
-/*.hero__search__form form .hero__search__categories span {*/
-/*	position: absolute;*/
-/*	right: 14px;*/
-/*	top: 14px;*/
-/*}*/
-
-.hero__search__form form input {
-	width:79%;
-	border: none;
-	height: 48px;
-	font-size: 16px;
-	color: #b2b2b2;
-	padding-left: 20px;
-	flex: 1;
-	border-radius: 15px;
-	/*margin-right: 10px;*/
-}
-
-.hero__search__form form input::placeholder {
-	color: #b2b2b2;
-}
-
-.hero__search__form form button {
-	background-color: white; /* Nền trắng cho nút */
-	color: black; /* Chữ màu đen */
-	border: none; /* Bỏ viền nút */
-	padding: 8px 15px; /* Khoảng cách bên trong nút */
-	border-radius: 15px; /* Bo tròn góc nút */
-	cursor: pointer; /* Hiển thị con trỏ dạng tay khi hover */
-	white-space: none;
-	font-weight: bold;
-	gap: 5px;
-}
-/*.header__cart {*/
-/*	text-align: center;*/
-/*	padding: 10px 0 24px;*/
-/*	margin-left: 20px;*/
-/*}*/
-/*.header__cart ul li a i{*/
-/*	color: white;*/
-/*}*/
 .hero__search__phone {
 	/*float: right;*/
 	display: flex;
@@ -736,6 +623,15 @@ ol {
 	color: white;
 }
 
+/*---------------------
+  Hero
+-----------------------*/
+
+.hero {
+	/*padding-bottom: 50px;*/
+	padding-top: 10px;
+}
+
 .hero__item {
 	height: 431px;
 	display: flex;
@@ -768,6 +664,7 @@ ol {
 	margin: 0; /* Khoảng cách trên và dưới */
 	width: 100%; /* Chiều rộng toàn bộ */
 }
+
 
 /*---------------------
   Categories
@@ -3592,12 +3489,12 @@ ol {
 
 /*color menu hover*/
 .hero__categories ul li:hover {
-	background-color: whitesmoke; /* Màu nền khi hover */
-	color: black; /* Màu chữ khi hover */
+	background: linear-gradient(to right,#000000,#737373); /* Màu nền khi hover */
+	color: white; /* Màu chữ khi hover */
 }
 
 .hero__categories ul li a:hover {
-	color: black; /* Màu chữ khi hover */
+	color: white; /* Màu chữ khi hover */
 }
 
 /*breadcump*/

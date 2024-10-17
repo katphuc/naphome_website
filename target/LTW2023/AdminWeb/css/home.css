@@ -91,7 +91,7 @@
 
 /* left box */
 .home-content .sales-boxes .recent-sales {
-    width: 65%;
+    width: 100%;
     background: #fff;
     padding: 20px 30px;
     margin: 0 20px;
@@ -114,17 +114,17 @@
 
 .sales-boxes .box .button a {
     color: #fff;
-    background: #ffacac;
+    background: linear-gradient(to right, #201c1c, #9d2424);
     padding: 4px 12px;
     font-size: 15px;
     font-weight: 400;
-    border-radius: 4px;
+    border-radius: 15px;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .sales-boxes .box .button a:hover {
-    background: #ffacac;
+    background: linear-gradient(to right,#5d4848,#d83838);
 }
 
 /* Right box */

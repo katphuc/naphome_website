@@ -32,16 +32,11 @@ public class Statistical extends HttpServlet {
         request.setAttribute("totalBillCancel", totalBillCancel);
         request.setAttribute("totalBill", totalBill);
 
-
         if(user==null || user.getRole()==2){
             response.sendRedirect("errorAccess.jsp");
             return;
         }
-
-
         request.getRequestDispatcher("AdminWeb/index.jsp").forward(request, response);
-
-
     }
 
     @Override

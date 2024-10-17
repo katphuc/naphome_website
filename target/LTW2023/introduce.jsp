@@ -39,12 +39,18 @@
 </head>
 <body>
 <%@include file="include/header.jsp"%>
-<h1 style="font-weight: bold">VỀ NGÂN ANH PHÁT</h1>
-<img src="img/logo_nap.png" alt="Logo">
 
+<section id="introduction"> /* đây là section riêng cho introduction */
+<div class="page__content">
+    <div class="page__content__inner">
+        <h1 style="font-weight: bold">VỀ NGÂN ANH PHÁT</h1>
+        <p class="pg__content__txt">Được thành lập vào năm 2007, </p>
+    </div>
+</div>
+</section>
+<section id="intro__content">
 
-
-
+</section>
 
 <%@include file="include/footer.jsp"%>
 
