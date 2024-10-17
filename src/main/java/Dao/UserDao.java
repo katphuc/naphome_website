@@ -212,21 +212,6 @@ public class UserDao {
 
         return null; // Trả về null nếu không tìm thấy
     }
-    public static boolean isEmailExists(String email) {
-        // Thực hiện truy vấn để kiểm tra email
-        String query = "SELECT COUNT(*) FROM users WHERE email = ?";
-        try (Connection conn = DatabaseConnector.getConnection(); PreparedStatement stmt = conn.prepareStatement(query)) {
-            stmt.setString(1, email);
-            ResultSet rs = stmt.executeQuery();
-            if (rs.next()) {
-                return rs.getInt(1) > 0; // Nếu số lượng trả về lớn hơn 0, email đã tồn tại
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return false; // Email không tồn tại
-    }
-
 
 
 
