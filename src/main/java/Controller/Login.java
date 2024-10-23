@@ -44,9 +44,9 @@ public class Login extends HttpServlet {
                 session.setAttribute("user", user);
                 String name = UserDao.getUserName(username);
                 session.setAttribute("name", name);
-                if(user.getRole()==2) {
+                if(user.getRoleId()==2) {
                     response.sendRedirect("Home"); // Chuyển hướng đến trang welcome.jsp
-                } if (user.getRole()==1 || user.getRole()==0 ){
+                } if (user.getRoleId()==1 || user.getRoleId()==0 ){
                     response.sendRedirect("Statistical"); // Chuyển hướng đến trang welcome.jsp
                 }
             }

@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Quản lý</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="AdminWeb/css/all.min.css">
     <link rel="stylesheet" href="AdminWeb/css/style.css">
     <link rel="stylesheet" href="AdminWeb/css/home.css">
@@ -38,13 +38,6 @@
                     int totalIncomeValue = (totalIncome != null) ? totalIncome.intValue() : 0;
 
                 %>
-                <%--                <div>--%>
-                <%--                    <select>--%>
-                <%--                        <option value="0">Hôm nay</option>--%>
-                <%--                        <option value="1">Tuần</option>--%>
-                <%--                        <option value="2">Tháng</option>--%>
-                <%--                    </select>--%>
-                <%--                </div>--%>
             </div>
             <div class="overview-boxes">
                 <div class="box">

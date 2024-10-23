@@ -35,6 +35,6 @@ public class AddProductAdmin extends HttpServlet {
         ProductDao.addProduct(id_type,name,discount,price,describe,0,amount,vendor,import_price);
         ProductDao.addIMGProduct(image,newID);
 
-        response.sendRedirect("StorageAdmin");
+        response.sendRedirect("addProduct.jsp");
     }
 }

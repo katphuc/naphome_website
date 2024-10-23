@@ -10,7 +10,7 @@
     position: fixed;
     height: 100%;
     width: 240px;
-    background: #ffacac;
+    background: linear-gradient(to bottom, #201c1c, #9d2424);
     transition: all 0.5s ease;
 }
 
@@ -44,11 +44,11 @@
 }
 
 .sidebar .nav-links li a.active {
-    background: #ffacac;
+    background: linear-gradient(to right, #5d4848, #d83838);
 }
 
 .sidebar .nav-links li a:hover {
-    background: #ffacac;
+    background: linear-gradient(to right, #5d4848, #d83838);
 }
 
 .sidebar .nav-links li i {
@@ -70,6 +70,16 @@
     bottom: 0;
     width: 100%;
 }
+.user-name-menu{
+    text-align: center;
+}
+.user-name-menu i{
+    color: #fff;
+}
+.user-name-menu span {
+    color: #fff;
+    font-weight: bold;
+}
 
 .home-section {
     position: relative;
@@ -79,6 +89,7 @@
     left: 240px;
     transition: all 0.5s ease;
 }
+
 
 .sidebar.active ~ .home-section {
     width: calc(100% - 60px);

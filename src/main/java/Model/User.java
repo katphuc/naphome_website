@@ -1,6 +1,7 @@
 package Model;
 
 import Dao.InfoDeliverDao;
+import java.sql.Timestamp;
 
 public class User {
     private int id;
@@ -8,19 +9,21 @@ public class User {
     private String password;
     private String email;
     private String name;
-    private int role;
     private int activate;
+    private int roleId;
+    private Timestamp createdAt;
+    private Timestamp updatedAt;
 
     public User() {
     }
 
-    public User(int id, String username, String password, String email, String name, int role, int activate) {
+    public User(int id, String username, String password, String email, String name, int roleId, int activate) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.email = email;
         this.name = name;
-        this.role = role;
+        this.roleId = roleId;
         this.activate = activate;
     }
 
@@ -64,17 +67,37 @@ public class User {
         this.name = name;
     }
 
-    public int getRole() {
-        return role;
+    public int getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(int roleId) {
+        this.roleId = roleId;
+    }
+
+    public Timestamp getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Timestamp createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Timestamp getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Timestamp updatedAt) {
+        this.updatedAt = updatedAt;
     }
     public String getNameRole() {
-        if(role==0){
+        if(roleId==0){
             return "Admin";
         }
-        if(role==1) {
-            return "Mod";
+        if(roleId==1) {
+            return "Moderator";
         }
-        if(role==2) {
+        if(roleId==2) {
             return "User";
         }
         return null;
@@ -94,7 +117,7 @@ public class User {
     }
 
     public void setRole(int role) {
-        this.role = role;
+        this.roleId = role;
     }
 
     public int getActivate() {

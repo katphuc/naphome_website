@@ -17,7 +17,7 @@ public class ProductAdmin extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Product> products = ProductDao.getAllProduct();
         User user = (User) request.getSession().getAttribute("user");
-        if(user==null || user.getRole()==2){
+        if(user==null || user.getRoleId()==2){
             response.sendRedirect("errorAccess.jsp");
             return;
         }

@@ -51,20 +51,6 @@
 
 <%@include file="include/header.jsp"%>
 
-<!-- Hero Section Begin -->
-<section class="hero hero-normal">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3">
-        <%@include file="include/menu.jsp"%>
-      </div>
-      <div class="col-lg-9">
-        <%@include file="include/search.jsp"%>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Hero Section End -->
 <ul class="breadcrumb">
   <li><a href="">Trang chủ</a></li>
   <%--    <li><a href="/dung-cu/">  Giỏ hàng</a></li>--%>

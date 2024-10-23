@@ -35,20 +35,6 @@
 <%@include file="include/header.jsp"%>
 <!-- Header Section End -->
 
-<!-- Hero Section Begin -->
-<section class="hero hero-normal">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3">
-       <%@include file="include/menu.jsp"%>
-      </div>
-      <div class="col-lg-9">
-       <%@include file="include/search.jsp"%>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Hero Section End -->
 <ul class="breadcrumb">
   <c:forEach var="product" items="${product}">
   <li><a href="">Trang chủ</a></li>

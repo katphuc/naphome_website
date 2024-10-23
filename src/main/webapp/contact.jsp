@@ -21,32 +21,18 @@
     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="icon" href="img/favicon.png" type="image/png">
 </head>
 
 <body>
 
-
-
-
 <!-- Header Section Begin -->
 <%@include file="include/header.jsp"%>
 <!-- Header Section End -->
-
-<!-- Hero Section Begin -->
-<section class="hero hero-normal">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3">
-               <%@include file="include/menu.jsp"%>
-            </div>
-            <div class="col-lg-9">
-                <%@include file="include/search.jsp"%>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Hero Section End -->
 
 <ul class="breadcrumb">
     <li><a href="">Trang chủ</a></li>
@@ -122,7 +108,8 @@
     </div>
 </div>
 <!-- Contact Form End -->
-
+<!-- Nút cuộn lên đầu trang -->
+<button id="scrollToTopBtn" class="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></button>
 <!-- Footer Section Begin -->
 <%@include file="include/footer.jsp"%>
 <!-- Footer Section End -->
@@ -136,7 +123,7 @@
 <script src="js/mixitup.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
-
+<script src="js/scrollToTop.js"></script>
 
 
 </body>

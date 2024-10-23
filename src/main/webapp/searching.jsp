@@ -33,22 +33,7 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <style>
-        .hero__search__phone__icon {
-            padding-top: 15px;
-            font-size: 18px;
-            color: #ffacac;
-            height: 50px;
-            width: 50px;
-            background: #f5f5f5;
-            line-height: 50px;
-            text-align: center;
-            border-radius: 50%;
-            float: left;
-            margin-right: 20px;
-            /*padding-top: 14px;*/
 
-
-        }
         .paginationn a {
             border: #ffacac 1px solid;
             padding: 5px 10px;
@@ -64,20 +49,6 @@
 
 <%@include file="include/header.jsp"%>
 
-<!-- Hero Section Begin -->
-<section class="hero hero-normal">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3">
-                <%@include file="include/menu.jsp"%>
-            </div>
-            <div class="col-lg-9">
-                <%@include file="include/search.jsp"%>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Hero Section End -->
 
 <ul class="breadcrumb">
     <li><a href="">Trang chủ</a></li>
@@ -91,9 +62,6 @@
         <div class="row">
             <div class="col-lg-3 col-md-5">
                 <div class="sidebar">
-
-
-
 
                     <div class="sidebar__item">
                         <div class="latest-product__text">
@@ -225,20 +193,7 @@
 
 
                 </div>
-                <%--                <div class="product__pagination">--%>
-                <%--                    <a href="product1.jsp">1</a>--%>
-                <%--                    <a href="product2.jsp">2</a>--%>
-                <%--                    <a href="product3.jsp">3</a>--%>
-                <%--                    <a href="product4.jsp">4</a>--%>
-                <%--                    <a href="product5.jsp">5</a>--%>
-                <%--                    <a href="product6.jsp">6</a>--%>
-                <%--                    <a href="product7.jsp">7</a>--%>
-                <%--                    <a href="product8.jsp">8</a>--%>
-                <%--                    <a href="product9.jsp">9</a>--%>
-                <%--                    <a href="product10.jsp">10</a>--%>
-                <%--                    <a href="product11.jsp">11</a>--%>
-                <%--                    <a href="product12.jsp">>></a>--%>
-                <%--                </div>--%>
+
                 <div class="paginationn">
                     <c:if test="${currentPage > 1}">
                         <a href="?categoryId=${categoryId}&page=${currentPage - 1}">Trang trước</a>

@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -8,7 +10,7 @@
   <meta name="keywords" content="Ogani, unica, creative, html">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Tin Tức</title>
+  <title>Tin Tức | Ngân Anh Phát</title>
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -21,7 +23,11 @@
   <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
   <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
   <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="icon" href="img/favicon.png" type="image/png">
 
   <style>
     .long-content {
@@ -47,32 +53,11 @@
 </head>
 
 <body>
-
-
-
-
-
 <%@include file="include/header.jsp"%>
-<!-- Hero Section Begin -->
-<section class="hero hero-normal">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3">
-        <%@include file="include/menu.jsp"%>
-      </div>
-      <div class="col-lg-9">
-       <%@include file="include/search.jsp"%>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Hero Section End -->
-<ul class="breadcrumb">
-  <li><a href="index.jsp">Trang chủ</a></li>
-<%--  <li><a href="/dung-cu/">  Tin tức</a></li>--%>
-  <li><span>  Tin tức</span></li>
-</ul>
-
+<%--<ul class="breadcrumb">--%>
+<%--  <li><a href="index.jsp">Trang chủ</a></li>--%>
+<%--  <li><span>  Tin tức</span></li>--%>
+<%--</ul>--%>
 
 <!-- Blog Section Begin -->
 <section class="blog spad">
@@ -174,7 +159,8 @@
   </div>
 </section>
 <!-- Blog Section End -->
-
+<!-- Nút cuộn lên đầu trang -->
+<button id="scrollToTopBtn" class="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></button>
 <!-- Footer Section Begin -->
 <%@include file="include/footer.jsp"%>
 <!-- Footer Section End -->
@@ -187,9 +173,10 @@
 <script src="js/jquery.slicknav.js"></script>
 <script src="js/mixitup.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/main.js"></script>
-
-
+<script src="js/scrollToTop.js"></script>
 
 </body>
 

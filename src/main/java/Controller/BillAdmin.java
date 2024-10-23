@@ -26,7 +26,7 @@ public class BillAdmin extends HttpServlet {
         request.setAttribute("bd", bd);
         request.setAttribute("bc", bc);
         User user = (User) request.getSession().getAttribute("user");
-        if(user==null || user.getRole()==2){
+        if(user==null || user.getRoleId()==2){
             response.sendRedirect("errorAccess.jsp");
             return;
         }

@@ -1,19 +1,9 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: HP
-  Date: 22/10/2023
-  Time: 6:00 pm
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ page import="javax.servlet.http.HttpServletRequest" %>
 <%@ page import="java.net.URLDecoder" %>
-
-
-
-
 
 <html lang="zxx">
 
@@ -36,24 +26,11 @@
     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <style>
-        .hero__search__phone__icon {
-            padding-top: 15px;
-            font-size: 18px;
-            color: #ffacac;
-            height: 50px;
-            width: 50px;
-            background: #f5f5f5;
-            line-height: 50px;
-            text-align: center;
-            border-radius: 50%;
-            float: left;
-            margin-right: 20px;
-            /*padding-top: 14px;*/
-
-
-        }
        .paginationn a {
            border: #ffacac 1px solid;
            padding: 5px 10px;
@@ -65,25 +42,7 @@
 </head>
 
 <body>
-
-
 <%@include file="include/header.jsp"%>
-
-<!-- Hero Section Begin -->
-<section class="hero hero-normal">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3">
-             <%@include file="include/menu.jsp"%>
-            </div>
-            <div class="col-lg-9">
-                <%@include file="include/search.jsp"%>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Hero Section End -->
-
 <ul class="breadcrumb">
     <li><a href="">Trang chủ</a></li>
     <%--    <li><a href="/dung-cu/">  Giỏ hàng</a></li>--%>
@@ -96,9 +55,6 @@
         <div class="row">
             <div class="col-lg-3 col-md-5">
                 <div class="sidebar">
-
-
-
 
                     <div class="sidebar__item">
                         <div class="latest-product__text">
@@ -238,20 +194,6 @@
 
 
                 </div>
-<%--                <div class="product__pagination">--%>
-<%--                    <a href="product1.jsp">1</a>--%>
-<%--                    <a href="product2.jsp">2</a>--%>
-<%--                    <a href="product3.jsp">3</a>--%>
-<%--                    <a href="product4.jsp">4</a>--%>
-<%--                    <a href="product5.jsp">5</a>--%>
-<%--                    <a href="product6.jsp">6</a>--%>
-<%--                    <a href="product7.jsp">7</a>--%>
-<%--                    <a href="product8.jsp">8</a>--%>
-<%--                    <a href="product9.jsp">9</a>--%>
-<%--                    <a href="product10.jsp">10</a>--%>
-<%--                    <a href="product11.jsp">11</a>--%>
-<%--                    <a href="product12.jsp">>></a>--%>
-<%--                </div>--%>
                 <div class="paginationn">
                 <c:if test="${currentPage > 1}">
                     <a href="?page=${currentPage - 1}">Trang trước</a>
@@ -278,7 +220,8 @@
     </div>
 </section>
 <!-- Product Section End -->
-
+<!-- Nút cuộn lên đầu trang -->
+<button id="scrollToTopBtn" class="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></button>
 <!-- Footer Section Begin -->
 <%@include file="include/footer.jsp"%>
 <!-- Footer Section End -->
@@ -292,6 +235,9 @@
 <script src="js/mixitup.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/scrollToTop.js"></script>
 <script>
     function submitForm() {
         var sortingOption = document.getElementById("sortingOption").value;
@@ -309,10 +255,5 @@
     }
 
 </script>
-
-
-
-
 </body>
-
 </html>
