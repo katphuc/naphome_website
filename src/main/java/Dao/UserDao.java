@@ -65,13 +65,13 @@ public class UserDao {
 
             // Thêm cột role_id với giá trị mặc định, activate với giá trị 0
             String sql = "INSERT INTO user (username, password, email, `name`, activate, role_id, created_at, updated_at) " +
-                    "VALUES (?, ?, ?, ?, ?, 0, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)";
+                    "VALUES (?, ?, ?, ?, 0, 3, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)";
             try (PreparedStatement ps = connection.prepareStatement(sql)) {
                 ps.setString(1, username);
                 ps.setString(2, password_hash);
                 ps.setString(3, email);
                 ps.setString(4, name);
-                ps.setInt(5, 3); // 3 có thể là mã cho role_id của người dùng thông thường
+//                ps.setInt(5, 3); // 3 có thể là mã cho role_id của người dùng thông thường
 
                 int i = ps.executeUpdate();
                 return i > 0;

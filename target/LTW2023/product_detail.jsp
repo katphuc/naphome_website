@@ -1,6 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<!DOCTYPE html>
 
 <html lang="zxx">
 
@@ -11,18 +10,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Sản phẩm</title>
-
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
 
   <!-- Css Styles -->
   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+
   <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
   <link rel="stylesheet" href="css/nice-select.css" type="text/css">
   <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
   <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
   <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 
@@ -67,7 +67,10 @@
             <i class="fa fa-star-half-o"></i>
             <span></span>
           </div>
-          <div class="product__details__price"><fmt:formatNumber value="${product.price}" pattern="#,##0"/><sup>đ</sup></div>
+          <div class="product__details__price">
+<%--            <fmt:formatNumber value="${product.price}" pattern="#,##0"/><sup>đ</sup>--%>
+            <h3 style="color: red; font-style: italic">Liên hệ</h3>
+          </div>
           <p>${product.describe}
 
 
@@ -75,7 +78,7 @@
           <div class="product__details__quantity">
             <div class="quantity">
               <div class="pro-qty">
-                <input type="text" value="1">
+                <input  type="text" value="1">
               </div>
             </div>
           </div>
@@ -85,14 +88,14 @@
             <li><b>Tình trạng</b> <span>Còn hàng</span></li>
             <li><b>Ship</b> <span>free ship trong bán kính 5km</span></li>
             <li><b>Đơn vị tính</b> <span></span></li>
-            <li><b>Chia sẻ</b>
-              <div class="share">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-pinterest"></i></a>
-              </div>
-            </li>
+<%--            <li><b>Chia sẻ</b>--%>
+<%--              <div class="share">--%>
+<%--                <a href="#"><i class="fa fa-facebook-f"></i></a>--%>
+<%--                <a href="#"><i class="fa fa-twitter"></i></a>--%>
+<%--                <a href="#"><i class="fa fa-instagram"></i></a>--%>
+<%--                <a href="#"><i class="fa fa-pinterest"></i></a>--%>
+<%--              </div>--%>
+<%--            </li>--%>
           </ul>
         </div>
       </div>

@@ -4,12 +4,16 @@ import DB.DatabaseConnector;
 import Model.Product;
 import Model.TypeProduct;
 import Model.User;
+import Model.Vendor;
+import jdk.jfr.Category;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class ProductDao {
@@ -135,7 +139,6 @@ public class ProductDao {
     }
 
 
-
     public static List<Product> getAllDiscountProduct() {
         Connection connection = null;
         List<Product> products = new ArrayList<>();
@@ -189,8 +192,6 @@ public class ProductDao {
                 try (ResultSet rs = statement.executeQuery()) {
 
 
-
-
                     while (rs.next()) {
                         Product product = new Product();
                         product.setId(rs.getInt("id"));
@@ -232,8 +233,6 @@ public class ProductDao {
                 try (ResultSet rs = statement.executeQuery()) {
 
 
-
-
                     while (rs.next()) {
                         Product product = new Product();
                         product.setId(rs.getInt("id"));
@@ -273,8 +272,6 @@ public class ProductDao {
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
                 statement.setString(1, "%" + searchTerm + "%");
                 try (ResultSet rs = statement.executeQuery()) {
-
-
 
 
                     while (rs.next()) {
@@ -360,10 +357,6 @@ public class ProductDao {
     }
 
 
-
-
-
-
     public static List<TypeProduct> getAllType() {
         Connection connection = null;
         List<TypeProduct> typeProducts = new ArrayList<>();
@@ -371,7 +364,7 @@ public class ProductDao {
             connection = DatabaseConnector.getConnection();
 
             // Sử dụng PreparedStatement để tránh SQL injection
-            String sql = "SELECT * from type_product";
+            String sql = "SELECT * from category";
             try (PreparedStatement ps = connection.prepareStatement(sql)) {
 
 
@@ -381,6 +374,8 @@ public class ProductDao {
                     TypeProduct typeProduct = new TypeProduct();
                     typeProduct.setId(rs.getInt("id"));
                     typeProduct.setName(rs.getString("name"));
+                    typeProduct.setParent_id(rs.getInt("parent_id"));
+
 
                     typeProducts.add(typeProduct);
                 }
@@ -405,7 +400,7 @@ public class ProductDao {
             // Sử dụng PreparedStatement để tránh SQL injection
             String sql = "SELECT * from products where id =?";
             try (PreparedStatement ps = connection.prepareStatement(sql)) {
-                ps.setInt(1,productID);
+                ps.setInt(1, productID);
 
                 ResultSet rs = ps.executeQuery();
 
@@ -436,7 +431,6 @@ public class ProductDao {
         // Nếu có lỗi, giả sử username không tồn tại
         return null;
     }
-
 
 
     private static void testGetAllProduct() {
@@ -744,7 +738,7 @@ public class ProductDao {
             String sql = "UPDATE products SET amount_shop=amount_shop+? WHERE id=? ";
             try (PreparedStatement ps = connection.prepareStatement(sql)) {
 
-                ps.setInt(1,amount_up);
+                ps.setInt(1, amount_up);
                 ps.setInt(2, idP);
 
 
@@ -776,7 +770,7 @@ public class ProductDao {
             String sql = "UPDATE products SET amount_shop=amount_shop-? WHERE id=? ";
             try (PreparedStatement ps = connection.prepareStatement(sql)) {
 
-                ps.setInt(1,amount_up);
+                ps.setInt(1, amount_up);
                 ps.setInt(2, idP);
 
 
@@ -809,7 +803,7 @@ public class ProductDao {
             String sql = "UPDATE products SET amount_storage=amount_storage-? WHERE id=? ";
             try (PreparedStatement ps = connection.prepareStatement(sql)) {
 
-                ps.setInt(1,amount_down);
+                ps.setInt(1, amount_down);
                 ps.setInt(2, idP);
 
 
@@ -841,7 +835,7 @@ public class ProductDao {
             String sql = "UPDATE products SET amount_storage=amount_storage+? WHERE id=? ";
             try (PreparedStatement ps = connection.prepareStatement(sql)) {
 
-                ps.setInt(1,amount_down);
+                ps.setInt(1, amount_down);
                 ps.setInt(2, idP);
 
 
@@ -862,6 +856,7 @@ public class ProductDao {
         // Nếu có lỗi hoặc không có dòng nào được cập nhật
         return false;
     }
+
     public static int getID_vendor(int id_product) {
         Connection connection = null;
 
@@ -912,7 +907,7 @@ public class ProductDao {
         return 0; // Trả về null nếu không tìm thấy
     }
 
-    public static boolean deleteProduct( int idP) {
+    public static boolean deleteProduct(int idP) {
         Connection connection = null;
 
         try {
@@ -922,8 +917,7 @@ public class ProductDao {
             String sql = "delete from products where id=?";
             try (PreparedStatement ps = connection.prepareStatement(sql)) {
 
-                ps.setInt(1,idP);
-
+                ps.setInt(1, idP);
 
 
                 int rowsAffected = ps.executeUpdate();
@@ -979,15 +973,15 @@ public class ProductDao {
             String sql = "insert into products (id_type, `name`, discount, price, `describe`, status, amount_shop, amount_storage, id_vendor, `date`,import_price) values (?,?,?,?,?,1,?,?,?,NOW(),?)";
             try (PreparedStatement ps = connection.prepareStatement(sql)) {
 
-                ps.setInt(1,id_type);
+                ps.setInt(1, id_type);
                 ps.setString(2, name);
-                ps.setInt(3,discount);
-                ps.setInt(4,price);
-                ps.setString(5,describe);
-                ps.setInt(6,amount_shop);
-                ps.setInt(7,amount_storage);
-                ps.setInt(8,id_vendor);
-                ps.setInt(9,import_price);
+                ps.setInt(3, discount);
+                ps.setInt(4, price);
+                ps.setString(5, describe);
+                ps.setInt(6, amount_shop);
+                ps.setInt(7, amount_storage);
+                ps.setInt(8, id_vendor);
+                ps.setInt(9, import_price);
 
 
                 int rowsAffected = ps.executeUpdate();
@@ -1018,9 +1012,8 @@ public class ProductDao {
             String sql = "insert into images (url, id_product) values (?,?)";
             try (PreparedStatement ps = connection.prepareStatement(sql)) {
 
-                ps.setString(1,url);
+                ps.setString(1, url);
                 ps.setInt(2, idP);
-
 
 
                 int rowsAffected = ps.executeUpdate();
@@ -1040,6 +1033,7 @@ public class ProductDao {
         // Nếu có lỗi hoặc không có dòng nào được cập nhật
         return false;
     }
+
     public static boolean addType(String name) {
         Connection connection = null;
 
@@ -1050,9 +1044,7 @@ public class ProductDao {
             String sql = "insert into type_product (name) values (?)";
             try (PreparedStatement ps = connection.prepareStatement(sql)) {
 
-                ps.setString(1,name);
-
-
+                ps.setString(1, name);
 
 
                 int rowsAffected = ps.executeUpdate();
@@ -1080,7 +1072,7 @@ public class ProductDao {
             connection = DatabaseConnector.getConnection();
 
             PreparedStatement ps = connection.prepareStatement("select `name` from type_product where id =? ");
-            ps.setInt(1,id);
+            ps.setInt(1, id);
 
             ResultSet rs = ps.executeQuery();
 
@@ -1139,7 +1131,7 @@ public class ProductDao {
             // Sử dụng PreparedStatement để tránh SQL injection
             String sql = "delete from type_product where id =?";
             try (PreparedStatement ps = connection.prepareStatement(sql)) {
-                ps.setInt(1,id);
+                ps.setInt(1, id);
 
 
                 int rowsAffected = ps.executeUpdate();
@@ -1155,7 +1147,6 @@ public class ProductDao {
         } finally {
             DatabaseConnector.closeConnection(connection);
         }
-
 
 
         // Nếu có lỗi hoặc không có dòng nào được cập nhật
@@ -1190,14 +1181,132 @@ public class ProductDao {
         return products;
     }
 
+    public static List<TypeProduct> getChildCategory(int parent_id) {
+        Connection connection = null;
+        List<TypeProduct> typeProducts = new ArrayList<>();
+        try {
+            connection = DatabaseConnector.getConnection();
+            if (connection == null) {
+                throw new SQLException("Cannot establish a database connection.");
+            }
+
+            String sql = "SELECT id, name, parent_id FROM category WHERE parent_id=?";
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                statement.setInt(1, parent_id);
+                try (ResultSet rs = statement.executeQuery()) {
+                    while (rs.next()) {
+                        TypeProduct category = new TypeProduct();
+                        category.setId(rs.getInt("id")); // Cần phải chọn id
+                        category.setName(rs.getString("name"));
+                        category.setParent_id(rs.getInt("parent_id"));
+                        typeProducts.add(category);
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // In lỗi
+            // return an empty list instead of null
+            return new ArrayList<>();
+        } finally {
+            DatabaseConnector.closeConnection(connection);
+        }
+
+        return typeProducts; // Trả về danh sách (có thể rỗng)
+    }
+
+    public static List<Vendor> getAllVendor() {
+        Connection connection = null;
+        List<Vendor> vendors = new ArrayList<>();
+        try {
+            connection = DatabaseConnector.getConnection();
+
+            // Sử dụng PreparedStatement để tránh SQL injection
+            String sql = "SELECT id, name from vendor ";
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
 
 
+                ResultSet rs = ps.executeQuery();
 
+                while (rs.next()) {
+                    Vendor vendor = new Vendor();
+                    vendor.setId(rs.getInt("id"));
+                    vendor.setName(rs.getString("name"));
+
+
+                    vendors.add(vendor);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            DatabaseConnector.closeConnection(connection);
+        }
+
+        // Nếu có lỗi, giả sử username không tồn tại
+        return vendors;
+    }
+
+    public static List<Product> getProductsByVendorIds(List<Integer> vendorIds) {
+        Connection connection = null;
+        List<Product> products = new ArrayList<>();
+
+        // Kiểm tra danh sách vendorIds có trống không
+        if (vendorIds == null || vendorIds.isEmpty()) {
+            return products; // Trả về danh sách rỗng nếu không có vendorId nào được chọn
+        }
+
+        // Tạo chuỗi dấu hỏi (?) cho truy vấn SQL
+        String placeholders = String.join(",", Collections.nCopies(vendorIds.size(), "?"));
+
+        try {
+            connection = DatabaseConnector.getConnection();
+            if (connection == null) {
+                throw new SQLException("Cannot establish a database connection.");
+            }
+
+            String sql = "SELECT * FROM products WHERE id_vendor IN (" + placeholders + ")";
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                // Gán giá trị cho các dấu hỏi trong câu truy vấn
+                for (int i = 0; i < vendorIds.size(); i++) {
+                    statement.setInt(i + 1, vendorIds.get(i));
+                }
+
+                ResultSet rs = statement.executeQuery();
+                while (rs.next()) {
+                    Product product = new Product();
+                    product.setId(rs.getInt("id"));
+                    product.setId_type(rs.getInt("id_type"));
+                    product.setName(rs.getString("name"));
+                    product.setDiscount(rs.getInt("discount"));
+                    product.setPrice(rs.getDouble("price"));
+                    product.setDescribe(rs.getString("describe"));
+                    product.setStatus(rs.getInt("status"));
+                    product.setAmount_shop(rs.getInt("amount_shop"));
+                    product.setAmount_storage(rs.getInt("amount_storage"));
+                    product.setId_vendor(rs.getInt("id_vendor"));
+                    product.setDate(rs.getString("date"));
+
+                    products.add(product);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace(); // In lỗi
+            }
+        } catch (SQLException e) {
+            e.printStackTrace(); // In lỗi khi không thể kết nối
+        } finally {
+            DatabaseConnector.closeConnection(connection);
+        }
+
+        return products; // Trả về danh sách (có thể rỗng)
+    }
 
 
 
     public static void main(String[] args) {
-        System.out.println(getNameType(1));;
+        List<Integer> vendorIds = Arrays.asList(1); // Giả sử bạn có các ID nhà cung cấp 1, 2, 3
+        System.out.println(getProductsByVendorIds(vendorIds).size());
+        ;
 
     }
 

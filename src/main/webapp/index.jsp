@@ -72,8 +72,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-1">
+<%--                <%@include file="include/menu.jsp" %>--%>
             </div>
-            <div class="col-lg-10">
+            <div class="col-lg-11">
                 <div class="hero__container">
                     <div class="hero__item set-bg" data-setbg="img/hero/banner2.png">
                         <div class="hero__text">
@@ -109,7 +110,7 @@
             <div class="col-lg-12">
                 <div class="section-title">
                     <div class="title">
-                        <h2 style="user-select: none">Mua nhanh giảm ngay</h2>
+                        <h2 style="user-select: none; padding-top: 20px">Mua nhanh giảm ngay</h2>
                     </div>
                     <a id="eye-view-all" href="index.jsp">
                         <div class="view-all-icon">
@@ -126,7 +127,7 @@
                         <div class="featured__item__pic set-bg" data-setbg="${product.getImageUrl()}">
                             <ul class="featured__item__pic__hover">
                                 <c:if test="${product.amount_shop ne 0}">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
+<%--                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>--%>
                                     <%--                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>--%>
                                     <li><a href="AddToCart?id=${product.id}"><i class="fa fa-shopping-cart"></i></a>
                                     </li>
@@ -152,6 +153,7 @@
 </section>
 <section class="featured spad">
     <div class="container">
+        <c:if test="${not empty productsNew}">
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title">
@@ -166,6 +168,7 @@
                 </div>
             </div>
         </div>
+        </c:if>
         <div class="row featured__filter">
             <c:forEach var="product" items="${productsNew}">
                 <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
@@ -289,7 +292,7 @@
 <script src="js/jquery.slicknav.js"></script>
 <script src="js/mixitup.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
-
+<script src="js/main.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 

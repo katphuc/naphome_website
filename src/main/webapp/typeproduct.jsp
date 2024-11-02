@@ -30,25 +30,11 @@
     <link rel="stylesheet" href="css/nice-select.css" type="text/css">
     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <style>
-        .hero__search__phone__icon {
-            padding-top: 15px;
-            font-size: 18px;
-            color: #ffacac;
-            height: 50px;
-            width: 50px;
-            background: #f5f5f5;
-            line-height: 50px;
-            text-align: center;
-            border-radius: 50%;
-            float: left;
-            margin-right: 20px;
-            /*padding-top: 14px;*/
 
-
-        }
         .paginationn a {
             border: #ffacac 1px solid;
             padding: 5px 10px;

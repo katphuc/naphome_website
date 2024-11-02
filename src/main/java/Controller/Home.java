@@ -18,7 +18,7 @@ public class Home extends HttpServlet {
         List<TypeProduct> typeproduct = ProductDao.getAllType();
 
 
-        request.setAttribute("typeproduct", typeproduct);
+        request.getSession().setAttribute("typeProducts", typeproduct);
 
         // Lưu danh sách sản phẩm và thông tin phân trang vào request
         request.setAttribute("productsDis", productsDis);
@@ -26,6 +26,7 @@ public class Home extends HttpServlet {
 
 
         request.getRequestDispatcher("index.jsp").forward(request, response);
+
     }
 
     @Override

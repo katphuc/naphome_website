@@ -32,11 +32,7 @@ public class Login extends HttpServlet {
 
 
         if (loginSuccess) {
-            if(UserDao.getNotActivateAccount(username)==0){
-                // Đăng nhập thất bại
-                request.getSession().setAttribute("message2", "Tài khoản chưa được kích hoạt");
-                response.sendRedirect("login.jsp"); // Chuyển hướng đến trang login.jsp
-            } else {
+
 
                 // Đăng nhập thành công
                 HttpSession session = request.getSession();
@@ -44,16 +40,20 @@ public class Login extends HttpServlet {
                 session.setAttribute("user", user);
                 String name = UserDao.getUserName(username);
                 session.setAttribute("name", name);
-                if(user.getRoleId()==2) {
+
+                if(user.getRoleId()==3) {
                     response.sendRedirect("Home"); // Chuyển hướng đến trang welcome.jsp
-                } if (user.getRoleId()==1 || user.getRoleId()==0 ){
+                } if (user.getRoleId()==1 || user.getRoleId()==2 ){
                     response.sendRedirect("Statistical"); // Chuyển hướng đến trang welcome.jsp
                 }
-            }
+
+
+
         } else {
             // Đăng nhập thất bại
-            request.getSession().setAttribute("message2", "Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin đăng nhập.");
-            response.sendRedirect("login.jsp"); // Chuyển hướng đến trang login.jsp
+            HttpSession session = request.getSession();
+            session.setAttribute("loginError", "Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin đăng nhập.");
+            response.sendRedirect("Home");
         }
 
     }

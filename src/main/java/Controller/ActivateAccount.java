@@ -21,8 +21,8 @@ public class ActivateAccount extends HttpServlet {
         String enterOTP = request.getParameter("enterOTP");
         if(otp.equals(enterOTP)) {
             UserDao.updateActivateAccount(username);
-            request.getSession().setAttribute("message", "Kích hoạt tài khoản thành công");
-            response.sendRedirect("login.jsp");
+            request.getSession().setAttribute("message", "Kích hoạt tài khoản thành công, vui lòng đăng nhập lại");
+            response.sendRedirect("Home");
         } else {
             request.getSession().setAttribute("message", "Sai mã OTP");
             response.sendRedirect("enterOTP.jsp");

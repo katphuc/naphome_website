@@ -507,7 +507,7 @@ ol {
 }
 
 .hero__search__form form input {
-	width: 76%;
+	width: 75%;
 	border: none;
 	height: 48px;
 	font-size: 16px;
@@ -594,7 +594,7 @@ ol {
 }
 
 .hero__search__phone__icon {
-	/*padding-top: 10px;*/
+	padding-top: 10px;
 	font-size: 25px;
 	color: #9d2424;
 	height: 50px;
@@ -605,7 +605,7 @@ ol {
 	border-radius: 50%;
 	float: left;
 	margin-right: 20px;
-	padding-top: 14px;
+
 }
 
 .hero__search__phone__text {

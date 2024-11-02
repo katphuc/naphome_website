@@ -72,7 +72,9 @@
 
 <body>
 <%@include file="include/header.jsp" %>
+<div style="height: 600px">
 
+</div>
 <!-- Nút cuộn lên đầu trang -->
 <button id="scrollToTopBtn" class="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></button>
 <!-- Footer Section Begin -->
@@ -89,7 +91,7 @@
 <script src="js/jquery.slicknav.js"></script>
 <script src="js/mixitup.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
-
+<script src="js/main.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
