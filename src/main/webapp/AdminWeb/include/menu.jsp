@@ -15,7 +15,7 @@
             </a>
         </li>
         <li>
-            <a href="StorageAdmin">
+            <a href="ProductAdmin">
                 <i class="fa-solid fa-box-open"></i>
                 <span class="links_name">Quản Lý Sản Phẩm</span>
             </a>
@@ -45,7 +45,7 @@
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="AddNewsAdmin">
                 <i class="fa-solid fa-user"></i>
                 <span class="links_name">Thêm Tin Tức</span>
             </a>

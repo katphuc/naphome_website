@@ -12,7 +12,54 @@
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 10px;
-    border-bottom: 1px solid #2c9700;
+    border-bottom: 1px solid slategray;
+}
+.add-product .section-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border-bottom: 1px solid slategray;
+}
+.add-product {
+    background: #fff;
+    padding: 20px 30px; /* Tăng padding để tạo khoảng cách với khung */
+    border-radius: 12px; /* Bo tròn góc */
+    border: 1px solid #ccc; /* Thêm khung */
+    box-shadow: 0 5px 10px rgb(0 0 0 / 10%); /* Thêm bóng đổ */
+}
+
+.add-product .input-container .form-control {
+    width: calc(100% - 20px); /* Đặt độ rộng của input thành 100% */
+    max-width: 100%; /* Giới hạn chiều dài tối đa cho trường input */
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Giữ khoảng cách giữa các trường input */
+}
+.first-class{
+    background: #fff;
+    padding: 20px 30px; /* Tăng padding để tạo khoảng cách với khung */
+    border-radius: 12px; /* Bo tròn góc */
+    border: 1px solid #ccc; /* Thêm khung */
+    box-shadow: 0 5px 10px rgb(0 0 0 / 10%); /* Thêm bóng đổ */
+}
+.second-class{
+    background: #fff;
+    padding: 20px 30px; /* Tăng padding để tạo khoảng cách với khung */
+    border-radius: 12px; /* Bo tròn góc */
+    border: 1px solid #ccc; /* Thêm khung */
+    box-shadow: 0 5px 10px rgb(0 0 0 / 10%); /* Thêm bóng đổ */
+}
+.description{
+    background: #fff;
+    padding: 20px 30px; /* Tăng padding để tạo khoảng cách với khung */
+    border-radius: 12px; /* Bo tròn góc */
+    border: 1px solid #ccc; /* Thêm khung */
+    box-shadow: 0 5px 10px rgb(0 0 0 / 10%); /* Thêm bóng đổ */
+}
+.description .descript {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border-bottom: 1px solid slategray;
 }
 
 #thumbimage {
@@ -57,6 +104,47 @@
     transform: rotate(45deg);
     display: block;
 }
+/* Căn giữa nội dung trong tất cả các ô của bảng */
+.table th,
+.table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Định dạng cột sản phẩm */
+.table .product-column {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+/* Định dạng ảnh và tên sản phẩm */
+.table .product-column img {
+    margin-right: 10px;
+    max-width: 100px;
+    max-height: 100px;
+    display: inline-block;
+}
+
+.table .product-column .product-name {
+    white-space: nowrap; /* Giữ tên sản phẩm không bị xuống dòng */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.contact-text {
+    color: red;
+    font-weight: bold;
+}
+.dropdown-item {
+    padding: 8px 12px;
+}
+.dropdown-item label {
+    cursor: pointer;
+}
+.dropdown-item input[type="checkbox"] {
+    margin-right: 8px;
+}
+
 
 
 
