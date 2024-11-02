@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<!DOCTYPE html>
+
 <html lang="zxx">
 
 <head>
@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
 
   <!-- Css Styles -->
+  <link rel="stylesheet" href="css/style.css" type="text/css">
   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
@@ -26,7 +27,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css" type="text/css">
+
   <link rel="icon" href="img/favicon.png" type="image/png">
 
   <style>
@@ -38,15 +39,17 @@
     }
 
     .long-title {
-      max-width: 364px; /* Điều chỉnh giới hạn kích thước tùy ý */
+      width: 364px; /* Điều chỉnh giới hạn kích thước tùy ý */
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      display: inline-block;
+      /*display: inline-block;*/
     }
 
+
+
     .blog__pagination{
-      padding-left: 496px;
+      /*padding-left: 496px;*/
     }
 
   </style>
@@ -75,7 +78,7 @@
                   <li><i class="fa fa-calendar-o"></i> 25/10/2023</li>
                   <li><i class="fa fa-comment-o"></i> 5</li>
                 </ul>
-                <h5><a class="long-title" href="blog_detail.jsp">Bánh xốp ăn dặm Puffs Happy Baby có mấy loại? Giá bao nhiêu?</a></h5>
+                <h5><a class="long-title" href="blog_detail.jsp">asdf</a></h5>
                 <p class="long-content">Thuộc thương hiệu thực phẩm hữu cơ nổi tiếng tại Mỹ, bánh xốp ăn dặm Puffs Happy Baby được các bé yêu thích nhờ vào hương vị đa dạng và thơm ngon. </p>
                 <a href="blog_detail.jsp" class="blog__btn">ĐỌC THÊM <span class="arrow_right"></span></a>
               </div>
@@ -91,7 +94,7 @@
                   <li><i class="fa fa-calendar-o"></i> 25/10/2023</li>
                   <li><i class="fa fa-comment-o"></i> 5</li>
                 </ul>
-                <h5 class="long-title"><a href="#">Hướng dẫn cách dùng vitamin Gummies CHEWY VITES hiệu quả và an toàn nhất</a></h5>
+                <h5 class="long-title"><a class="long-title" href="#">xcxcxc</a></h5>
                 <p class="long-content">Với mong muốn bổ sung hệ dưỡng chất cần thiết giúp bé phát triển khỏe mạnh, nhiều ba mẹ đã tin chọn sản phẩm vitamin Gummies CHEWY VITES  </p>
                 <a href="#" class="blog__btn">ĐỌC THÊM <span class="arrow_right"></span></a>
               </div>
@@ -107,7 +110,7 @@
                   <li><i class="fa fa-calendar-o"></i> 25/10/2023</li>
                   <li><i class="fa fa-comment-o"></i> 5</li>
                 </ul>
-                <h5 class="long-title"><a href="#">Men vi sinh SynterAct & men vi sinh BioGaia cho trẻ sơ sinh uống lúc nào là tốt nhất?</a></h5>
+                <h5 class="long-title"><a class="long-title" href="#">sdsdsd</a></h5>
                 <p class="long-content">Với tác dụng hệ tiêu hóa của bé sơ sinh khoẻ mạnh, SynterAct và BioGaia là 2 thương hiệu men vi sinh được nhiều ba mẹ tin chọn bậc nhất khi đến với chuỗi cửa hàng mẹ và bé Con Cưng </p>
                 <a href="#" class="blog__btn">ĐỌC THÊM <span class="arrow_right"></span></a>
               </div>
@@ -123,7 +126,7 @@
                   <li><i class="fa fa-calendar-o"></i> 25/10/2023</li>
                   <li><i class="fa fa-comment-o"></i> 5</li>
                 </ul>
-                <h5 class="long-title"><a href="#">Bình sữa cho trẻ sơ sinh: Nên mua loại bao nhiêu ml?</a></h5>
+                <h5 class="long-title"><a href="#">sdsdsad</a></h5>
                 <p class="long-content">Bên cạnh chất liệu, loại cổ bình, size núm ty, thì dung tích bình cũng là đặc điểm mà ba mẹ cần quan tâm khi lựa chọn bình sữa cho trẻ sơ sinh </p>
                 <a href="#" class="blog__btn">Đọc thêm <span class="arrow_right"></span></a>
               </div>
@@ -139,7 +142,7 @@
                   <li><i class="fa fa-calendar-o"></i> 25/10/2023</li>
                   <li><i class="fa fa-comment-o"></i> 5</li>
                 </ul>
-                <h5 class="long-title"><a href="#">Gummies CHEWY VITES hỗ trợ tăng sức đề kháng có tốt không? Bé mấy tuổi dùng được?</a></h5>
+                <h5 class="long-title"><a href="#">ádfasdfasdf</a></h5>
                 <p class="long-content">Gummies CHEWY VITES hỗ trợ tăng sức đề kháng là một dòng vitamin cho bé được nhiều trẻ mê tít khi đến Con Cưng bởi hương vị thơm ngon và hình dáng dễ thương. </p>
                 <a href="#" class="blog__btn">ĐỌC THÊM <span class="arrow_right"></span></a>
               </div>
@@ -173,6 +176,7 @@
 <script src="js/jquery.slicknav.js"></script>
 <script src="js/mixitup.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/main.js"></script>

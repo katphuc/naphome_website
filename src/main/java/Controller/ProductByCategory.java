@@ -23,6 +23,7 @@ public class ProductByCategory extends HttpServlet {
 
         List<Product> products = ProductDao.getProductByCategory(categoryIdInt);
 
+
         // Lấy số trang từ tham số yêu cầu (nếu không có, mặc định là trang đầu tiên)
          int page = 1;
         if (request.getParameter("page") != null) {

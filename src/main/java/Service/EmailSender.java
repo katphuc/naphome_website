@@ -8,8 +8,8 @@ import java.util.Properties;
 public class EmailSender {
 
     // Thông tin cấu hình email
-    private static final String EMAIL_USERNAME = "20130096@st.hcmuaf.edu.vn";
-    private static final String EMAIL_PASSWORD = "thienphucka1";
+    private static final String EMAIL_USERNAME = "20130404@st.hcmuaf.edu.vn";
+    private static final String EMAIL_PASSWORD = "ydqn omkd krxq zwnj";
 
     // Phương thức gửi email
     public static void sendEmail(String toEmail, String subject, String body) {

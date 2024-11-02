@@ -15,7 +15,7 @@ public class Product extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int productsPerPage = 20;
 
-
+        List<Model.Vendor> vendors = ProductDao.getAllVendor();
         List<Model.Product> products = ProductDao.getAllProduct();
 
         // Lấy số trang từ tham số yêu cầu (nếu không có, mặc định là trang đầu tiên)
@@ -39,6 +39,7 @@ public class Product extends HttpServlet {
 
 
         request.setAttribute("typeproduct", typeproduct);
+        request.setAttribute("vendors", vendors);
 
         // Lưu danh sách sản phẩm và thông tin phân trang vào request
         request.setAttribute("products", productsOnPage);
