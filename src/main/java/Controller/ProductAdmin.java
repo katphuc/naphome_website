@@ -15,7 +15,7 @@ import java.util.List;
 public class ProductAdmin extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Product> products = ProductDao.getAllProduct();
+        List<Product> products = ProductDao.getAllProductAdmin();
         User user = (User) request.getSession().getAttribute("user");
         if(user==null || user.getRoleId()==2){
             response.sendRedirect("errorAccess.jsp");

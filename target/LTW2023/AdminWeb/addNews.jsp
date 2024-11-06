@@ -18,6 +18,7 @@
     <style>
         .home-news {
             padding: 20px;
+            margin-top: 0;
         }
 
         .form-news label {
@@ -56,14 +57,14 @@
     <div class="news-content">
         <div class="add-news">
             <div class="add-news-title">Thêm Tin Tức</div>
-            <form id="myForm" action="" method="post">
+            <form id="myForm" action="AddNewsAdmin" method="post" enctype="multipart/form-data">
                 <div class="row">
                     <div class="first-class col-12">
                         <div class="form-news row">
                             <label class="col-md-4">Title Tin Tức</label>
                             <div class="col-md-8">
                                 <label>
-                                    <input name="titleNews" class="form-news" type="text">
+                                    <input name="title" class="form-news" type="text">
                                 </label>
                             </div>
                         </div>
@@ -71,68 +72,76 @@
                             <label class="col-md-4">Meta Description</label>
                             <div class="col-md-8">
                                 <label>
-                                    <input name="desNews" class="form-news" type="text">
+                                    <input name="meta" class="form-news" type="text">
                                 </label>
                             </div>
                         </div>
                         <div class="form-news row">
                             <label class="col-md-4">Hình ảnh hiển thị</label>
                             <div class="col-md-8">
-                                <button class="form-news btn btn-secondary">Chọn hình</button>
+                                <input style="width: 46%" name="image" id="imageInput"  type="file" accept="image/*" onchange="previewImage()">
+                                <br>
+                                <img id="imagePreview" src="" alt="Hình ảnh đã chọn" style="max-width: 100px; margin-top: 10px; display: none;">
                             </div>
                         </div>
                     </div>
                     <div class="second-class col-12">
 
+                        <!-- Include Quill library -->
+                        <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+                        <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
                         <div class="description">
-                            <label class="descript">Mô tả tin tức</label>
+                            <label class="descript">Mô tả sản phẩm</label>
+                            <%--                    <textarea class="form-control" name="describe" id="mota"></textarea>--%>
                             <div id="toolbar-container">
-  <span class="ql-formats">
-    <select class="ql-font"></select>
-    <select class="ql-size"></select>
-  </span>
+                                          <span class="ql-formats">
+                                            <select class="ql-font"></select>
+                                            <select class="ql-size"></select>
+                                          </span>
                                 <span class="ql-formats">
-    <button class="ql-bold"></button>
-    <button class="ql-italic"></button>
-    <button class="ql-underline"></button>
-    <button class="ql-strike"></button>
-  </span>
+                                            <button class="ql-bold"></button>
+                                            <button class="ql-italic"></button>
+                                            <button class="ql-underline"></button>
+                                            <button class="ql-strike"></button>
+                                          </span>
                                 <span class="ql-formats">
-    <select class="ql-color"></select>
-    <select class="ql-background"></select>
-  </span>
+                                            <select class="ql-color"></select>
+                                            <select class="ql-background"></select>
+                                          </span>
                                 <span class="ql-formats">
-    <button class="ql-script" value="sub"></button>
-    <button class="ql-script" value="super"></button>
-  </span>
+                                            <button class="ql-script" value="sub"></button>
+                                            <button class="ql-script" value="super"></button>
+                                          </span>
                                 <span class="ql-formats">
-    <button class="ql-header" value="1"></button>
-    <button class="ql-header" value="2"></button>
-    <button class="ql-blockquote"></button>
-    <button class="ql-code-block"></button>
-  </span>
+                                            <button class="ql-header" value="1"></button>
+                                            <button class="ql-header" value="2"></button>
+                                            <button class="ql-blockquote"></button>
+                                            <button class="ql-code-block"></button>
+                                          </span>
                                 <span class="ql-formats">
-    <button class="ql-list" value="ordered"></button>
-    <button class="ql-list" value="bullet"></button>
-    <button class="ql-indent" value="-1"></button>
-    <button class="ql-indent" value="+1"></button>
-  </span>
+                                            <button class="ql-list" value="ordered"></button>
+                                            <button class="ql-list" value="bullet"></button>
+                                            <button class="ql-indent" value="-1"></button>
+                                            <button class="ql-indent" value="+1"></button>
+                                          </span>
                                 <span class="ql-formats">
-    <button class="ql-direction" value="rtl"></button>
-    <select class="ql-align"></select>
-  </span>
+                                            <button class="ql-direction" value="rtl"></button>
+                                            <select class="ql-align"></select>
+                                          </span>
                                 <span class="ql-formats">
-    <button class="ql-link"></button>
-    <button class="ql-image"></button>
-    <button class="ql-video"></button>
-    <button class="ql-formula"></button>
-  </span>
+                                            <button class="ql-link"></button>
+                                            <button class="ql-image"></button>
+                                            <button class="ql-video"></button>
+                                            <button class="ql-formula"></button>
+                                          </span>
                                 <span class="ql-formats">
-    <button class="ql-clean"></button>
-  </span>
+                                            <button class="ql-clean"></button>
+                                          </span>
                             </div>
                             <div id="editor">
                             </div>
+                            <!-- Hidden textarea to store the HTML content -->
+                            <textarea name="describe" id="mota" style="display:none;"></textarea>
                         </div>
                     </div>
                 </div>
@@ -162,15 +171,52 @@
         document.getElementById("myForm").submit();
     }
 </script>
+
 <script>
-    const quill = new Quill('#editor', {
-        modules: {
-            syntax: true,
-            toolbar: '#toolbar-container',
-        },
-        placeholder: 'Compose an epic...',
-        theme: 'snow',
+    function previewImage() {
+        const file = document.getElementById('imageInput').files[0];
+        const preview = document.getElementById('imagePreview');
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                preview.src = e.target.result; // Gán đường dẫn hình ảnh cho thẻ img
+                preview.style.display = 'block'; // Hiện thẻ img khi có hình ảnh
+            }
+
+            reader.readAsDataURL(file); // Đọc file và trả về URL của hình ảnh
+        } else {
+            preview.src = ""; // Nếu không có file nào được chọn, xóa hình ảnh
+            preview.style.display = 'none'; // Ẩn thẻ img nếu không có hình ảnh
+        }
+    }
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("externalButton").addEventListener("click", function () {
+            submitForm();
+        });
     });
+
+    function submitForm() {
+        document.querySelector('#mota').value = quill.root.innerHTML;
+        document.getElementById("myForm").submit();
+    }
+</script>
+<script>
+    // Initialize Quill editor
+    var quill = new Quill('#editor', {
+        theme: 'snow',
+        modules: {
+            toolbar: '#toolbar-container'
+        }
+    });
+
+    // On form submit, save the editor content to the hidden textarea
+    document.querySelector('form').onsubmit = function() {
+        document.querySelector('#mota').value = quill.root.innerHTML;
+    };
 </script>
 </body>
 </html>

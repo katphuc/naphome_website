@@ -17,7 +17,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class ProductDao {
-    public static List<Product> getAllProduct() {
+    public static List<Product> getAllProductAdmin() {
         Connection connection = null;
         List<Product> products = new ArrayList<>();
         try {
@@ -44,6 +44,48 @@ public class ProductDao {
                     product.setId_vendor(rs.getInt("id_vendor"));
                     product.setDate(rs.getString("date"));
                     product.setImport_price(rs.getDouble("import_price"));
+                    product.setIs_visible(rs.getInt("is_visible"));
+                    products.add(product);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            DatabaseConnector.closeConnection(connection);
+        }
+
+
+        return products;
+    }
+    public static List<Product> getAllProduct() {
+        Connection connection = null;
+        List<Product> products = new ArrayList<>();
+        try {
+            connection = DatabaseConnector.getConnection();
+
+            // Sử dụng PreparedStatement để tránh SQL injection
+            String sql = "SELECT * from products where is_visible = 1";
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+
+
+                ResultSet rs = ps.executeQuery();
+
+                while (rs.next()) {
+                    Product product = new Product();
+                    product.setId(rs.getInt("id"));
+                    product.setId_type(rs.getInt("id_type"));
+                    product.setName(rs.getString("name"));
+                    product.setDiscount(rs.getInt("discount"));
+                    product.setPrice(rs.getDouble("price"));
+                    product.setDescribe(rs.getString("describe"));
+                    product.setStatus((rs.getInt("status")));
+                    product.setAmount_shop(rs.getInt("amount_shop"));
+                    product.setAmount_storage(rs.getInt("amount_storage"));
+                    product.setId_vendor(rs.getInt("id_vendor"));
+                    product.setDate(rs.getString("date"));
+                    product.setImport_price(rs.getDouble("import_price"));
+                    product.setIs_visible(rs.getInt("is_visible"));
                     products.add(product);
                 }
             }
@@ -105,7 +147,7 @@ public class ProductDao {
             connection = DatabaseConnector.getConnection();
 
             // Sử dụng PreparedStatement để tránh SQL injection
-            String sql = "SELECT * from products where date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 MONTH) ORDER BY date DESC limit 8";
+            String sql = "SELECT * from products where is_visible=1 and date >= DATE_SUB(CURRENT_DATE, INTERVAL 1 MONTH) ORDER BY date DESC limit 8";
             try (PreparedStatement ps = connection.prepareStatement(sql)) {
 
 
@@ -186,7 +228,7 @@ public class ProductDao {
             connection = DatabaseConnector.getConnection();
 
             // Sử dụng PreparedStatement để tránh SQL injection
-            String sql = "SELECT * from products where id_type = ?";
+            String sql = "SELECT * from products where id_type = ? and is_visible=1";
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
                 statement.setInt(1, id_type);
                 try (ResultSet rs = statement.executeQuery()) {
@@ -268,7 +310,7 @@ public class ProductDao {
             connection = DatabaseConnector.getConnection();
 
             // Sử dụng PreparedStatement để tránh SQL injection
-            String sql = "SELECT * from products where name like ?";
+            String sql = "SELECT * from products where name like ? and is_visible=1";
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
                 statement.setString(1, "%" + searchTerm + "%");
                 try (ResultSet rs = statement.executeQuery()) {
@@ -661,6 +703,7 @@ public class ProductDao {
         return ""; // Trả về null nếu không tìm thấy
     }
 
+
     public static boolean updateProduct(int id_type, String name, int discount, int price, String describe, int id_product) {
         Connection connection = null;
 
@@ -969,19 +1012,30 @@ public class ProductDao {
         try {
             connection = DatabaseConnector.getConnection();
 
-            // Sử dụng PreparedStatement để tránh SQL injection
-            String sql = "insert into products (id_type, `name`, discount, price, `describe`, status, amount_shop, amount_storage, id_vendor, `date`,import_price) values (?,?,?,?,?,1,?,?,?,NOW(),?)";
-            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+            String getMaxIdSql = "SELECT MAX(id) FROM products";
+            PreparedStatement getMaxIdStmt = connection.prepareStatement(getMaxIdSql);
+            ResultSet rs = getMaxIdStmt.executeQuery();
 
-                ps.setInt(1, id_type);
-                ps.setString(2, name);
-                ps.setInt(3, discount);
-                ps.setInt(4, price);
-                ps.setString(5, describe);
-                ps.setInt(6, amount_shop);
-                ps.setInt(7, amount_storage);
-                ps.setInt(8, id_vendor);
-                ps.setInt(9, import_price);
+            int newId = 1; // Giá trị mặc định khi không có bản ghi nào
+            if (rs.next()) {
+                int maxId = rs.getInt(1);
+                newId = maxId + 1; // Cộng 1 vào id lớn nhất hiện tại
+            }
+
+// Câu truy vấn thêm sản phẩm mới với id mới
+            String sql = "INSERT INTO products (id, id_type, `name`, discount, price, `describe`, status, amount_shop, amount_storage, id_vendor, `date`, import_price) "
+                    + "VALUES (?,?, ?, ?, ?, ?, 1, ?, ?, ?, NOW(), ?)";
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+                ps.setInt(1, newId);
+                ps.setInt(2, id_type);
+                ps.setString(3, name);
+                ps.setInt(4, discount);
+                ps.setInt(5, price);
+                ps.setString(6, describe);
+                ps.setInt(7, amount_shop);
+                ps.setInt(8, amount_storage);
+                ps.setInt(9, id_vendor);
+                ps.setInt(10, import_price);
 
 
                 int rowsAffected = ps.executeUpdate();
@@ -1299,6 +1353,93 @@ public class ProductDao {
         }
 
         return products; // Trả về danh sách (có thể rỗng)
+    }
+
+    public static String getNameVendor(int id) {
+        Connection connection = null;
+
+        try {
+            connection = DatabaseConnector.getConnection();
+
+            PreparedStatement ps = connection.prepareStatement("select `name` from vendor where id =? ");
+            ps.setInt(1, id);
+
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                return rs.getString("name");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        } finally {
+            DatabaseConnector.closeConnection(connection);
+        }
+
+        return null; // Trả về null nếu không tìm thấy
+    }
+
+    public static boolean hideProduct(int id) {
+        Connection connection = null;
+
+        try {
+            connection = DatabaseConnector.getConnection();
+
+            // Sử dụng PreparedStatement để tránh SQL injection
+            String sql = "UPDATE products SET is_visible=0 WHERE id=? ";
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+
+                ps.setInt(1, id);
+
+
+                int rowsAffected = ps.executeUpdate();
+
+                // Kiểm tra xem có dòng nào được cập nhật không
+                if (rowsAffected > 0) {
+                    // Cập nhật thành công
+                    return true;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DatabaseConnector.closeConnection(connection);
+        }
+
+        // Nếu có lỗi hoặc không có dòng nào được cập nhật
+        return false;
+    }
+
+    public static boolean showProduct(int id) {
+        Connection connection = null;
+
+        try {
+            connection = DatabaseConnector.getConnection();
+
+            // Sử dụng PreparedStatement để tránh SQL injection
+            String sql = "UPDATE products SET is_visible=1 WHERE id=? ";
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+
+                ps.setInt(1, id);
+
+
+                int rowsAffected = ps.executeUpdate();
+
+                // Kiểm tra xem có dòng nào được cập nhật không
+                if (rowsAffected > 0) {
+                    // Cập nhật thành công
+                    return true;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DatabaseConnector.closeConnection(connection);
+        }
+
+        // Nếu có lỗi hoặc không có dòng nào được cập nhật
+        return false;
     }
 
 

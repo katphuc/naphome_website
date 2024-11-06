@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <style>
 
@@ -181,9 +182,10 @@
                                 </div>
                                 <div class="product__item__text">
                                     <h6><a title="${product.name}" href="DetailProduct?id=${product.id}">${product.name}</a></h6>
-                                    <h5><fmt:formatNumber value="${product.price}" pattern="#,##0"/><sup>đ</sup>
+<%--                                    <h5><fmt:formatNumber value="${product.price}" pattern="#,##0"/><sup>đ</sup>--%>
+                                    <h5 style="color: red">Liên hệ
                                         <c:if test="${product.discount ne 0}">
-                                        <span class="discount">-${product.discount}%</span>
+<%--                                        <span class="discount">-${product.discount}%</span>--%>
                                         </c:if>
                                 </div>
                             </div>
