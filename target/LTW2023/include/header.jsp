@@ -63,7 +63,7 @@
                             <li class="active"><a href="Home">Trang chủ<i class="fa-solid fa-angle-down"></i></a></li>
                             <li><a href="introduce.jsp">Giới thiệu<i class="fa-solid fa-angle-down"></i></a></li>
                             <li><a href="Product">Cửa hàng<i class="fa-solid fa-angle-down"></i></a></li>
-                            <li><a href="blog.jsp">Tin tức<i class="fa-solid fa-angle-down"></i></a></li>
+                            <li><a href="Blog">Tin tức<i class="fa-solid fa-angle-down"></i></a></li>
                             <li><a href="contact.jsp">Liên hệ<i class="fa-solid fa-angle-down"></i></a></li>
                         </ul>
                     </nav>

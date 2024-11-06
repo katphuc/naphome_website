@@ -3,6 +3,9 @@ package Service;
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeUtility;
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
 public class EmailSender {
@@ -33,22 +36,26 @@ public class EmailSender {
             // Đặt thông tin người gửi, người nhận, chủ đề và nội dung email
             message.setFrom(new InternetAddress(EMAIL_USERNAME));
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(toEmail));
-            message.setSubject(subject);
-            message.setText(body);
+            message.setSubject(MimeUtility.encodeText(subject, "UTF-8", "B"));
+            // Sử dụng setContent để gửi email HTML
+            message.setContent(new String(body.getBytes(StandardCharsets.UTF_8), StandardCharsets.UTF_8), "text/html; charset=UTF-8");
 
             // Gửi email
             Transport.send(message);
+
 
             System.out.println("Email sent successfully to: " + toEmail);
         } catch (MessagingException e) {
             e.printStackTrace();
             System.err.println("Error sending email to: " + toEmail);
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
         }
     }
 
     public static void main(String[] args) {
         // Thông tin email của người nhận
-        String toEmail = "20130404@st.hcmuaf.edu.vn";
+        String toEmail = "vuutruongnhatthanh@gmail.com";
 
         // Chủ đề và nội dung email
         String subject = "Test";

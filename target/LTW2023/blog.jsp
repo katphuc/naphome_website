@@ -63,98 +63,37 @@
 <%--</ul>--%>
 
 <!-- Blog Section Begin -->
-<section class="blog spad">
+<section style="padding-top: 20px" class="blog spad">
   <div class="container">
     <div class="row">
 
         <div class="row">
+          <c:forEach var="blogs" items="${blogs}">
           <div class="col-lg-4 col-md-6 col-sm-6">
             <div class="blog__item">
               <div class="blog__item__pic">
-                <img src="https://concung.com/img/news/2023/2534-1698209686-cover.png" alt="">
+                <img src="${blogs.img}" alt="">
               </div>
               <div class="blog__item__text">
                 <ul>
-                  <li><i class="fa fa-calendar-o"></i> 25/10/2023</li>
-                  <li><i class="fa fa-comment-o"></i> 5</li>
+                  <li><i class="fa fa-calendar-o"></i> ${blogs.formatBlogTime(blogs.time)}</li>
+<%--                  <li><i class="fa fa-comment-o"></i> 5</li>--%>
                 </ul>
-                <h5><a class="long-title" href="blog_detail.jsp">asdf</a></h5>
-                <p class="long-content">Thuộc thương hiệu thực phẩm hữu cơ nổi tiếng tại Mỹ, bánh xốp ăn dặm Puffs Happy Baby được các bé yêu thích nhờ vào hương vị đa dạng và thơm ngon. </p>
-                <a href="blog_detail.jsp" class="blog__btn">ĐỌC THÊM <span class="arrow_right"></span></a>
+                <h5><a class="long-title" href="DetailBlog?id=${blogs.id}">${blogs.title}</a></h5>
+                <p class="long-content">${blogs.meta}</p>
+                <a href="DetailBlog?id=${blogs.id}" class="blog__btn">ĐỌC THÊM <span class="arrow_right"></span></a>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="blog__item">
-              <div class="blog__item__pic">
-                <img src="https://concung.com/img/news/2023/2533-1698207874-cover.png" alt="">
-              </div>
-              <div class="blog__item__text">
-                <ul>
-                  <li><i class="fa fa-calendar-o"></i> 25/10/2023</li>
-                  <li><i class="fa fa-comment-o"></i> 5</li>
-                </ul>
-                <h5 class="long-title"><a class="long-title" href="#">xcxcxc</a></h5>
-                <p class="long-content">Với mong muốn bổ sung hệ dưỡng chất cần thiết giúp bé phát triển khỏe mạnh, nhiều ba mẹ đã tin chọn sản phẩm vitamin Gummies CHEWY VITES  </p>
-                <a href="#" class="blog__btn">ĐỌC THÊM <span class="arrow_right"></span></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="blog__item">
-              <div class="blog__item__pic">
-                <img src="https://concung.com/img/news/2023/2532-1698206569-cover.png" alt="">
-              </div>
-              <div class="blog__item__text">
-                <ul>
-                  <li><i class="fa fa-calendar-o"></i> 25/10/2023</li>
-                  <li><i class="fa fa-comment-o"></i> 5</li>
-                </ul>
-                <h5 class="long-title"><a class="long-title" href="#">sdsdsd</a></h5>
-                <p class="long-content">Với tác dụng hệ tiêu hóa của bé sơ sinh khoẻ mạnh, SynterAct và BioGaia là 2 thương hiệu men vi sinh được nhiều ba mẹ tin chọn bậc nhất khi đến với chuỗi cửa hàng mẹ và bé Con Cưng </p>
-                <a href="#" class="blog__btn">ĐỌC THÊM <span class="arrow_right"></span></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="blog__item">
-              <div class="blog__item__pic">
-                <img src="https://concung.com/img/news/2023/2531-1698145166-cover.png" alt="">
-              </div>
-              <div class="blog__item__text">
-                <ul>
-                  <li><i class="fa fa-calendar-o"></i> 25/10/2023</li>
-                  <li><i class="fa fa-comment-o"></i> 5</li>
-                </ul>
-                <h5 class="long-title"><a href="#">sdsdsad</a></h5>
-                <p class="long-content">Bên cạnh chất liệu, loại cổ bình, size núm ty, thì dung tích bình cũng là đặc điểm mà ba mẹ cần quan tâm khi lựa chọn bình sữa cho trẻ sơ sinh </p>
-                <a href="#" class="blog__btn">Đọc thêm <span class="arrow_right"></span></a>
-              </div>
-            </div>
-          </div>>
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="blog__item">
-              <div class="blog__item__pic">
-                <img src="https://concung.com/img/news/2023/2527-1698044342-cover.png" alt="">
-              </div>
-              <div class="blog__item__text">
-                <ul>
-                  <li><i class="fa fa-calendar-o"></i> 25/10/2023</li>
-                  <li><i class="fa fa-comment-o"></i> 5</li>
-                </ul>
-                <h5 class="long-title"><a href="#">ádfasdfasdf</a></h5>
-                <p class="long-content">Gummies CHEWY VITES hỗ trợ tăng sức đề kháng là một dòng vitamin cho bé được nhiều trẻ mê tít khi đến Con Cưng bởi hương vị thơm ngon và hình dáng dễ thương. </p>
-                <a href="#" class="blog__btn">ĐỌC THÊM <span class="arrow_right"></span></a>
-              </div>
-            </div>
-          </div>
+          </c:forEach>
+
           <div class="col-lg-12">
-            <div class="product__pagination blog__pagination">
-              <a href="#">1</a>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a href="#"><i class="fa fa-long-arrow-right"></i></a>
-            </div>
+<%--            <div class="product__pagination blog__pagination">--%>
+<%--              <a href="#">1</a>--%>
+<%--              <a href="#">2</a>--%>
+<%--              <a href="#">3</a>--%>
+<%--              <a href="#"><i class="fa fa-long-arrow-right"></i></a>--%>
+<%--            </div>--%>
           </div>
         </div>
 

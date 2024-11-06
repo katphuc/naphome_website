@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Quản lý tài khoản</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="AdminWeb/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="AdminWeb/css/all.min.css">
     <link rel="stylesheet" href="AdminWeb/css/style.css">
@@ -35,7 +35,7 @@
             <div class="title">Danh Sách Tài Khoản</div>
             <%
                 User user = (User) session.getAttribute("user");
-                int role = user.getRole();
+                int role = user.getRoleId();
 
             %>
             <div class="row">

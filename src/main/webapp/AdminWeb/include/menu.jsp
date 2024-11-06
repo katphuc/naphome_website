@@ -39,7 +39,7 @@
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="BlogAdmin">
                 <i class="fa-solid fa-newspaper"></i>
                 <span class="links_name">Quản Lý Tin Tức</span>
             </a>
@@ -50,12 +50,12 @@
                 <span class="links_name">Thêm Tin Tức</span>
             </a>
         </li>
-        <li>
-            <a href="">
-                <i class="fa-solid fa-boxes-packing"></i>
-                <span class="links_name">Quản Lý Đơn Hàng</span>
-            </a>
-        </li>
+<%--        <li>--%>
+<%--            <a href="">--%>
+<%--                <i class="fa-solid fa-boxes-packing"></i>--%>
+<%--                <span class="links_name">Quản Lý Đơn Hàng</span>--%>
+<%--            </a>--%>
+<%--        </li>--%>
         <li>
             <a href="">
                 <i class="fa-solid fa-user"></i>
@@ -68,12 +68,12 @@
                 <span class="links_name">Thêm Tài Khoản</span>
             </a>
         </li>
-        <li>
-            <a href="">
-                <i class="fa-solid fa-square-poll-vertical"></i>
-                <span class="links_name">Thống Kê Chi Tiết</span>
-            </a>
-        </li>
+<%--        <li>--%>
+<%--            <a href="">--%>
+<%--                <i class="fa-solid fa-square-poll-vertical"></i>--%>
+<%--                <span class="links_name">Thống Kê Chi Tiết</span>--%>
+<%--            </a>--%>
+<%--        </li>--%>
 
         <li class="log_out">
             <a href="LogoutServlet">

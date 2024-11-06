@@ -15,6 +15,7 @@ public class Product {
     private int id_vendor;
     private String date;
     private double import_price;
+    private int is_visible;
 
     public Product() {
     }
@@ -59,6 +60,30 @@ public class Product {
         this.amount_shop = amount_shop;
         this.amount_storage = amount_storage;
         this.id_vendor = id_vendor;
+    }
+
+    public Product(int id, int id_type, String name, int discount, double price, String describe, int status, int amount_shop, int amount_storage, int id_vendor, String date, double import_price, int is_visible) {
+        this.id = id;
+        this.id_type = id_type;
+        this.name = name;
+        this.discount = discount;
+        this.price = price;
+        this.describe = describe;
+        this.status = status;
+        this.amount_shop = amount_shop;
+        this.amount_storage = amount_storage;
+        this.id_vendor = id_vendor;
+        this.date = date;
+        this.import_price = import_price;
+        this.is_visible = is_visible;
+    }
+
+    public int getIs_visible() {
+        return is_visible;
+    }
+
+    public void setIs_visible(int is_visible) {
+        this.is_visible = is_visible;
     }
 
     public double getImport_price() {

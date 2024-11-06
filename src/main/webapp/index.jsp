@@ -137,12 +137,13 @@
                         <div class="featured__item__text">
                             <h6><a title="${product.name}" href="DetailProduct?id=${product.id}">${product.name}</a>
                             </h6>
-                            <h5><fmt:formatNumber value="${product.price}" pattern="#,##0"/><sup>đ</sup>
-                                <c:if test="${product.discount ne 0}">
-                                <span class="discount">-${product.discount}%</span>
+<%--                            <h5><fmt:formatNumber value="${product.price}" pattern="#,##0"/><sup>đ</sup>--%>
+                            <h5 style="color: red">Liên hệ
+                            <c:if test="${product.discount ne 0}">
+<%--                                <span class="discount">-${product.discount}%</span>--%>
                                 </c:if>
                                 <c:if test="${product.amount_shop == 0}">
-                                <span class="discount">Hết hàng</span>
+<%--                                <span class="discount">Hết hàng</span>--%>
                                 </c:if>
                         </div>
                     </div>
@@ -186,9 +187,10 @@
                         <div class="featured__item__text">
                             <h6><a title="${product.name}" href="DetailProduct?id=${product.id}">${product.name}</a>
                             </h6>
-                            <h5><fmt:formatNumber value="${product.price}" pattern="#,##0"/><sup>đ</sup>
+                                <%--                                    <h5><fmt:formatNumber value="${product.price}" pattern="#,##0"/><sup>đ</sup>&ndash;%&gt;--%>
+                            <h5 style="color: red">Liên hệ
                                 <c:if test="${product.discount ne 0}">
-                                <span class="discount">-${product.discount}%</span>
+<%--                                <span class="discount">-${product.discount}%</span>--%>
                                 </c:if>
                                 <c:if test="${product.amount_shop == 0}">
                                 <span class="discount">Hết hàng</span>
