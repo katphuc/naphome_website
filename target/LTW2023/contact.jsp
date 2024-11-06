@@ -21,72 +21,85 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/contact.css" type="text/css">
     <link rel="icon" href="img/favicon.png" type="image/png">
+    <style>
+        .contact__form__title h2 {
+            color: white;
+        }
+
+        .site-btn {
+            background: linear-gradient(to right, #5d4848, #d83838);
+            font-weight: bold;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 
 <body>
 
 <!-- Header Section Begin -->
-<%@include file="include/header.jsp"%>
+<%@include file="include/header.jsp" %>
 <!-- Header Section End -->
-
-<ul class="breadcrumb">
-    <li><a href="">Trang chủ</a></li>
-<%--    <li><a href="/dung-cu/">  Giỏ hàng</a></li>--%>
-    <li><span>  Liên hệ</span></li>
-</ul>
-
-
 
 <!-- Contact Section Begin -->
 <section class="contact spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-                <div class="contact__widget">
-                    <span class="icon_phone"></span>
-                    <h4>Số điện thoại</h4>
-                    <p>078 6191 721</p>
-                </div>
+    <div class="container-fluid no-padding">
+        <img src="img/banner/banner_contact.png" alt="ngân anh phát tạo dựng giá trị khẳng định
+tương lai" style="padding-bottom: 20px">
+        <div class="row contact-map">
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.133050511073!2d106.8638096758272!3d10.953320789206382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174df2fa4691b41%3A0xc2afacd12e4778d9!2zQ8O0bmcgVHkgVE5ISCBOZ8OibiBBbmggUGjDoXQ!5e0!3m2!1sen!2s!4v1730789572630!5m2!1sen!2s"
+                        width="600" height="450"
+                        style="border:0; border-radius:20px;box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);"
+                        allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-                <div class="contact__widget">
-                    <span class="icon_pin_alt"></span>
-                    <h4>Địa chỉ</h4>
-                    <p>Đại học Nông Lâm, TP.HCM</p>
-                </div>
+            <div class="col-md-1"></div>
+            <div class="location col-md-4">
+                <h4 class="map-cont">Địa chỉ cụ thể</h4>
+                <p><i class="fa-solid fa-map-location-dot"></i>: D3, KP3, Phường Tam Hòa, TP.Biên Hòa - Đồng Nai</p>
+                <p><i class="fa-solid fa-earth-asia"></i>: www.ngananhphat.com</p>
+                <a href="https://maps.app.goo.gl/FEFGQ9xEXYKQWxzc6" target="_blank"><u>Truy cập Google Maps</u></a>
+
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-                <div class="contact__widget">
-                    <span class="icon_clock_alt"></span>
-                    <h4>Giờ mở cửa</h4>
-                    <p>8h đến 18h</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 text-center">
-                <div class="contact__widget">
-                    <span class="icon_mail_alt"></span>
-                    <h4>Email</h4>
-                    <p>lpn@gmail.com</p>
-                </div>
-            </div>
+            <div class="col-md-2"></div>
         </div>
     </div>
 </section>
 <!-- Contact Section End -->
-
-
+<div class="contact-phone spad">
+    <div class="container">
+        <div class="contact-phone-title" style="padding-bottom: 50px">
+            <h2 style="font-size: 35px; color:black; text-align: center">Tổng đài tư vấn hỗ trợ trực tiếp 24/7</h2>
+        </div>
+        <div class="row contact-phone-second">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-4" style="text-align: center">
+                <i class="fa-solid fa-phone-volume"></i>
+                <p>(+84) 2513 857 563</p>
+            </div>
+            <div class="col-lg-4" style="text-align: center">
+                <i class="fa-regular fa-envelope"></i>
+                <p>info@ngananhphat.com, sales@ngananhphat.com</p>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+    </div>
+</div>
 
 <!-- Contact Form Begin -->
 <div class="contact-form spad">
-    <div class="container">
+    <div class="container contact-messenger">
         <div class="row">
             <div class="col-lg-12">
                 <div class="contact__form__title">
-                    <h2 style="font-size: 25px">Để lại lời nhắn cho chúng tôi</h2>
+                    <h2 style="font-size: 35px">Bạn cần giúp gì? Để lại lời nhắn</h2>
                 </div>
             </div>
         </div>
@@ -110,7 +123,7 @@
 <!-- Nút cuộn lên đầu trang -->
 <button id="scrollToTopBtn" class="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></button>
 <!-- Footer Section Begin -->
-<%@include file="include/footer.jsp"%>
+<%@include file="include/footer.jsp" %>
 <!-- Footer Section End -->
 
 <!-- Js Plugins -->

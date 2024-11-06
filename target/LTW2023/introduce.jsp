@@ -23,58 +23,117 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/introduce.css" type="text/css">
     <link rel="icon" href="img/favicon.png" type="image/png">
-
     <style>
-        .hero {
-            padding-top: 10px;
+        h1 {
+            font-size: 30px;
+            padding-top: 50px;
+            color: black;
+            font-weight: bold;
+            text-align: center;
         }
 
-        .hero__container {
-            position: relative;
-            overflow: hidden;
+        p.introduce-p {
+            color: black;
+            padding: 40px 386px;
+            text-align: center;
         }
 
-        .hero__item {
-            display: none;
+        h2 {
+            color: darkred;
+            text-align: center;
+            font-style: italic;
+            font-weight: bold;
+            margin-top: 110px;
+
         }
 
-        .hero__item img {
-            width: 100%;
+        p.intro-1 {
+            color: black;
+            padding: 20px 127px;
         }
-
-        .slider-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            font-size: 24px;
-            background: rgba(255, 255, 255, 0.7);
-            padding: 10px 15px;
-            border-radius: 50%;
-            color: #333;
-            z-index: 1;
+        h4{
+            color: black;
+            font-weight: bold;
+            font-size: 40px;
+            padding-top: 20px;
+            text-align: center;
         }
-
-        .prev-arrow {
-            left: 10px;
-        }
-
-        .next-arrow {
-            right: 10px;
-        }
-
     </style>
 </head>
 
 <body>
 <%@include file="include/header.jsp" %>
-<div style="height: 600px">
+<section class="introduce">
+    <div>
+        <h1 class="h1-introduce">VỀ <q>NGÂN ANH PHÁT</q></h1>
+        <p class="introduce-p"> Thành lập vào năm 2007, Công ty TNHH Ngân Anh Phát đã không ngừng
+            nỗ lực và phát triển trong ngành Điện - Điện tử, cung cấp
+            vật liệu, thiết bị khuôn mẫu, cùng các dịch vụ gia công cơ khí và thiết
+            kế chế tạo máy. Sau hơn 10 năm, Ngân Anh Phát đã trở thành nhà cung cấp
+            uy tín hàng đầu trong lĩnh vực này.</p>
+    </div>
+    <div class="container-fluid">
+        <div class="row first-intro">
+            <div class="col-md-4">
+                <img src="img/banner/introduce-banner-1.png" alt="ngân anh phát giải pháp cơ khí"
+                     style="border-radius: 5%">
+            </div>
+            <div class="col-md-8">
+                <h2>UY TÍN - CHẤT LƯỢNG</h2>
+                <p class="intro-1">Tiêu chí hàng đầu của Ngân Anh Phát chính là uy tin và chất lượng.
+                    Mỗi sản phẩm làm ra đều tỉ mỉ trong từng chi tiết. Vì thế, Ngân Anh Phát
+                    đã từng ngày khẳng định uy tín về dịch vụ trong ngành cơ khí chế tạo.</p>
+            </div>
 
-</div>
+        </div>
+        <div class="row first-intro">
+            <div class="col-md-8">
+                <h2>UY TÍN - CHẤT LƯỢNG</h2>
+                <p class="intro-1">Tiêu chí hàng đầu của Ngân Anh Phát chính là uy tin và chất lượng.
+                    Mỗi sản phẩm làm ra đều tỉ mỉ trong từng chi tiết. Vì thế, Ngân Anh Phát
+                    đã từng ngày khẳng định uy tín về dịch vụ trong ngành cơ khí chế tạo.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="img/banner/introduce-banner-1.png" alt="ngân anh phát giải pháp cơ khí"
+                     style="border-radius: 5%">
+            </div>
+
+        </div>
+        <div class="row first-intro">
+            <div class="col-md-4">
+                <img src="img/banner/introduce-banner-1.png" alt="ngân anh phát giải pháp cơ khí"
+                     style="border-radius: 5%">
+            </div>
+            <div class="col-md-8">
+                <h2>UY TÍN - CHẤT LƯỢNG</h2>
+                <p class="intro-1">Tiêu chí hàng đầu của Ngân Anh Phát chính là uy tin và chất lượng.
+                    Mỗi sản phẩm làm ra đều tỉ mỉ trong từng chi tiết. Vì thế, Ngân Anh Phát
+                    đã từng ngày khẳng định uy tín về dịch vụ trong ngành cơ khí chế tạo.</p>
+            </div>
+        </div>
+        <div class="row last-contact">
+            <div class="col-md-4">
+            </div>
+            <div class="intro-contact col-md-4">
+                <h4>Liên hệ với chúng tôi</h4>
+                <p>Để nhận được báo giá tốt nhất <strong>24/7</strong>, hãy
+                 liên hệ ngay!</p>
+                <a href="contact.jsp" class="icon-link" target="_blank">
+                    <i class="fa-solid fa-arrow-right-from-bracket icon-right"></i>
+                </a>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+
+    </div>
+</section>
 <!-- Nút cuộn lên đầu trang -->
 <button id="scrollToTopBtn" class="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></button>
 <!-- Footer Section Begin -->

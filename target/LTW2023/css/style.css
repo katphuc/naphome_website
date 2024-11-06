@@ -132,7 +132,7 @@ ol {
 	right: 0;
 	height: 4px;
 	width: 80px;
-	background: #ffacac;
+	background: black;
 	content: "";
 	margin: 0 auto;
 }
@@ -177,11 +177,11 @@ ol {
 .site-btn {
 	font-size: 14px;
 	color: #ffffff;
-	font-weight: 800;
+	font-weight: bold;
 	text-transform: uppercase;
 	display: inline-block;
 	padding: 13px 30px 12px;
-	background: #ffacac;
+	background: linear-gradient(to right,#5d4848,#d83838);
 	border: none;
 	font-family: Arial, sans-serif;
 }

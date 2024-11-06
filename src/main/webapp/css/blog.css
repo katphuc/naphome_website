@@ -312,7 +312,7 @@
 
 .related-blog {
     padding-top: 70px;
-    padding-bottom: 10px;
+    padding-bottom: 100px;
 }
 
 .related-blog-title {
@@ -405,4 +405,7 @@
 
 .blog__details__widget .blog__details__social a:last-child {
     margin-right: 0;
+}
+.comment-blog{
+    padding-bottom: 100px;
 }

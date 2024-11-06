@@ -1,0 +1,23 @@
+.first-intro {
+    padding: 50px;
+}
+.intro-contact{
+    background-color: rgba(46, 147, 73, 0.4);
+    border-radius: 10px;
+    width: 500px;
+}
+.intro-contact p{
+    color: black;
+    text-align: center;
+}
+.last-contact{
+    padding-bottom: 20px;
+}
+.icon-right {
+    float: right; /* Căn phải trong div */
+    margin-top: 10px; /* Khoảng cách từ đoạn văn bản nếu cần */
+}
+.last-contact a i {
+    font-size: 50px;
+    color: black;
+}
