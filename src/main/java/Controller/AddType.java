@@ -18,8 +18,9 @@ public class AddType extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         String type = request.getParameter("type");
+        int parentType = Integer.parseInt(request.getParameter("parent-type"));
 
-        ProductDao.addType(type);
+        ProductDao.addType(type,parentType);
         response.sendRedirect("TypeAdmin");
     }
 }

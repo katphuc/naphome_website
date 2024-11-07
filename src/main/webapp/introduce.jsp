@@ -70,53 +70,48 @@
 <body>
 <%@include file="include/header.jsp" %>
 <section class="introduce">
+    <c:forEach var="abouts" items="${abouts}">
     <div>
-        <h1 class="h1-introduce">VỀ <q>NGÂN ANH PHÁT</q></h1>
-        <p class="introduce-p"> Thành lập vào năm 2007, Công ty TNHH Ngân Anh Phát đã không ngừng
-            nỗ lực và phát triển trong ngành Điện - Điện tử, cung cấp
-            vật liệu, thiết bị khuôn mẫu, cùng các dịch vụ gia công cơ khí và thiết
-            kế chế tạo máy. Sau hơn 10 năm, Ngân Anh Phát đã trở thành nhà cung cấp
-            uy tín hàng đầu trong lĩnh vực này.</p>
+        <h1 class="h1-introduce">${abouts.title_first}</h1>
+        <p class="introduce-p">${abouts.content_first}</p>
     </div>
     <div class="container-fluid">
         <div class="row first-intro">
             <div class="col-md-4">
-                <img src="img/banner/introduce-banner-1.png" alt="ngân anh phát giải pháp cơ khí"
+                <img src="${abouts.img_second}"
                      style="border-radius: 5%">
             </div>
             <div class="col-md-8">
-                <h2>UY TÍN - CHẤT LƯỢNG</h2>
-                <p class="intro-1">Tiêu chí hàng đầu của Ngân Anh Phát chính là uy tin và chất lượng.
-                    Mỗi sản phẩm làm ra đều tỉ mỉ trong từng chi tiết. Vì thế, Ngân Anh Phát
-                    đã từng ngày khẳng định uy tín về dịch vụ trong ngành cơ khí chế tạo.</p>
+                <h2>${abouts.title_second}</h2>
+                <p class="intro-1">${abouts.content_second}</p>
             </div>
 
         </div>
         <div class="row first-intro">
             <div class="col-md-8">
-                <h2>UY TÍN - CHẤT LƯỢNG</h2>
-                <p class="intro-1">Tiêu chí hàng đầu của Ngân Anh Phát chính là uy tin và chất lượng.
-                    Mỗi sản phẩm làm ra đều tỉ mỉ trong từng chi tiết. Vì thế, Ngân Anh Phát
-                    đã từng ngày khẳng định uy tín về dịch vụ trong ngành cơ khí chế tạo.</p>
+                <h2>${abouts.title_third}</h2>
+                <p class="intro-1">${abouts.content_third}</p>
             </div>
             <div class="col-md-4">
-                <img src="img/banner/introduce-banner-1.png" alt="ngân anh phát giải pháp cơ khí"
+                <img src="${abouts.img_third}"
                      style="border-radius: 5%">
             </div>
 
         </div>
-        <div class="row first-intro">
-            <div class="col-md-4">
-                <img src="img/banner/introduce-banner-1.png" alt="ngân anh phát giải pháp cơ khí"
-                     style="border-radius: 5%">
-            </div>
-            <div class="col-md-8">
-                <h2>UY TÍN - CHẤT LƯỢNG</h2>
-                <p class="intro-1">Tiêu chí hàng đầu của Ngân Anh Phát chính là uy tin và chất lượng.
-                    Mỗi sản phẩm làm ra đều tỉ mỉ trong từng chi tiết. Vì thế, Ngân Anh Phát
-                    đã từng ngày khẳng định uy tín về dịch vụ trong ngành cơ khí chế tạo.</p>
-            </div>
-        </div>
+        </c:forEach>
+
+<%--        <div class="row first-intro">--%>
+<%--            <div class="col-md-4">--%>
+<%--                <img src="img/banner/introduce-banner-1.png" alt="ngân anh phát giải pháp cơ khí"--%>
+<%--                     style="border-radius: 5%">--%>
+<%--            </div>--%>
+<%--            <div class="col-md-8">--%>
+<%--                <h2>UY TÍN - CHẤT LƯỢNG</h2>--%>
+<%--                <p class="intro-1">Tiêu chí hàng đầu của Ngân Anh Phát chính là uy tin và chất lượng.--%>
+<%--                    Mỗi sản phẩm làm ra đều tỉ mỉ trong từng chi tiết. Vì thế, Ngân Anh Phát--%>
+<%--                    đã từng ngày khẳng định uy tín về dịch vụ trong ngành cơ khí chế tạo.</p>--%>
+<%--            </div>--%>
+<%--        </div>--%>
         <div class="row last-contact">
             <div class="col-md-4">
             </div>
@@ -124,15 +119,16 @@
                 <h4>Liên hệ với chúng tôi</h4>
                 <p>Để nhận được báo giá tốt nhất <strong>24/7</strong>, hãy
                  liên hệ ngay!</p>
-                <a href="contact.jsp" class="icon-link" target="_blank">
+                <a href="contact.jsp" class="icon-link" >
                     <i class="fa-solid fa-arrow-right-from-bracket icon-right"></i>
                 </a>
             </div>
             <div class="col-md-4">
 
             </div>
-
+        </div>
     </div>
+
 </section>
 <!-- Nút cuộn lên đầu trang -->
 <button id="scrollToTopBtn" class="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></button>

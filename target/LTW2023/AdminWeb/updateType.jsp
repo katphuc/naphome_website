@@ -1,5 +1,7 @@
 <%@ page import="Model.Product" %>
 <%@ page import="Dao.ProductDao" %>
+<%@ page import="Model.TypeProduct" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
@@ -22,6 +24,12 @@
                 <%
                     int id = (int) request.getAttribute("id");
                     String type = (String) request.getAttribute("type");
+                    int parent_id = (int) request.getAttribute("parent_id");
+                    String name_parent =  ProductDao.getNameType(parent_id);;
+                    if(name_parent==null){
+                        name_parent="-----------------";
+                    }
+
 
 
                 %>
@@ -33,6 +41,31 @@
                 <div class="form-group col-md-3">
                     <label class="control-label">Tên loại sản phẩm</label>
                     <input name="type" class="form-control" type="text" value="<%= type %>">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label class="control-label">Danh mục cha</label>
+                    <select name="parent-type" class="form-control"  >
+                        <option value="<%=  parent_id %>"> <%=  name_parent %></option>
+                        <%
+                            List<TypeProduct> typeProducts = (List<TypeProduct>) session.getAttribute("typeProducts");
+                            boolean isNameParentDisplayed = false; // Biến theo dõi xem name_parent đã được hiển thị chưa
+                            for (TypeProduct typeproduct : typeProducts) {
+                                // Kiểm tra nếu name_parent trùng với typeproduct.getName()
+                                if (typeproduct.getName().equals(name_parent)) {
+                                    if (!isNameParentDisplayed) {
+                                        // Nếu chưa hiển thị, đặt flag và bỏ qua
+                                        isNameParentDisplayed = true; // Đánh dấu là đã hiển thị name_parent
+                                        continue; // Bỏ qua phần này
+                                    }
+                                }
+                                // Hiển thị tùy chọn nếu không phải là name_parent
+                        %>
+                        <option value="<%= typeproduct.getId() %>"> <%= typeproduct.getName() %> </option>
+                        <%
+                            }
+                        %>
+                    </select>
                 </div>
 
                 <%--                <div class="form-group  col-md-3">--%>

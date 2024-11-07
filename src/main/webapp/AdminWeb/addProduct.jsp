@@ -1,5 +1,8 @@
 <%@ page import="java.text.NumberFormat" %>
 <%@ page import="java.util.Locale" %>
+<%@ page import="Model.TypeProduct" %>
+<%@ page import="java.util.List" %>
+<%@ page import="Model.Vendor" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
@@ -139,14 +142,16 @@
                                     <%--                                    </div>--%>
                                     <select style="width: 46%" name="type" class="form-control">
                                         <option value="" disabled selected>--Chọn loại sản phẩm--</option>
-                                        <option value="1">Sữa bột cao cấp</option>
-                                        <option value="2">Bỉm tả khuyến mãi</option>
-                                        <option value="3">Ăn dặm, dinh dưỡng</option>
-                                        <option value="4">Vitamin & Sức khỏe</option>
-                                        <option value="5">Chăm sóc gia đình</option>
-                                        <option value="6">Đồ dùng mẹ & bé</option>
-                                        <option value="7">Thời trang & phụ kiện</option>
-                                        <option value="8">Đồ chơi, học tập</option>
+                                        <%
+                                            List<TypeProduct> typeProducts = (List<TypeProduct>) session.getAttribute("typeProducts");
+                                            for (TypeProduct typeproduct : typeProducts) {
+                                        %>
+
+                                        <option value="<%= typeproduct.getId() %>"><%= typeproduct.getName() %></option>
+
+                                        <%
+                                            }
+                                        %>
 
                                     </select>
                                 </div>
@@ -193,10 +198,14 @@
                             <div class="col-md-8">
                                 <select style="width: 46%" name="vendor" class="form-control">
                                     <option value="" disabled selected>--Chọn thương hiệu--</option>
-                                    <option value="1">Concung</option>
-                                    <option value="2">Kho mẹ bé Thiên An</option>
-                                    <option value="3">Sozo</option>
-                                    <option value="4">Chaang</option>
+                                    <%
+                                        List<Vendor> vendors = (List<Vendor>) session.getAttribute("vendors");
+                                        for (Vendor vendor : vendors) {
+                                    %>
+                                    <option value="<%= vendor.getId() %>"><%= vendor.getName() %></option>
+                                    <%
+                                        }
+                                    %>
                                 </select>
                             </div>
                         </div>

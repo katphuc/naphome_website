@@ -215,7 +215,7 @@
                     <div class="title">
                         <h2 style="user-select: none">Thông tin bổ ích</h2>
                     </div>
-                    <a href="index.jsp">
+                    <a href="Blog">
                         <div class="view-all-icon">
                             Xem tất cả >
                         </div>
@@ -227,50 +227,45 @@
             <div class="col-lg-4 col-md-4 col-sm-6">
                 <div class="blog__item">
                     <div class="blog__item__pic">
-                        <img src="https://concung.com/img/news/2023/2223-1680851555-cover.png" alt="">
+                        <img src="https://www.ngananhphat.com/vnt_upload/news/11_2024/ro_le_nhiet_cau_tao_chuc_nang_va_ung_dung.png" alt="">
                     </div>
                     <div class="blog__item__text">
                         <ul>
                             <li><i class="fa fa-calendar-o"></i> 21/10/2023</li>
                             <li><i class="fa fa-comment-o"></i> 5</li>
                         </ul>
-                        <h5><a href="#">Review chi tiết top 5 dòng sữa cho trẻ sơ sinh phát triển toàn diện </a></h5>
-                        <p>Sữa mẹ là nguồn dinh dưỡng tốt nhất cho trẻ sơ sinh và trẻ nhỏ. Song mẹ có thể cân nhắc kết
-                            hợp cho bé dùng sữa mẹ và sữa công thức để đảm bảo cung cấp đầy đủ dinh dưỡng cần thiết cho
-                            con</p>
+                        <h5><a href="#">Rơ le nhiệt, cấu tạo chức năng và ứng dụng</a></h5>
+                        <p>Rơ le nhiệt, cấu tạo chức năng và ứng dụng</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6">
                 <div class="blog__item">
                     <div class="blog__item__pic">
-                        <img src="https://concung.com/img/news/2023/2222-1680851139-cover.png" alt="">
+                        <img src="https://www.ngananhphat.com/vnt_upload/news/11_2024/ro_le_dien_la_gi_cau_tao_ung_dung_va_cach_hoat_dong.png" alt="">
                     </div>
                     <div class="blog__item__text">
                         <ul>
                             <li><i class="fa fa-calendar-o"></i> 21/10/2023</li>
                             <li><i class="fa fa-comment-o"></i> 5</li>
                         </ul>
-                        <h5><a href="#">Gợi ý lịch ăn cho bé 1 tuổi khoa học ba mẹ cần biết</a></h5>
-                        <p>Ở giai đoạn 1 tuổi, tốc độ phát triển của bé rất nhanh. Bổ sung đầy đủ dinh dưỡng và sắp xếp
-                            lịch ăn cho bé 1 tuổi phù hợp là cách ba mẹ có thể giúp con phát triển thể chất tốt
-                            nhất.</p>
+                        <h5><a href="#">Rơ le điện là gì? Cấu tạo, ứng dụng và nguyên lý hoạt động</a></h5>
+                        <p>Rơ le điện là gì? Cấu tạo, ứng dụng và nguyên lý hoạt động</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6">
                 <div class="blog__item">
                     <div class="blog__item__pic">
-                        <img src="https://concung.com/img/news/2023/2216-1680851084-cover.png" alt="">
+                        <img src="https://www.ngananhphat.com/vnt_upload/news/11_2024/ro_le_trang_thai_ran_phan_loai_va_loi_ich.png" alt="">
                     </div>
                     <div class="blog__item__text">
                         <ul>
                             <li><i class="fa fa-calendar-o"></i> 21/10/2023</li>
                             <li><i class="fa fa-comment-o"></i> 5</li>
                         </ul>
-                        <h5><a href="#">Gợi ý thực đơn cho bé 1 tuổi đầy đủ dưỡng chất cần thiết</a></h5>
-                        <p>Từ 1 tuổi, bé phát triển thêm khá nhiều kỹ năng vận động thô, kéo theo nhu cầu dinh dưỡng
-                            cũng cần được tăng cao</p>
+                        <h5><a href="#">Rơ le trạng thái rắn, phân loại và lợi ích</a></h5>
+                        <p>Rơ le trạng thái rắn, phân loại và lợi ích</p>
                     </div>
                 </div>
             </div>
