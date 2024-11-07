@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'MRCHMaverickGrotesk';
+    src: url('../fonts/MRCHMaverickGrotesk-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MRCHMaverickGrotesk';
+    src: url('../fonts/MRCHMaverickGrotesk-BlackItalic.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'MRCHMaverickGrotesk';
+    src: url('../fonts/MRCHMaverickGrotesk-Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MRCHMaverickGrotesk';
+    src: url('../fonts/MRCHMaverickGrotesk-ThinItalic.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+}
