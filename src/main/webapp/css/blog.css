@@ -216,8 +216,8 @@
 }
 
 .blog__sidebar__recent__item__pic {
-    width: 70px;
-    height: 70px;
+    width: 132px;
+    height: 100px;
     overflow: hidden; /* Ẩn nội dung vượt ra ngoài kích thước */
     float: left;
     margin-right: 20px;
@@ -231,7 +231,7 @@
 
 .blog__sidebar__recent__item__text {
     overflow: hidden;
-    width: 262px;
+    width: 162px;
 
 }
 

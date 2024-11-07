@@ -63,11 +63,11 @@
                       <i class="fas fa-pen"></i>
                     </i>
                   </a>
-                  <a title="Xóa loại sản phẩm" href="RemoveType?id=${type.id}" class="icon-link">
-                    <i class="icon-wrapper">
-                      <i class="fas fa-trash-alt"></i> <!-- Biểu tượng thùng rác -->
-                    </i>
-                  </a>
+<%--                  <a title="Xóa loại sản phẩm" href="RemoveType?id=${type.id}" class="icon-link">--%>
+<%--                    <i class="icon-wrapper">--%>
+<%--                      <i class="fas fa-trash-alt"></i> <!-- Biểu tượng thùng rác -->--%>
+<%--                    </i>--%>
+<%--                  </a>--%>
 
 
 

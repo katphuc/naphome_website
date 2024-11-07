@@ -2,6 +2,7 @@ package Controller;
 
 import Dao.ProductDao;
 import Model.TypeProduct;
+import Model.Vendor;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -16,13 +17,16 @@ public class Home extends HttpServlet {
         List<Model.Product> productsDis = ProductDao.getDiscountProduct();
         List<Model.Product> productsNew = ProductDao.getNewProduct();
         List<TypeProduct> typeproduct = ProductDao.getAllType();
+        List<Vendor> vendors = ProductDao.getAllVendor();
 
 
         request.getSession().setAttribute("typeProducts", typeproduct);
+        request.getSession().setAttribute("vendors", vendors);
 
         // Lưu danh sách sản phẩm và thông tin phân trang vào request
         request.setAttribute("productsDis", productsDis);
         request.setAttribute("productsNew", productsNew);
+
 
 
         request.getRequestDispatcher("index.jsp").forward(request, response);

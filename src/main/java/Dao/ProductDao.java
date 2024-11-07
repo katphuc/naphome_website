@@ -1088,17 +1088,18 @@ public class ProductDao {
         return false;
     }
 
-    public static boolean addType(String name) {
+    public static boolean addType(String name, int parent_type) {
         Connection connection = null;
 
         try {
             connection = DatabaseConnector.getConnection();
 
             // Sử dụng PreparedStatement để tránh SQL injection
-            String sql = "insert into type_product (name) values (?)";
+            String sql = "insert into category (name,parent_id) values (?,?)";
             try (PreparedStatement ps = connection.prepareStatement(sql)) {
 
                 ps.setString(1, name);
+                ps.setInt(2, parent_type);
 
 
                 int rowsAffected = ps.executeUpdate();
@@ -1125,7 +1126,7 @@ public class ProductDao {
         try {
             connection = DatabaseConnector.getConnection();
 
-            PreparedStatement ps = connection.prepareStatement("select `name` from type_product where id =? ");
+            PreparedStatement ps = connection.prepareStatement("select `name` from category where id =? ");
             ps.setInt(1, id);
 
             ResultSet rs = ps.executeQuery();
@@ -1144,18 +1145,79 @@ public class ProductDao {
         return null; // Trả về null nếu không tìm thấy
     }
 
-    public static boolean updateType(String name, int id) {
+
+
+    public static int getParentIdType(int id) {
+        Connection connection = null;
+
+        try {
+            connection = DatabaseConnector.getConnection();
+
+            PreparedStatement ps = connection.prepareStatement("select parent_id from category where id =? ");
+            ps.setInt(1, id);
+
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                return rs.getInt("parent_id");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        } finally {
+            DatabaseConnector.closeConnection(connection);
+        }
+
+        return 0; // Trả về null nếu không tìm thấy
+    }
+
+    public static boolean updateType(String name,int parent_id, int id) {
         Connection connection = null;
 
         try {
             connection = DatabaseConnector.getConnection();
 
             // Sử dụng PreparedStatement để tránh SQL injection
-            String sql = "UPDATE type_product SET name=? WHERE id=? ";
+            String sql = "UPDATE category SET name=?, parent_id=? WHERE id=? ";
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+
+                ps.setString(1, name);
+                ps.setInt(2, parent_id);
+                ps.setInt(3, id);
+
+
+                int rowsAffected = ps.executeUpdate();
+
+                // Kiểm tra xem có dòng nào được cập nhật không
+                if (rowsAffected > 0) {
+                    // Cập nhật thành công
+                    return true;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DatabaseConnector.closeConnection(connection);
+        }
+
+        // Nếu có lỗi hoặc không có dòng nào được cập nhật
+        return false;
+    }
+
+    public static boolean updateVendor(String name, int id) {
+        Connection connection = null;
+
+        try {
+            connection = DatabaseConnector.getConnection();
+
+            // Sử dụng PreparedStatement để tránh SQL injection
+            String sql = "UPDATE vendor SET name=? WHERE id=? ";
             try (PreparedStatement ps = connection.prepareStatement(sql)) {
 
                 ps.setString(1, name);
                 ps.setInt(2, id);
+
 
 
                 int rowsAffected = ps.executeUpdate();
@@ -1422,6 +1484,38 @@ public class ProductDao {
             try (PreparedStatement ps = connection.prepareStatement(sql)) {
 
                 ps.setInt(1, id);
+
+
+                int rowsAffected = ps.executeUpdate();
+
+                // Kiểm tra xem có dòng nào được cập nhật không
+                if (rowsAffected > 0) {
+                    // Cập nhật thành công
+                    return true;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DatabaseConnector.closeConnection(connection);
+        }
+
+        // Nếu có lỗi hoặc không có dòng nào được cập nhật
+        return false;
+    }
+
+    public static boolean addVendor(String name) {
+        Connection connection = null;
+
+        try {
+            connection = DatabaseConnector.getConnection();
+
+            // Sử dụng PreparedStatement để tránh SQL injection
+            String sql = "insert into vendor (name) values (?)";
+            try (PreparedStatement ps = connection.prepareStatement(sql)) {
+
+                ps.setString(1, name);
+
 
 
                 int rowsAffected = ps.executeUpdate();

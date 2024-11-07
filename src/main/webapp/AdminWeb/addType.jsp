@@ -1,5 +1,7 @@
 <%@ page import="Model.Product" %>
 <%@ page import="Dao.ProductDao" %>
+<%@ page import="Model.TypeProduct" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
@@ -24,6 +26,25 @@
                 <div class="form-group col-md-3">
                     <label class="control-label">Tên loại sản phẩm</label>
                     <input name="type" class="form-control" type="text" value="">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label class="control-label">Danh mục con của</label>
+<%--                    <input name="parent-type" class="form-control" type="text" value="">--%>
+                    <select style="width: 91%" name="parent-type" class="form-control">
+                        <option value="0" selected>----------------------</option>
+                        <%
+                            List<TypeProduct> typeProducts = (List<TypeProduct>) session.getAttribute("typeProducts");
+                            for (TypeProduct typeproduct : typeProducts) {
+                        %>
+
+                        <option value="<%= typeproduct.getId() %>"><%= typeproduct.getName() %></option>
+
+                        <%
+                            }
+                        %>
+
+                    </select>
                 </div>
 
                 <%--                <div class="form-group  col-md-3">--%>

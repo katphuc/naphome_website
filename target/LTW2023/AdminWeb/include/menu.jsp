@@ -27,18 +27,6 @@
             </a>
         </li>
         <li>
-            <a href="">
-                <i class="fa-solid fa-note-sticky"></i>
-                <span class="links_name">Quản Lý Danh Mục</span>
-            </a>
-        </li>
-        <li>
-            <a href="">
-                <i class="fa-solid fa-square-plus"></i>
-                <span class="links_name">Thêm Danh Mục</span>
-            </a>
-        </li>
-        <li>
             <a href="BlogAdmin">
                 <i class="fa-solid fa-newspaper"></i>
                 <span class="links_name">Quản Lý Tin Tức</span>
@@ -50,24 +38,48 @@
                 <span class="links_name">Thêm Tin Tức</span>
             </a>
         </li>
+        <li>
+            <a href="AboutAdmin">
+                <i class="fa-regular fa-address-card"></i>
+                <span class="links_name">Giới Thiệu</span>
+            </a>
+        </li>
+        <li>
+            <a href="TypeAdmin">
+                <i class="fa-solid fa-note-sticky"></i>
+                <span class="links_name">Quản Lý Danh Mục</span>
+            </a>
+        </li>
+        <li>
+            <a href="VendorAdmin">
+                <i class="fa-regular fa-copyright"></i>
+                <span class="links_name">Quản Lý Thương Hiệu</span>
+            </a>
+        </li>
+<%--        <li>--%>
+<%--            <a href="">--%>
+<%--                <i class="fa-solid fa-square-plus"></i>--%>
+<%--                <span class="links_name">Thêm Danh Mục</span>--%>
+<%--            </a>--%>
+<%--        </li>--%>
 <%--        <li>--%>
 <%--            <a href="">--%>
 <%--                <i class="fa-solid fa-boxes-packing"></i>--%>
 <%--                <span class="links_name">Quản Lý Đơn Hàng</span>--%>
 <%--            </a>--%>
 <%--        </li>--%>
-        <li>
-            <a href="">
-                <i class="fa-solid fa-user"></i>
-                <span class="links_name">Quản Lý Tài Khoản</span>
-            </a>
-        </li>
-        <li>
-            <a href="">
-                <i class="fa-solid fa-square-plus"></i>
-                <span class="links_name">Thêm Tài Khoản</span>
-            </a>
-        </li>
+<%--        <li>--%>
+<%--            <a href="">--%>
+<%--                <i class="fa-solid fa-user"></i>--%>
+<%--                <span class="links_name">Quản Lý Tài Khoản</span>--%>
+<%--            </a>--%>
+<%--        </li>--%>
+<%--        <li>--%>
+<%--            <a href="">--%>
+<%--                <i class="fa-solid fa-square-plus"></i>--%>
+<%--                <span class="links_name">Thêm Tài Khoản</span>--%>
+<%--            </a>--%>
+<%--        </li>--%>
 <%--        <li>--%>
 <%--            <a href="">--%>
 <%--                <i class="fa-solid fa-square-poll-vertical"></i>--%>
